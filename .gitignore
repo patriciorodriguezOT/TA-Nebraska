@@ -31,6 +31,7 @@ Reports
 settings/internal/com.kms.katalon.integration.analytics.properties
 settings/internal/com.kms.katalon.integration.jira.properties
 settings/internal/com.kms.katalon.composer.testcase.properties
+settings/internal/com.kms.katalon.core.webservice.properties
 
 
 
@@ -39,6 +40,8 @@ settings/internal/com.kms.katalon.composer.testcase.properties
 \.settings/
 bin/lib/
 Libs/
+ScreenShots/
+bin/keyword/.gitignore
 
 
 # Katalon Test Suite
