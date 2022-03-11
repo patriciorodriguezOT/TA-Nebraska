@@ -29,6 +29,8 @@ String DOB = Generic_functions.randomPastDate(18250, 5840)
 
 
 // Set Random Variables
+String titleMessage = 'Unable To Process Registration'
+String bodyMessage = 'An error was encountered. A record for you already exists in the system based upon one of the key identifying criteria. Please go to https://vv5qa.visualvault.com/ to sign in or use the forgot username/password link. If you need further assistance, please e-mail DHHS.LanceSupport@nebraska.gov.'
 String randomFirstName = Generic_functions.randomString(chars, 5)
 String randomLastName = Generic_functions.randomString(chars, 5)
 String randomI94 = Generic_functions.randomString(nums, 11)
@@ -51,16 +53,19 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeLastName'(Gl
 
 CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeDOB'(DOB)
 
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePlaceOfBirth'(placeOfBirth)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePlaceOfBirth'(GlobalVariable.G_Applicant_PlaceOfBirth)
 
 
 
 // Enter Mailing Address Information
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.selectCountryCanada'()
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.selectCountryUruguay'()
 
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeZipCode'(zipCode)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeAddressLine'(GlobalVariable.G_Applicant_AddressLine)
 
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeAddressLine'(addressLine)
+
+
+// Select Yes on dropdown "Is the Physical address the same?"
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.selectSameAddress'('Yes')
 
 
 
@@ -79,7 +84,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeI94'(randomI
 
 
 // Enter PhoneNumber Information
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePrimaryPhoneNumber'(phoneNumber)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePrimaryPhoneNumber'(GlobalVariable.G_Applicant_PhoneNumber)
 
 
 
@@ -95,7 +100,11 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.clickOnSubmitBtn'()
 
 
 // Verify Error Message because user duplicated is displayed - In this case the duplacted error is cause because the Email
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.verifyDuplicatedErrorMessage'()
+CustomKeywords.'pages.ModalDialog.verifyBody'(bodyMessage)
+
+CustomKeywords.'pages.ModalDialog.verifyTitle'(titleMessage)
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
 
 
@@ -115,6 +124,8 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeRetypeEmailA
 
 
 
+
+
 // Enter existing Identification Information - Alien Registration Number
 CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeI94'(existingI94)
 
@@ -126,7 +137,11 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.clickOnSubmitBtn'()
 
 
 // Verify Error Message because user duplicated is displayed - In this case the duplacted error is cause because the Email
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.verifyDuplicatedErrorMessage'()
+CustomKeywords.'pages.ModalDialog.verifyBody'(bodyMessage)
+
+CustomKeywords.'pages.ModalDialog.verifyTitle'(titleMessage)
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
 
 

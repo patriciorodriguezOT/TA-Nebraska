@@ -6,12 +6,12 @@
    <elementGuidId>46e2182c-f146-4c25-a340-83f324a99f0d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>#k-296cea5d-ee9e-41c4-ac2d-ed8bf22f3468 > span.k-select > span.k-icon.k-i-arrow-s</value>
+         <key>XPATH</key>
+         <value>//kendo-dropdownlist[@id='Primary Phone Type']/span/span[2]/span</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[3]/div/kendo-dropdownlist/span/span[2]/span</value>
+         <key>CSS</key>
+         <value>#k-296cea5d-ee9e-41c4-ac2d-ed8bf22f3468 > span.k-select > span.k-icon.k-i-arrow-s</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

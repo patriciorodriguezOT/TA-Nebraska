@@ -33,17 +33,19 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeLastName'(Gl
 
 CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeDOB'(GlobalVariable.G_Applicant_DOB)
 
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePlaceOfBirth'(placeOfBirth)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePlaceOfBirth'(GlobalVariable.G_Applicant_PlaceOfBirthCanada)
 
 
 
 // Enter Mailing Address Information
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.selectCountryCanada'()
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.selectCountryUruguay'()
 
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeZipCode'(zipCode)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeAddressLine'(GlobalVariable.G_Applicant_AddressLine)
 
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeAddressLine'(addressLine)
 
+
+// Select Yes on dropdown "Is the Physical address the same?"
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.selectSameAddress'('Yes')
 
 
 // Enter Identification Information
@@ -56,7 +58,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeI94'(GlobalV
 
 
 // Enter PhoneNumber Information
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePrimaryPhoneNumber'(phoneNumber)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePrimaryPhoneNumber'(GlobalVariable.G_Applicant_PhoneNumber)
 
 
 
@@ -64,12 +66,6 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePrimaryPhone
 CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeEmailAddress'(GlobalVariable.G_Applicant_Email)
 
 CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeRetypeEmailAddress'(GlobalVariable.G_Applicant_Email)
-
-
-
-// Take Screenshot
-WebUI.takeScreenshot(('C:\\Users\\patricior-ot\\Katalon Studio\\ScreenShots\\Screenshot' + GlobalVariable.G_Applicant_Email) + 
-    '.png')
 
 
 

@@ -55,7 +55,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Test Suites - Process/Registration - -License Application Deny process</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Test Suites - Process/Registration - License Application Deny process</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>

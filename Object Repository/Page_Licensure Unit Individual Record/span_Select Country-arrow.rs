@@ -6,12 +6,12 @@
    <elementGuidId>4d6e122b-a901-4f58-b950-3976303d96ae</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>span.k-icon.k-i-arrow-s</value>
+         <key>XPATH</key>
+         <value>//kendo-dropdownlist[@id='Country']/span/span[2]/span</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//span[2]/span</value>
+         <key>CSS</key>
+         <value>span.k-icon.k-i-arrow-s</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
