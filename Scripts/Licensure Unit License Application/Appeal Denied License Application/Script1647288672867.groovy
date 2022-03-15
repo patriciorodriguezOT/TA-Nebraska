@@ -14,9 +14,12 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import com.kms.katalon.core.util.KeywordUtil
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import generic.generic_functions as Generic_functions
+import org.openqa.selenium.WebDriver as WebDriver
 
 // Numbers variable
 String nums = '1234567890'
@@ -24,20 +27,29 @@ String nums = '1234567890'
 // Set random appeal code variable
 String randomAppealCode = Generic_functions.randomString(nums, 6)
 
-// Open Browser
-WebUI.openBrowser(GlobalVariable.G_Nebraska_Link)
-
-// Go to Appeal form public link
-WebUI.navigateToUrl(GlobalVariable.G_Appeal_Link)
+// Open Browser and go to Appeal form public link
+WebUI.openBrowser(GlobalVariable.G_Appeal_Link)
 
 // Enter incorrect appeal code
-CustomKeywords.'pages.Page_Home_Admin_Manage_Individual_IndividualsAll.clickOnSearchFilterBtn'()
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'(randomAppealCode)
 
 // Click on Next
-CustomKeywords.'pages.Page_Home_Admin_Manage_Individual_IndividualsAll.enterSearchCriteria'()
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextButton'()
 
-// Shows modal with error message indicating denial code is invalid
-CustomKeywords.'pages.Page_Home_Admin_Manage_Individual_IndividualsAll.clickOnSearchBtn'()
+// Verify if alert is present
+WebUI.verifyAlertPresent(5)
 
-// Close Browser
-//WebUI.closeBrowser()
+//Getting the text from the alert and storing it in Variable
+WebDriver driver = DriverFactory.getWebDriver()
+String alertText = driver.switchTo().alert().getText()
+
+//Verify if modal text contains an error message indicating denial code is invalid
+String errorText = String.format("An error was encountered. The denial code of %s was not found in the system or is older than 50 days.", randomAppealCode);
+
+if (alertText.contains(errorText)) {
+	// Close Browser
+	WebUI.closeBrowser()
+} else {
+	// Stop tc excecution
+	KeywordUtil.markErrorAndStop('\nThe test case can not be completed.')
+}
