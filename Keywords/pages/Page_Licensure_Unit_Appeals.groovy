@@ -19,6 +19,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.kms.katalon.core.util.KeywordUtil
 
 import internal.GlobalVariable
 
@@ -50,5 +51,16 @@ public class Page_Licensure_Unit_Appeals {
 		WebUI.waitForElementVisible(inputEmail, 0)
 
 		WebUI.verifyElementAttributeValue(inputEmail, 'value', email, 0)
+	}
+	
+	@Keyword
+	def verifyErrorAlert (String alertObj, String errorText) {
+		if (alertObj.contains(errorText)) {
+			// Close Browser
+			WebUI.closeBrowser()
+		} else {
+			// Stop tc execution
+			KeywordUtil.markErrorAndStop('\nThe test case can not be completed.')
+		}
 	}
 }

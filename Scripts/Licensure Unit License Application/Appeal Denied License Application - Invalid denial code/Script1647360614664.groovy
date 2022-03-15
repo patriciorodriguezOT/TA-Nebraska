@@ -15,7 +15,6 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import com.kms.katalon.core.util.KeywordUtil
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import generic.generic_functions as Generic_functions
@@ -36,20 +35,13 @@ CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'(randomAppealC
 // Click on Next
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextButton'()
 
-// Verify if alert is present
+// Verify if alert is present and get alertText
 WebUI.verifyAlertPresent(5)
 
-//Getting the text from the alert and storing it in Variable
+// Get the text from the alert and stores it in variable
 WebDriver driver = DriverFactory.getWebDriver()
 String alertText = driver.switchTo().alert().getText()
 
-//Verify if modal text contains an error message indicating denial code is invalid
+// Verify if modal text contains an error message indicating denial code is invalid
 String errorText = String.format("An error was encountered. The denial code of %s was not found in the system or is older than 50 days.", randomAppealCode);
-
-if (alertText.contains(errorText)) {
-	// Close Browser
-	WebUI.closeBrowser()
-} else {
-	// Stop tc excecution
-	KeywordUtil.markErrorAndStop('\nThe test case can not be completed.')
-}
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.verifyErrorAlert'(alertText, errorText)
