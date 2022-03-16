@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>The applicant is registered successfully</description>
+   <description>Register a citizen that does not have their email or SSN in the system.  Should be allowed to register.</description>
    <name>Registration Successful - US Citizen - With SSN</name>
    <tag>Registration</tag>
    <comment></comment>

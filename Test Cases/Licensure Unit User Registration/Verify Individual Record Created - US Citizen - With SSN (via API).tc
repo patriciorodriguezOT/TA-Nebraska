@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Verify Individual Record Created - US Citizen - With SSN (via API)</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>a863315f-fd6a-4c77-9681-03dc8657f592</testCaseGuid>
-</TestCaseEntity>

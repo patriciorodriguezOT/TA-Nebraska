@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Adding a hold to the license detail record manually will display a message when viewing the individual record that the individual is on hold.
-
-Hold message should also appear when opening the license detail record.</description>
+   <description>Processor cannot release a hold.</description>
    <name>Release a Hold on License Detail as LP</name>
    <tag></tag>
    <comment></comment>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Register a citizen that does have their email or SSN in the system and does have a user account that represents the email already in the system.  Should not be allowed to register.</description>
    <name>Registration Failed - US Citizen - Email-SSN Duplicated</name>
    <tag></tag>
    <comment></comment>

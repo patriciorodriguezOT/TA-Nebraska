@@ -18,20 +18,29 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import groovy.json.JsonSlurper as JsonSlurper
 
 import internal.GlobalVariable
 
 public class IndividualRecordResp {
+
+	@Keyword
+	def getApplicantEmail (Object individualRecordResp) {
+
+		// Assign the License Id from the License Details to the variables
+		String applicantEmail = WS.getElementPropertyValue(individualRecordResp, 'data[0]["email Address"]')
+
+		// Return record id
+		return applicantEmail
+	}
 	
-		@Keyword
-		def getApplicantEmail (Object individualRecordResp) {
-	
-			// Assign the License Id from the License Details to the variables
-			String applicantEmail = WS.getElementPropertyValue(individualRecordResp, 'data[0]["email Address"]')
-	
-			System.out.println(applicantEmail)
-	
-			// Return record id
-			return applicantEmail
-		}
+	@Keyword
+	def verifyUniqueIndividualRecord (Object individualRecordResp) {
+
+		String currentSize = WS.getElementsCount(individualRecordResp, 'data')
+		
+		String expectedSize = '1'
+		
+		WebUI.verifyMatch(currentSize, expectedSize, false, FailureHandling.CONTINUE_ON_FAILURE)
+	}
 }

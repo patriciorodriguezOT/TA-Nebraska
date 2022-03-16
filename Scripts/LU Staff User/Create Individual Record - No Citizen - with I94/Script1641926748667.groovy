@@ -30,15 +30,11 @@ int currentTab
 
 
 // Set Random Variables
-String placeOfBirth = 'Toronto'
-String zipCode = 'M1R 0E9'
-String addressLine1 = 'Address Line 1234'
-String phoneNumber = '2222222222'
 GlobalVariable.G_Applicant_DOB = Generic_functions.randomPastDate(18250, 5840)
 GlobalVariable.G_Applicant_I94 = Generic_functions.randomString(nums, 11)
 GlobalVariable.G_Applicant_FirstName = ('PR' + randomFirstName)
-GlobalVariable.G_Applicant_LastName = ('Automation' + randomLastName)
-GlobalVariable.G_Applicant_Email = (('patricio.rodriguez+Applicant' + randomFirstName) + '@onetree.com')
+GlobalVariable.G_Applicant_LastName = ('AutomationNoCitizen' + randomLastName)
+GlobalVariable.G_Applicant_Email = (('pruebas.onetree+ApplicantNoCitizen' + randomFirstName) + '@gmail.com')
 
 
 
@@ -71,13 +67,13 @@ CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.enterLastName'(Globa
 
 CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.enterDateOfBirth'(GlobalVariable.G_Applicant_DOB)
 
-CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.enterPlaceOfBirth'(placeOfBirth)
+CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.enterPlaceOfBirth'(GlobalVariable.G_Applicant_PlaceOfBirthCanada)
 
-CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.selectCountryCanada'()
+CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.selectCountryUruguay'()
 
-CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.enterZipCode'(zipCode)
+CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.enterAddressLine1'(GlobalVariable.G_Applicant_AddressLine)
 
-CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.enterAddressLine1'(addressLine1)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.selectSameAddress'('Yes')
 
 CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.selectUSCitizen'('No')
 
@@ -85,7 +81,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.selectDoYouHaveSSN'(
 
 CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.enterI94'(GlobalVariable.G_Applicant_I94)
 
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePrimaryPhoneNumber'(phoneNumber)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePrimaryPhoneNumber'(GlobalVariable.G_Applicant_PhoneNumber)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.enterEmailAddress'(GlobalVariable.G_Applicant_Email)
 

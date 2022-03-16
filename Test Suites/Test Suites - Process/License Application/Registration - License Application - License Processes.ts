@@ -87,7 +87,7 @@
       <guid>06f54f20-b32d-4212-8ed3-053609202649</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Licensure Unit License Application/Return License Application</testCaseId>
+      <testCaseId>Test Cases/Licensure Unit License Application/Return License Application as LU Processor</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8764c91b-e8cf-4375-9f57-e36967aa6296</guid>
@@ -117,7 +117,7 @@
       <guid>00220165-2102-4666-9d11-5a0c26d7d8fd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Licensure Unit License/Add Fee</testCaseId>
+      <testCaseId>Test Cases/Licensure Unit License/Add Fee as LU Staff</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2e8d522d-60dd-4a15-99dd-cb6984f5090e</guid>

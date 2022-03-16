@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Apply for a Licesense - Physical Therapist - US Citizen</description>
+   <description>Register an Applicant and Apply for a License type Phisical Therapist.</description>
    <name>Apply for a License - Physical Therapist</name>
    <tag></tag>
    <comment></comment>
