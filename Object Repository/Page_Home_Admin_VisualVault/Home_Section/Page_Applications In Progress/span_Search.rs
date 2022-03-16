@@ -6,10 +6,6 @@
    <elementGuidId>5a16a272-56fd-46de-ba0e-6b12de2287c3</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>span.rtbText</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//span[(text() = 'Search' or . = 'Search')]</value>
       </entry>
@@ -17,8 +13,12 @@
          <key>XPATH</key>
          <value>//span/span/span/span</value>
       </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span.rtbText</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

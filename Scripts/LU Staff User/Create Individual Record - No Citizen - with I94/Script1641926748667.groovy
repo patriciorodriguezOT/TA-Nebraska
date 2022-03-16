@@ -30,7 +30,7 @@ int currentTab
 
 
 // Set Random Variables
-GlobalVariable.G_Applicant_DOB = Generic_functions.randomPastDate(18250, 5840)
+GlobalVariable.G_Applicant_DOB = Generic_functions.randomPastDate(18250, 10000)
 GlobalVariable.G_Applicant_I94 = Generic_functions.randomString(nums, 11)
 GlobalVariable.G_Applicant_FirstName = ('PR' + randomFirstName)
 GlobalVariable.G_Applicant_LastName = ('AutomationNoCitizen' + randomLastName)

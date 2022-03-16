@@ -24,7 +24,7 @@ import generic.generic_functions as Generic_functions
 
 String chars = 'abcdefghijklmnopqrstuvwxyz'
 String nums = '123456780'
-String DOB = Generic_functions.randomPastDate(18250, 5840)
+String DOB = Generic_functions.randomPastDate(18250, 10000)
 
 
 // Set Random Variables

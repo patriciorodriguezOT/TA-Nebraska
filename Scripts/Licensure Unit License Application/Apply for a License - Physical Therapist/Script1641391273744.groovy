@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat as SimpleDateFormat
 import java.util.Calendar as Calendar
 import generic.generic_functions as Generic_functions
 import generic.common_functions as common_functions
+import com.kms.katalon.core.configuration.RunConfiguration
 
 
 
@@ -38,6 +39,8 @@ String placeOfBirth = 'Alaska'
 String schoolName = 'PR Test'
 String titleMessageRecord = 'Record Saved'
 String printName = 'PR Automation Test'
+String projectPath = RunConfiguration.getProjectDir()
+String emtpyDocpath = projectPath + '\\Documents\\Document Empty.txt'
 
 
 // Open Browser
@@ -161,7 +164,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Practice_Prior_To_
 //Checklist Management---
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnUploadButton'()
 
-common_functions.uploadFilePath('C:\\Users\\patricior-ot\\Documents\\VisualVault\\Nebraska\\Document Empty.txt')
+common_functions.uploadFilePath(emtpyDocpath)
 
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnNextButton'()
 
@@ -252,7 +255,7 @@ if (CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Pay.verifyPayN
 
 if (WebUI.verifyElementVisible(findTestObject('Page_Licensure Unit License Application/Pay/button_Submit'),	FailureHandling.OPTIONAL)) {
 	
-		WebUI.verifyElementText(findTestObject('Page_Licensure Unit License Application/Pay/kendo-Dropdown-Status'), 'New')
+		WebUI.verifyElementText(findTestObject('Page_Licensure Unit License Application/Pay/kendo-Dropdown-Status'), 'New', FailureHandling.OPTIONAL)
 	
 		WebUI.click(findTestObject('Page_Licensure Unit License Application/Pay/button_Submit'))
 	}

@@ -22,44 +22,54 @@ import internal.GlobalVariable
 
 public class Page_Home_Admin_ApplicationsInProgress {
 
+	private TestObject buttonSearchMain 				= findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/span_Search')
+	private TestObject inputSearchCriteria				= findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/input_Search Criteria')
+	private TestObject selectSearchCriteria				= findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/a_Search By Arrow')
+	private TestObject selectFirstNameOpt				= findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/li_First Name')
+	private TestObject buttonSearch						= findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/input_Search Button')
+	private TestObject linkReview						= findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/a_Review')
+	
+	
+	
+	
 	@Keyword
 	def clickOnSearchRecordButton () {
-		WebUI.waitForElementVisible(findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/span_Search'), 0)
+		WebUI.waitForElementVisible(buttonSearchMain, 20)
 
-		WebUI.click(findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/span_Search'))
+		WebUI.click(buttonSearchMain)
 	}
 
 
 	@Keyword
 	def enterSearchCriteria (String Criteria) {
-		WebUI.waitForElementVisible(findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/input_Search Criteria'), 0)
+		WebUI.waitForElementVisible(inputSearchCriteria, 20)
 
-		WebUI.sendKeys(findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/input_Search Criteria'), Criteria)
+		WebUI.sendKeys(inputSearchCriteria, Criteria)
 	}
 
 
 	@Keyword
 	def selectFirstNameForSearch () {
-		WebUI.waitForElementVisible(findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/a_Search By Arrow'), 0)
+		WebUI.waitForElementVisible(selectSearchCriteria, 20)
 
-		WebUI.click(findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/a_Search By Arrow'))
+		WebUI.click(selectSearchCriteria)
 
-		WebUI.click(findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/li_First Name'))
+		WebUI.click(selectFirstNameOpt)
 	}
 
 
 	@Keyword
 	def clickOnSearchButton () {
-		WebUI.waitForElementVisible(findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/input_Search Button'), 0)
+		WebUI.waitForElementVisible(buttonSearch, 20)
 
-		WebUI.click(findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/input_Search Button'))
+		WebUI.click(buttonSearch)
 	}
 
 
 	@Keyword
 	def clickOnReviewLink () {
-		WebUI.waitForElementVisible(findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/a_Review'), 0)
+		WebUI.waitForElementVisible(linkReview, 20)
 
-		WebUI.click(findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/a_Review'))
+		WebUI.click(linkReview)
 	}
 }

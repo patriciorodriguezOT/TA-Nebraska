@@ -24,15 +24,12 @@ import internal.GlobalVariable
 public class tcl {
 	@Keyword
 	def checkErrors(String[] tcId) {
-		
+
 		for(parent in tcId) {
 			Boolean existPrevFailure = GlobalVariable.G_TestCasesFailed.contains(parent)
-			
-			println existPrevFailure
-			
+
 			if (existPrevFailure) {
-				KeywordUtil.markErrorAndStop('\nThe test case can not be completed if a previous TC failed')
-				println 'entro al error'
+				KeywordUtil.markErrorAndStop('The test case can not be completed if a previous TC failed')
 			}
 		}
 	}
