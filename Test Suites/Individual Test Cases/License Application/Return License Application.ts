@@ -15,6 +15,6 @@
       <guid>35ae21f9-9eaf-4e9b-9701-f3e2123774e3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Licensure Unit License Application/Return License Application</testCaseId>
+      <testCaseId>Test Cases/Licensure Unit License Application/Return License Application as LU Processor</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

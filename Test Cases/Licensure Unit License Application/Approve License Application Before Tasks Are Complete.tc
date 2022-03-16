@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>On this Test Case, the LU user approve the tasks on the Checklist Management</description>
+   <description>On this Test Case, the LU user try to approve License Application without approving the Tasks</description>
    <name>Approve License Application Before Tasks Are Complete</name>
    <tag></tag>
    <comment></comment>
