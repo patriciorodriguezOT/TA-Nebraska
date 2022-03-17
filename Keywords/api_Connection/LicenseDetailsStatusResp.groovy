@@ -81,10 +81,10 @@ public class LicenseDetailsStatusResp {
 
 		WebUI.verifyMatch(simpleExpirationDate, endDate, true, FailureHandling.CONTINUE_ON_FAILURE)
 	}
-	
-	
+
+
 	@Keyword
-	def verifyOiginalStatusReason (Object responseDetailsStatus, String expectedStatusReason) {
+	def verifyOriginalStatusReason (Object responseDetailsStatus, String expectedStatusReason) {
 
 		// Get License Expiration Type and Date Expires from the form
 		String licenseStatusReason = WS.getElementPropertyValue(responseDetailsStatus, 'data[0]["reason Status was Assigned"]')
@@ -153,5 +153,4 @@ public class LicenseDetailsStatusResp {
 
 		WebUI.verifyMatch(licenseStatus, expectedStatus, true, FailureHandling.CONTINUE_ON_FAILURE)
 	}
-
 }

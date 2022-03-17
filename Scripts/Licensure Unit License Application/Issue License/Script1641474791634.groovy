@@ -155,7 +155,7 @@ CustomKeywords.'api_Connection.LicenseDetailsStatusResp.verifyOriginalEffectivet
 
 CustomKeywords.'api_Connection.LicenseDetailsStatusResp.verifyOriginalExpirationDate'(getLicenseDetailsStatusResp, expirationDate)
 
-CustomKeywords.'api_Connection.LicenseDetailsStatusResp.verifyStatusReason'(getLicenseDetailsStatusResp, statusReason)
+CustomKeywords.'api_Connection.LicenseDetailsStatusResp.verifyOriginalStatusReason'(getLicenseDetailsStatusResp, statusReason)
 
 //Close Browser
 WebUI.closeBrowser()

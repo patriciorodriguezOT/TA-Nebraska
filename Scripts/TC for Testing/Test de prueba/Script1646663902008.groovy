@@ -36,9 +36,9 @@ GetToken getTokenReq = new GetToken()
 
 
 
-GlobalVariable.G_Applicant_FirstName = 'PRarcnd'							//In case that FirstName has not been set
-GlobalVariable.G_Applicant_LastName = 'Automationqjkux' 					//In case that FirstName has not been set
-GlobalVariable.G_Applicant_Email = 'pruebas.onetree+Applicantarcnd@gmail.com'
+GlobalVariable.G_Applicant_FirstName = 'PRqsyjo'							//In case that FirstName has not been set
+GlobalVariable.G_Applicant_LastName = 'Automationctbgt' 					//In case that FirstName has not been set
+GlobalVariable.G_Applicant_Email = 'pruebas.onetree+Applicantqsyjo@gmail.com'
 
 
 
@@ -107,7 +107,7 @@ CustomKeywords.'api_Connection.LicenseDetailsStatusResp.verifyOriginalEffectivet
 
 CustomKeywords.'api_Connection.LicenseDetailsStatusResp.verifyOriginalExpirationDate'(getLicenseDetailsStatusResp, expirationDate)
 
-CustomKeywords.'api_Connection.LicenseDetailsStatusResp.verifyStatusReason'(getLicenseDetailsStatusResp, 'License Issued')
+CustomKeywords.'api_Connection.LicenseDetailsStatusResp.verifyOriginalStatusReason'(getLicenseDetailsStatusResp, 'License Issued')
 
 
 
