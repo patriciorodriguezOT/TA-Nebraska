@@ -31,13 +31,14 @@ public class Page_Home_Admin_Manage_Individual_IndividualsAll {
 	private	TestObject	textboxSearch					= findTestObject('Page_Home_Admin_VisualVault/Manage_Section/Individual/IndividualsAll/textbox_search');
 	private TestObject	btnSearch						= findTestObject('Page_Home_Admin_VisualVault/Manage_Section/Individual/IndividualsAll/btnSearch');
 	private TestObject	checkboxIndividualRecord		= findTestObject('Page_Home_Admin_VisualVault/Manage_Section/Individual/IndividualsAll/checkbox_individual_record');
+	private TestObject openLinkOpt1						= findTestObject('Page_Home_Admin_VisualVault/Manage_Section/Individual/IndividualsAll/a_Open Link Opt1')
 
 	@Keyword
 	def clickOnSearchFilterBtn () {
 		System.sleep(5000)
-		
+
 		WebUI.waitForElementVisible(btnSearchFilter, 20);
-		
+
 		WebUI.click(btnSearchFilter);
 	}
 
@@ -45,29 +46,37 @@ public class Page_Home_Admin_Manage_Individual_IndividualsAll {
 	def enterSearchCriteria (String searchCriteriaValue) {
 
 		//Select criteria type
-		WebUI.waitForElementVisible(dropdownSearchCriteria, 0);
+		WebUI.waitForElementVisible(dropdownSearchCriteria, 20);
 		WebUI.click(dropdownSearchCriteria);
 		WebUI.click(optionSearchCriteriaFirstName);
 
 		//Select operator
-		WebUI.waitForElementVisible(dropdownSearchOperator, 0);
+		WebUI.waitForElementVisible(dropdownSearchOperator, 20);
 		WebUI.click(dropdownSearchOperator);
 		WebUI.click(optionSearchOperatorContains);
 
 		//Input search value
-		WebUI.waitForElementVisible(textboxSearch, 0);
+		WebUI.waitForElementVisible(textboxSearch, 20);
 		WebUI.sendKeys(textboxSearch, searchCriteriaValue);
 	}
 
 	@Keyword
 	def clickOnSearchBtn () {
-		WebUI.waitForElementVisible(btnSearch, 0);
+		WebUI.waitForElementVisible(btnSearch, 20);
 		WebUI.click(btnSearch);
 	}
 
 	@Keyword
 	def verifyIndividualRecordCreated () {
-		WebUI.waitForElementVisible(checkboxIndividualRecord, 0)
-		WebUI.verifyElementPresent(checkboxIndividualRecord, 0)
+		WebUI.waitForElementVisible(checkboxIndividualRecord, 20)
+		WebUI.verifyElementPresent(checkboxIndividualRecord, 20)
+	}
+
+
+	@Keyword
+	def clickOnOpenLink () {
+		WebUI.waitForElementVisible(openLinkOpt1, 20)
+
+		WebUI.click(openLinkOpt1)
 	}
 }

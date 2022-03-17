@@ -6,15 +6,19 @@
    <elementGuidId>4cfaa15e-b121-437e-bf25-687ce273752d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>span.rtbText</value>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Search' or . = 'Search')]</value>
       </entry>
       <entry>
          <key>XPATH</key>
          <value>//span/span/span/span</value>
       </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span.rtbText</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

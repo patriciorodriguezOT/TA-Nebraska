@@ -58,13 +58,14 @@ public class Page_Licensure_Unit_Individual_Record {
 	private TestObject selectSameAddress			= findTestObject('Page_Licensure Unit Individual Record/Select Same Addresss/span_Select Item_k-icon k-i-arrow-s')
 	private TestObject selectSameAddressYes			= findTestObject('Page_Licensure Unit Individual Record/Select Same Addresss/li_Yes')
 	private TestObject selectSameAddressNo			= findTestObject('Page_Licensure Unit Individual Record/Select Same Addresss/li_No')
+	private TestObject buttonCancelAndClose			= findTestObject('Page_Licensure Unit Individual Record/button_Cancel and Close')
 
 
 
 
 	@Keyword
 	def enterFirstName (String FirstName) {
-		WebUI.waitForElementVisible(inputFirstName, 0)
+		WebUI.waitForElementVisible(inputFirstName, 20)
 
 		WebUI.sendKeys(inputFirstName, FirstName)
 	}
@@ -72,7 +73,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterLastName (String LastName) {
-		WebUI.waitForElementVisible(inputLastName, 0)
+		WebUI.waitForElementVisible(inputLastName, 20)
 
 		WebUI.sendKeys(inputLastName, LastName)
 	}
@@ -80,7 +81,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterDateOfBirth (String DOB) {
-		WebUI.waitForElementVisible(inputDOB, 0)
+		WebUI.waitForElementVisible(inputDOB, 20)
 
 		WebUI.sendKeys(inputDOB, DOB)
 	}
@@ -88,7 +89,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterPlaceOfBirth (String PlaceOfBirth) {
-		WebUI.waitForElementVisible(inputPlaceOfBirth, 0)
+		WebUI.waitForElementVisible(inputPlaceOfBirth, 20)
 
 		WebUI.sendKeys(inputPlaceOfBirth, PlaceOfBirth)
 	}
@@ -96,7 +97,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def selectCountryUS () {
-		WebUI.waitForElementVisible(selectCountry, 0)
+		WebUI.waitForElementVisible(selectCountry, 20)
 
 		WebUI.click(selectCountry)
 
@@ -106,7 +107,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def selectCountryCanada () {
-		WebUI.waitForElementVisible(selectCountry, 0)
+		WebUI.waitForElementVisible(selectCountry, 20)
 
 		WebUI.click(selectCountry)
 
@@ -116,7 +117,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def selectCountryUruguay () {
-		WebUI.waitForElementVisible(selectCountry, 0)
+		WebUI.waitForElementVisible(selectCountry, 20)
 
 		WebUI.click(selectCountry)
 
@@ -126,7 +127,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterZipCode (String ZipCode) {
-		WebUI.waitForElementVisible(inputZipCode, 0)
+		WebUI.waitForElementVisible(inputZipCode, 20)
 
 		WebUI.sendKeys(inputZipCode, ZipCode)
 	}
@@ -134,7 +135,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterAddressLine1 (String AddressLine) {
-		WebUI.waitForElementVisible(inputAddressLine1, 0)
+		WebUI.waitForElementVisible(inputAddressLine1, 20)
 
 		WebUI.sendKeys(inputAddressLine1, AddressLine)
 	}
@@ -142,7 +143,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def selectSameAddress (String sameAddress) {
-		WebUI.waitForElementVisible(selectSameAddress, 0)
+		WebUI.waitForElementVisible(selectSameAddress, 20)
 
 		if (sameAddress == 'Yes') {
 			WebUI.click(selectSameAddress)
@@ -158,7 +159,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def selectUSCitizen (String USCitizen) {
-		WebUI.waitForElementVisible(selectUSCitizen, 0)
+		WebUI.waitForElementVisible(selectUSCitizen, 20)
 
 		if (USCitizen == 'Yes') {
 			WebUI.click(selectUSCitizen)
@@ -174,7 +175,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterSSN (String SSN) {
-		WebUI.waitForElementVisible(inputSSN, 0)
+		WebUI.waitForElementVisible(inputSSN, 20)
 
 		WebUI.sendKeys(inputSSN, SSN)
 	}
@@ -182,7 +183,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def selectDoYouHaveSSN (String SSN) {
-		WebUI.waitForElementVisible(selectDoYouHaveSSN, 0)
+		WebUI.waitForElementVisible(selectDoYouHaveSSN, 20)
 
 		if (SSN == 'Yes') {
 			WebUI.click(selectDoYouHaveSSN)
@@ -198,7 +199,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterAlienRegisterNumber (String AlienRegNum) {
-		WebUI.waitForElementVisible(inputAlianRegNum, 0)
+		WebUI.waitForElementVisible(inputAlianRegNum, 20)
 
 		WebUI.sendKeys(inputAlianRegNum, AlienRegNum)
 	}
@@ -206,7 +207,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterI94 (String I94) {
-		WebUI.waitForElementVisible(inputI94, 0)
+		WebUI.waitForElementVisible(inputI94, 20)
 
 		WebUI.sendKeys(inputI94, I94)
 	}
@@ -214,7 +215,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def completePhoneNumber (String PhoneNumber) {
-		WebUI.waitForElementVisible(inptuPrimaryPhoneNumber, 0)
+		WebUI.waitForElementVisible(inptuPrimaryPhoneNumber, 20)
 
 		WebUI.click(selectPrimaryPhoneType)
 
@@ -226,7 +227,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterEmailAddress (String EmailAddress) {
-		WebUI.waitForElementVisible(inptuEmailAddress, 0)
+		WebUI.waitForElementVisible(inptuEmailAddress, 20)
 
 		WebUI.sendKeys(inptuEmailAddress, EmailAddress)
 	}
@@ -234,7 +235,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterRetypeEmailAddress (String EmailAddress) {
-		WebUI.waitForElementVisible(inptuRetypeEmailAddress, 0)
+		WebUI.waitForElementVisible(inptuRetypeEmailAddress, 20)
 
 		WebUI.sendKeys(inptuRetypeEmailAddress, EmailAddress)
 	}
@@ -242,14 +243,22 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def clickOnSaveAndConfirm () {
-		WebUI.waitForElementVisible(buttonSaveAndConfirm, 0)
+		WebUI.waitForElementVisible(buttonSaveAndConfirm, 20)
 
 		WebUI.click(buttonSaveAndConfirm)
 
-		WebUI.waitForElementVisible(h5ModalDialogTitle, 0)
+		WebUI.waitForElementVisible(h5ModalDialogTitle, 20)
 
 		WebUI.verifyElementText(h5ModalDialogTitle, 'Record Created')
 
 		WebUI.click(buttonModalDialogOk)
+	}
+
+
+	@Keyword
+	def clickOnCancelAndCloseBtn () {
+		WebUI.waitForElementVisible(buttonCancelAndClose, 20)
+
+		WebUI.click(buttonCancelAndClose)
 	}
 }

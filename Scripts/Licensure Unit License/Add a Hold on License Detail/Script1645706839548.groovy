@@ -25,6 +25,7 @@ GlobalVariable.G_Applicant_LastName = 'Automationoiiod'
 // Set variables
 String licenseType = 'Physical Therapist'
 String licenseStatus = 'On Hold'
+String modalDialogTitle = 'On Hold Information'
 
 
 // Go to Login Page
@@ -69,12 +70,75 @@ CustomKeywords.'pages.Page_Licensure_Unit_License.clickOnPlaceOnHoldBtn'()
 CustomKeywords.'pages.Page_Licensure_Unit_License.verifyStatus'(licenseStatus)
 
 
-// Close License Form and Open it again to verify message On Hold is displayed
+// Close License Form
 CustomKeywords.'pages.Page_Licensure_Unit_License.clickOnCancelAndContinueButton'()
 
 CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
 WebUI.switchToWindowIndex(currentTab)
+
+System.sleep(5000)
+
+
+
+// Click on Review Link on the License Application
+CustomKeywords.'pages.Page_Home_Admin_LicenseDetails.clickOnOpenLink'()
+
+WebUI.switchToWindowIndex(currentTab + 1)
+
+WebUI.waitForPageLoad(50)
+
+System.sleep(5000)
+
+
+
+// Verify Title of Modal Dialog is "Hold Message"
+CustomKeywords.'pages.ModalDialog.verifyTitle'(modalDialogTitle)
+
+CustomKeywords.'pages.ModalDialog.clickOnOkbutton'()
+
+
+
+// Close License Form
+CustomKeywords.'pages.Page_Licensure_Unit_License.clickOnCancelAndContinueButton'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+WebUI.switchToWindowIndex(currentTab)
+
+System.sleep(5000)
+
+
+
+// Go to Individuals All section and Look for the License Details Owner
+WebUI.navigateToUrl(GlobalVariable.G_IndividualsAll_Link)
+
+CustomKeywords.'pages.Page_Home_Admin_Manage_Individual_IndividualsAll.clickOnSearchFilterBtn'()
+
+CustomKeywords.'pages.Page_Home_Admin_Manage_Individual_IndividualsAll.enterSearchCriteria'(GlobalVariable.G_Applicant_FirstName)
+
+CustomKeywords.'pages.Page_Home_Admin_Manage_Individual_IndividualsAll.clickOnSearchBtn'()
+
+CustomKeywords.'pages.Page_Home_Admin_Manage_Individual_IndividualsAll.clickOnOpenLink'()
+
+WebUI.switchToWindowIndex(currentTab + 1)
+
+
+
+// Verify Title of Modal Dialog is "Hold Message"
+CustomKeywords.'pages.ModalDialog.verifyTitle'(modalDialogTitle)
+
+CustomKeywords.'pages.ModalDialog.clickOnOkbutton'()
+
+
+
+// Close Individual Record form
+CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.clickOnCancelAndCloseBtn'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+
+
 
 System.sleep(2000)
 

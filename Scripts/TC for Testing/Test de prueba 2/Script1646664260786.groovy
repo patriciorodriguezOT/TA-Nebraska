@@ -24,10 +24,107 @@ import java.util.Calendar as Calendar
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import gmail_Connection.getEmailContent as getEmailContent
 
+GlobalVariable.G_Applicant_Email = 'pruebas.onetree+Applicantikbvo@gmail.com'
+GlobalVariable.G_Applicant_FirstName = 'PRikbvo'
+GlobalVariable.G_Applicant_LastName = 'Automationuqmfa'
 
-WebUI.callTestCase(findTestCase('TC for Testing/Test de prueba'), [:], FailureHandling.STOP_ON_FAILURE)
+// Set variables
+String licenseType = 'Physical Therapist'
+String licenseStatus = 'On Hold'
+String modalDialogTitle = 'On Hold Information3'
+
+
+// Go to Login Page
+WebUI.openBrowser(GlobalVariable.G_Nebraska_Link)
 
 // Login with LU Staff user
 CustomKeywords.'pages.Page_Login.login'(GlobalVariable.G_LM_Staff_UserName, GlobalVariable.G_LM_Staff_Pass)
+
+
+// Go to Applications in Progress
+CustomKeywords.'pages.Page_Home_Admin.clickOnLicenseDetails'()
+
+// Search Applicant by First Name
+CustomKeywords.'pages.Page_Home_Admin_LicenseDetails.clickOnMainSearchButton'()
+
+CustomKeywords.'pages.Page_Home_Admin_LicenseDetails.selectFirstNameForSearch'()
+
+CustomKeywords.'pages.Page_Home_Admin_LicenseDetails.enterSearchCriteria'(GlobalVariable.G_Applicant_FirstName)
+
+CustomKeywords.'pages.Page_Home_Admin_LicenseDetails.clickOnSearchButton'()
+
+// Click on Review Link on the License Application
+CustomKeywords.'pages.Page_Home_Admin_LicenseDetails.clickOnOpenLink'()
+
+
+
+// Move to Next Window
+int currentTab = WebUI.getWindowIndex()
+
+WebUI.switchToWindowIndex(currentTab + 1)
+
+
+
+//
+
+
+
+
+WebUI.waitForPageLoad(50)
+
+System.sleep(5000)
+
+
+
+// Verify Title of Modal Dialog is "Hold Message"
+CustomKeywords.'pages.ModalDialog.verifyTitle'(modalDialogTitle)
+
+CustomKeywords.'pages.ModalDialog.clickOnOkbutton'()
+
+
+
+// Close License Form
+CustomKeywords.'pages.Page_Licensure_Unit_License.clickOnCancelAndContinueButton'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+WebUI.switchToWindowIndex(currentTab)
+
+System.sleep(5000)
+
+
+
+// Go to Individuals All section and Look for the License Details Owner
+WebUI.navigateToUrl(GlobalVariable.G_IndividualsAll_Link)
+
+CustomKeywords.'pages.Page_Home_Admin_Manage_Individual_IndividualsAll.clickOnSearchFilterBtn'()
+
+CustomKeywords.'pages.Page_Home_Admin_Manage_Individual_IndividualsAll.enterSearchCriteria'(GlobalVariable.G_Applicant_FirstName)
+
+CustomKeywords.'pages.Page_Home_Admin_Manage_Individual_IndividualsAll.clickOnSearchBtn'()
+
+CustomKeywords.'pages.Page_Home_Admin_Manage_Individual_IndividualsAll.clickOnOpenLink'()
+
+WebUI.switchToWindowIndex(currentTab + 1)
+
+
+
+// Verify Title of Modal Dialog is "Hold Message"
+CustomKeywords.'pages.ModalDialog.verifyTitle'(modalDialogTitle)
+
+CustomKeywords.'pages.ModalDialog.clickOnOkbutton'()
+
+
+
+// Close Individual Record form
+CustomKeywords.'pages.Page_Licensure_Unit_Individual_Record.clickOnCancelAndCloseBtn'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+
+
+
+System.sleep(2000)
+
 
 
