@@ -22,33 +22,102 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-
-
+/*************
+ * Objects
+ *************/
 public class Page_Licensure_Unit_Appeals {
 
+	private TestObject inputAppealCode			= findTestObject('Page_Licensure Unit Appeals/input_Appeal_Code')
+	private TestObject btnModalClose			= findTestObject('Page_Licensure Unit Appeals/button_Modal_Close')
+	private TestObject btnNext					= findTestObject('Page_Licensure Unit Appeals/button_Next')
+	private TestObject btnAppealSubmit			= findTestObject('Page_Licensure Unit Appeals/button_Appeal_Submit')
+	private TestObject checkboxOutsideUSA		= findTestObject('Page_Licensure Unit Appeals/checkbox_OutsideUSA')
+	private TestObject inputPhone				= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Phone')
+	private TestObject inputPhoneExt			= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Phone_Ext')
+	private TestObject inputAddressL1			= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Address_L1')
+	private TestObject inputAddressL2			= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Address_L2')
+	private TestObject inputAddressL3			= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Address_L3')
+	private TestObject inputZip					= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Zip')
+	private TestObject textareaAppealReason		= findTestObject('Page_Licensure Unit Appeals/textarea_ReasonForAppeal')
+	private TestObject divAppealSubmitted		= findTestObject('Page_Licensure Unit Appeals/Page_Appeal_Submitted/div_Appeal_Submitted')
 
-	private TestObject inputAppealCode						= findTestObject('Page_Licensure Unit Appeals/input_Appeal Code')
-	private TestObject buttonNext							= findTestObject('Page_Licensure Unit Appeals/button_Next')
-	private TestObject inputEmail							= findTestObject('Page_Licensure Unit Appeals/input_Applicant Email')
-
+	/*************
+	 * Inputs
+	 *************/	
 	@Keyword
 	def enterAppealCode (String appealCode) {
 		WebUI.waitForElementVisible(inputAppealCode, 0)
-
 		WebUI.sendKeys(inputAppealCode, appealCode)
 	}
 
 	@Keyword
-	def clickOnNextButton () {
-		WebUI.waitForElementVisible(buttonNext, 0)
-
-		WebUI.click(buttonNext)
+	def enterUpdatedPhone (String phone) {
+		WebUI.waitForElementVisible(inputPhone, 0)
+		WebUI.setText(inputPhone, phone)
+	}
+	
+	@Keyword
+	def enterUpdatedPhonExt (String ext) {
+		WebUI.waitForElementVisible(inputPhoneExt, 0)
+		WebUI.setText(inputPhoneExt, ext)
 	}
 
 	@Keyword
-	def verifyEmail (String email) {
-		WebUI.waitForElementVisible(inputEmail, 0)
+	def enterUpdatedAddressL1 (String address) {
+		WebUI.waitForElementVisible(inputAddressL1, 0)
+		WebUI.setText(inputAddressL1, address)
+	}
+	
+	@Keyword
+	def enterUpdatedAddressL2 (String address) {
+		WebUI.waitForElementVisible(inputAddressL2, 0)
+		WebUI.setText(inputAddressL2, address)
+	}
+	
+	@Keyword
+	def enterUpdatedAddressL3 (String address) {
+		WebUI.waitForElementVisible(inputAddressL3, 0)
+		WebUI.setText(inputAddressL3, address)
+	}
+	
+	@Keyword
+	def enterUpdatedZip (String zip) {
+		WebUI.waitForElementVisible(inputZip, 0)
+		WebUI.setText(inputZip, zip)
+	}
 
-		WebUI.verifyElementAttributeValue(inputEmail, 'value', email, 0)
+	@Keyword
+	def enterAppealReason (String text) {
+		WebUI.waitForElementVisible(textareaAppealReason, 0)
+		WebUI.sendKeys(textareaAppealReason, text)
+	}
+
+	/*************
+	 * Buttons
+	 *************/
+	@Keyword
+	def clickOnNextBtn () {
+		WebUI.waitForElementVisible(btnNext, 0)
+		WebUI.click(btnNext)
+	}
+
+	@Keyword
+	def clicOnCloseModalBtn () {
+		WebUI.waitForElementVisible(btnModalClose, 0)
+		WebUI.click(btnModalClose)
+	}
+
+	@Keyword
+	def clicOnAppealSubmitBtn () {
+		WebUI.waitForElementVisible(btnAppealSubmit, 0)
+		WebUI.click(btnAppealSubmit)
+	}
+
+	/****************
+	 * Validations
+	 ****************/
+	@Keyword
+	def verifyAppealSubmitted () {
+		WebUI.verifyElementPresent(divAppealSubmitted, 0)
 	}
 }
