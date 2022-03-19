@@ -45,3 +45,6 @@ String alertText = driver.switchTo().alert().getText()
 // Verify if modal text contains an error message indicating denial code is invalid
 String errorText = String.format("An error was encountered. The denial code of %s was not found in the system or is older than 50 days.", randomAppealCode);
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.verifyErrorAlert'(alertText, errorText)
+
+//Close browser
+WebUI.closeBrowser()
