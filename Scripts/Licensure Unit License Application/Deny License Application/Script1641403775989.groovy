@@ -91,9 +91,3 @@ GlobalVariable.G_Appeal_Code = CustomKeywords.'pages.Page_Licensure_Unit_License
 
 //Close Browser
 WebUI.closeBrowser()
-
-
-
-
-// Verify Appeal Record and Code were created correctly
-WebUI.callTestCase(findTestCase('Licensure Unit License Application/Verify Appeal Record was Created'), [:], FailureHandling.STOP_ON_FAILURE)
