@@ -35,32 +35,26 @@ public class Page_Licensure_Unit_Appeals {
 	@Keyword
 	def enterAppealCode (String appealCode) {
 		WebUI.waitForElementVisible(inputAppealCode, 0)
-
 		WebUI.sendKeys(inputAppealCode, appealCode)
 	}
 
 	@Keyword
 	def clickOnNextButton () {
 		WebUI.waitForElementVisible(buttonNext, 0)
-
 		WebUI.click(buttonNext)
 	}
 
 	@Keyword
 	def verifyEmail (String email) {
 		WebUI.waitForElementVisible(inputEmail, 0)
-
 		WebUI.verifyElementAttributeValue(inputEmail, 'value', email, 0)
 	}
-	
+
 	@Keyword
 	def verifyErrorAlert (String alertObj, String errorText) {
-		if (alertObj.contains(errorText)) {
-			// Close Browser
-			WebUI.closeBrowser()
-		} else {
+		if (!alertObj.contains(errorText)) {
 			// Stop tc execution
-			KeywordUtil.markErrorAndStop('\nThe test case can not be completed.')
+			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due VALID denial code entered")
 		}
 	}
 }
