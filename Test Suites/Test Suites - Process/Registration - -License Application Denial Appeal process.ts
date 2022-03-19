@@ -83,4 +83,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Licensure Unit License Application/Deny License Application</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>8a921ad5-63f2-4032-8e6f-d1711b57cf2a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit License Application/Submit Appeal with Valid Denial Code from Public link</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
