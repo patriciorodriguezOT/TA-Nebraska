@@ -17,15 +17,39 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-// Go Appeal Public Link
+// Verify Parents TC have not failed ---
+// Set TCs dependency
+String[] parentsTC = ['Test Cases/Licensure Unit License Application/Deny License Application']
+// Verify any TC dependency has failed
+CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
+
+// Go to Appeal Public Link
 WebUI.openBrowser(GlobalVariable.G_Appeal_Link)
 
-// Enter Appeal Code and go next
+// Enter Appeal Code and click Next
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'(GlobalVariable.G_Appeal_Code)
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextButton'()
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextBtn'()
 
-// Go to Applications in Progress
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.verifyEmail'(GlobalVariable.G_Applicant_Email)
+// Dismiss appeal info modal
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnCloseModalBtn'()
+
+// Update address info
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedPhone'('3333333333') 		// Update phone number
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL1'('PO BOX 5') 	// Update address line 1
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL2'('1234 Street') // Update address line 2
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL2'('5678 Street') // Update address line 3
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL2'('81611') 		// Update zip code (Aspen,CO)
+
+// Enter appeal reason
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealReason'('Because I can')
+
+//Upload file to attach MISSING
+
+// Click on submit appeal
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnAppealSubmitBtn'()
+
+// Verify appeal was submitted
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.verifyAppealSubmitted'()
 
 // Close Browser
-//WebUI.closeBrowser()
+WebUI.closeBrowser()
