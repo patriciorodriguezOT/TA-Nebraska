@@ -19,6 +19,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.kms.katalon.core.util.KeywordUtil
 
 import internal.GlobalVariable
 
@@ -55,7 +56,7 @@ public class Page_Licensure_Unit_Appeals {
 		WebUI.waitForElementVisible(inputPhone, 0)
 		WebUI.setText(inputPhone, phone)
 	}
-	
+
 	@Keyword
 	def enterUpdatedPhonExt (String ext) {
 		WebUI.waitForElementVisible(inputPhoneExt, 0)
@@ -67,19 +68,19 @@ public class Page_Licensure_Unit_Appeals {
 		WebUI.waitForElementVisible(inputAddressL1, 0)
 		WebUI.setText(inputAddressL1, address)
 	}
-	
+
 	@Keyword
 	def enterUpdatedAddressL2 (String address) {
 		WebUI.waitForElementVisible(inputAddressL2, 0)
 		WebUI.setText(inputAddressL2, address)
 	}
-	
+
 	@Keyword
 	def enterUpdatedAddressL3 (String address) {
 		WebUI.waitForElementVisible(inputAddressL3, 0)
 		WebUI.setText(inputAddressL3, address)
 	}
-	
+
 	@Keyword
 	def enterUpdatedZip (String zip) {
 		WebUI.waitForElementVisible(inputZip, 0)
@@ -118,6 +119,8 @@ public class Page_Licensure_Unit_Appeals {
 	 ****************/
 	@Keyword
 	def verifyAppealSubmitted () {
-		WebUI.verifyElementPresent(divAppealSubmitted, 0)
+		if (!WebUI.verifyElementPresent(divAppealSubmitted, 0)) {
+			KeywordUtil.markFailed('\nThe test case can not be completed. Appeal form submission failed')
+		}
 	}
 }
