@@ -27,19 +27,19 @@ import internal.GlobalVariable
  *************/
 public class Page_Licensure_Unit_Appeals {
 
-	private TestObject inputAppealCode			= findTestObject('Page_Licensure Unit Appeals/input_Appeal_Code')
-	private TestObject btnModalClose			= findTestObject('Page_Licensure Unit Appeals/button_Modal_Close')
-	private TestObject btnNext					= findTestObject('Page_Licensure Unit Appeals/button_Next')
-	private TestObject btnAppealSubmit			= findTestObject('Page_Licensure Unit Appeals/button_Appeal_Submit')
-	private TestObject checkboxOutsideUSA		= findTestObject('Page_Licensure Unit Appeals/checkbox_OutsideUSA')
-	private TestObject inputPhone				= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Phone')
-	private TestObject inputPhoneExt			= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Phone_Ext')
-	private TestObject inputAddressL1			= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Address_L1')
-	private TestObject inputAddressL2			= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Address_L2')
-	private TestObject inputAddressL3			= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Address_L3')
-	private TestObject inputZip					= findTestObject('Page_Licensure Unit Appeals/input_Applicant_Zip')
-	private TestObject textareaAppealReason		= findTestObject('Page_Licensure Unit Appeals/textarea_ReasonForAppeal')
-	private TestObject divAppealSubmitted		= findTestObject('Page_Licensure Unit Appeals/Page_Appeal_Submitted/div_Appeal_Submitted')
+	private TestObject inputAppealCode			= findTestObject('Page_Licensure_Unit_Appeals/input_Appeal_Code')
+	private TestObject btnModalClose			= findTestObject('Page_Licensure_Unit_Appeals/button_Modal_Close')
+	private TestObject btnNext					= findTestObject('Page_Licensure_Unit_Appeals/button_Next')
+	private TestObject btnAppealSubmit			= findTestObject('Page_Licensure_Unit_Appeals/button_Appeal_Submit')
+	private TestObject checkboxOutsideUSA		= findTestObject('Page_Licensure_Unit_Appeals/checkbox_OutsideUSA')
+	private TestObject inputPhone				= findTestObject('Page_Licensure_Unit_Appeals/input_Applicant_Phone')
+	private TestObject inputPhoneExt			= findTestObject('Page_Licensure_Unit_Appeals/input_Applicant_Phone_Ext')
+	private TestObject inputAddressL1			= findTestObject('Page_Licensure_Unit_Appeals/input_Applicant_Address_L1')
+	private TestObject inputAddressL2			= findTestObject('Page_Licensure_Unit_Appeals/input_Applicant_Address_L2')
+	private TestObject inputAddressL3			= findTestObject('Page_Licensure_Unit_Appeals/input_Applicant_Address_L3')
+	private TestObject inputZip					= findTestObject('Page_Licensure_Unit_Appeals/input_Applicant_Zip')
+	private TestObject textareaAppealReason		= findTestObject('Page_Licensure_Unit_Appeals/textarea_ReasonForAppeal')
+	private TestObject divAppealSubmitted		= findTestObject('Page_Licensure_Unit_Appeals/Page_Appeal_Submitted/div_Appeal_Submitted')
 
 	/*************
 	 * Inputs
