@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description>Submit appeal with invalid denial code from Public link</description>
-   <name>Appeal Denied License Application - Invalid denial code</name>
+   <name>Submit appeal with invalid denial code from Public link</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
