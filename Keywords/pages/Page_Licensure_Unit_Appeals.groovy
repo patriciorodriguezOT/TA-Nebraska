@@ -120,7 +120,7 @@ public class Page_Licensure_Unit_Appeals {
 	@Keyword
 	def verifyAppealSubmitted () {
 		if (!WebUI.verifyElementPresent(divAppealSubmitted, 0)) {
-			KeywordUtil.markFailed('\nThe test case can not be completed. Appeal form submission failed')
+			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due INVALID denial code entered")
 		}
 	}
 }
