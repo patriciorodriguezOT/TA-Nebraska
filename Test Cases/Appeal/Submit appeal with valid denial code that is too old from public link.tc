@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>There is a 50 day period that the denial codes are usable. Using the public link and the old denial code, attempt to submit with the old denial code. User should be stopped indicating that it is out of date. Test with codes that are at 49, 50 and 51 days to determine which ones go and which ones do not.</description>
+   <name>Submit appeal with valid denial code that is too old from public link</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c1e32635-4795-4dca-98c5-e9a341112b1d</testCaseGuid>
+</TestCaseEntity>
