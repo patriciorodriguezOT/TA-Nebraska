@@ -19,6 +19,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.kms.katalon.core.util.KeywordUtil
 
 import internal.GlobalVariable
 
@@ -34,21 +35,26 @@ public class Page_Licensure_Unit_Appeals {
 	@Keyword
 	def enterAppealCode (String appealCode) {
 		WebUI.waitForElementVisible(inputAppealCode, 0)
-
 		WebUI.sendKeys(inputAppealCode, appealCode)
 	}
 
 	@Keyword
 	def clickOnNextButton () {
 		WebUI.waitForElementVisible(buttonNext, 0)
-
 		WebUI.click(buttonNext)
 	}
 
 	@Keyword
 	def verifyEmail (String email) {
 		WebUI.waitForElementVisible(inputEmail, 0)
-
 		WebUI.verifyElementAttributeValue(inputEmail, 'value', email, 0)
+	}
+
+	@Keyword
+	def verifyErrorAlert (String alertObj, String errorText) {
+		if (!alertObj.contains(errorText)) {
+			// Stop tc execution
+			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due VALID denial code entered")
+		}
 	}
 }
