@@ -15,6 +15,6 @@
       <guid>1d9c2ddd-2cc3-4f63-bf25-884bde29c512</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Licensure Unit License Application/Appeal/Submit appeal with invalid denial code from Public link</testCaseId>
+      <testCaseId>Test Cases/Appeal/Submit appeal with invalid denial code from Public link</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
