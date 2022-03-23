@@ -35,9 +35,10 @@ CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 
 
 
-int currentTab
+int currentTab = 0
 String licenseName = 'Physical+Therapist'
 GetToken getTokenReq = new GetToken()
+String statusReason = 'License Issued'
 
 
 
@@ -154,6 +155,7 @@ CustomKeywords.'api_Connection.LicenseDetailsStatusResp.verifyOriginalEffectivet
 
 CustomKeywords.'api_Connection.LicenseDetailsStatusResp.verifyOriginalExpirationDate'(getLicenseDetailsStatusResp, expirationDate)
 
+CustomKeywords.'api_Connection.LicenseDetailsStatusResp.verifyOriginalStatusReason'(getLicenseDetailsStatusResp, statusReason)
 
 //Close Browser
 WebUI.closeBrowser()

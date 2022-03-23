@@ -17,21 +17,22 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import generic.common_functions as common_functions
+import com.kms.katalon.core.configuration.RunConfiguration
 
 
 
 // Verify Parents TC have not failed ---
 // Set TCs dependency
-String[] parentsTC = ['Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist', 'Test Cases/Licensure Unit License Application/Return License Application']
+String[] parentsTC = ['Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist', 'Test Cases/Licensure Unit License Application/Return License Application as LU Processor']
 // Verify any TC dependency has failed
 CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
-
-
 
 
 String messageTitle = 'Application Re-Submitted'
 String messageBody = "You have successfully re-submitted your license application. The application is now under review with the Nebraska Licensure Unit. You can review submitted application in read-only mode by navigating through the tabs on LICENSE APPLICATION. If the Licensure Unit needs additional information, you will receive notification to add or update your information. You can now go to the home page and check the status of your application under 'My Applications In Process' by clicking on the 'My Home' tab on the left side of the portal"
 String expectedStatus = 'Submitted'
+String projectPath = RunConfiguration.getProjectDir()
+String emtpyDoc2path = projectPath + '\\Documents\\Document Empty 2.txt'
 
 
 
@@ -58,7 +59,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_License_Application.clickOnChecklistMa
 // Complete first task returned (Citizen Documentation)
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnUploadButton'()
 
-common_functions.uploadFilePath('C:\\Users\\patricior-ot\\Documents\\VisualVault\\Nebraska\\Document Empty 2.txt')
+common_functions.uploadFilePath(emtpyDoc2path)
 
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnNextButton'()
 
