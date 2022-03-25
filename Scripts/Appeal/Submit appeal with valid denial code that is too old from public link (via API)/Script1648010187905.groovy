@@ -17,6 +17,7 @@ import com.sun.net.httpserver.Authenticator.Failure
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.util.KeywordUtil
 import internal.GlobalVariable as GlobalVariable
+import generic.generic_functions as GenericFunctions
 import org.openqa.selenium.Keys as Keys
 
 import ws.GetToken as GetToken
@@ -31,6 +32,7 @@ ResponseObject getTokenResp = getTokenReq.getToken1()
 
 CustomKeywords.'api_Connection.TokenResp.getToken'(getTokenResp)
 
+// TC fail control
 if(getTokenReq.getStatusCode(getTokenResp) != 200) {
 	KeywordUtil.markFailed("Status code is not 200 as expected. It is "	+ GetToken.getStatusCode(getTokenResp))
 }
@@ -40,6 +42,7 @@ GetDenialEventRecord getDenialEventRecordReq = new GetDenialEventRecord()
 
 ResponseObject getDenialEventRecordRes = getDenialEventRecordReq.getDenialEventRecordByDenialCode('229795')
 
+// TC fail control
 if(getDenialEventRecordReq.getStatusCode(getDenialEventRecordRes) != 200) {
 	KeywordUtil.markFailed("Status code is not 200 as expected. It is "	+ GetToken.getStatusCode(getDenialEventRecordRes))
 }
@@ -47,18 +50,21 @@ if(getDenialEventRecordReq.getStatusCode(getDenialEventRecordRes) != 200) {
 // Get Revision ID from Denial Event Record Res
 GlobalVariable.G_DenialEvent_RevisionId = CustomKeywords.'api_Connection.DenialEventRecordRes.getDenialEventRecordRevisionId'(getDenialEventRecordRes)
 
+// Get Danial Date from Denial Event Record Res
+GlobalVariable.G_DenialEvent_DenialDate = CustomKeywords.'api_Connection.DenialEventRecordRes.getDenialEventRecordDenialDate'(getDenialEventRecordRes)
+
+// Modifies Denial Date 51 days into future
+String newDenialDate51 = GenericFunctions.getCustomDatePlusCustomDays(GlobalVariable.G_DenialEvent_DenialDate, 51)
+
 // Post new Denial Event date of Denial for License Application Record
 PostDenialEventRecord postDenialEventRecordReq = new PostDenialEventRecord()
 
-ResponseObject postDenialEventRecordRes = postDenialEventRecordReq.postNewDenialDate('2022-03-18T00:33:50Z')
+ResponseObject postDenialEventRecordRes = postDenialEventRecordReq.postNewDenialDate(newDenialDate51)
 
+// TC fail control
 if(getDenialEventRecordReq.getStatusCode(postDenialEventRecordRes) != 200) {
 	KeywordUtil.markFailed("Status code is not 200 as expected. It is "	+ GetToken.getStatusCode(postDenialEventRecordRes))
 }
-
-// Get denial date from Denial Event Record Res
-String newDenialDate = CustomKeywords.'api_Connection.DenialEventRecordRes.getDenialEventRecordDenialDate'(getDenialEventRecordRes)
-println newDenialDate
 
 // Open appeal form
 
@@ -66,4 +72,18 @@ println newDenialDate
 
 // Click next
 
-// Handle error msj/display form
+// Handle error msj
+
+// Get denial date with 50 days
+
+// Post new denial date
+
+// // Open appeal form
+
+// Enter appeal code
+
+// Click next
+
+// Handle Display form
+
+// Call TS to get new appeal code
