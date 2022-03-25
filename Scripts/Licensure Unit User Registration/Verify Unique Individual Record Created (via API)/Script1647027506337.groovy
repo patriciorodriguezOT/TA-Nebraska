@@ -24,6 +24,7 @@ import ws.GetIndividualRecord as GetIndividualRecord
 
 // Verify Individual Record Details Status was created correctly
 
+
 GetToken getTokenReq = new GetToken()
 
 ResponseObject getTokenResp = getTokenReq.getToken1()
@@ -45,6 +46,8 @@ if(getIndividualRecordReq.getStatusCode(getIndividualRecordResp) != 200) {
 
 // Get Record ID from Individual Record Details Resp
 String applicantEmail = CustomKeywords.'api_Connection.IndividualRecordResp.getApplicantEmail'(getIndividualRecordResp)
+
+CustomKeywords.'api_Connection.IndividualRecordResp.verifyUniqueIndividualRecord'(getIndividualRecordResp)
 
 // Validates that global email variable matches API returned applicant email
 WebUI.verifyMatch(applicantEmail, GlobalVariable.G_Applicant_Email, false, FailureHandling.CONTINUE_ON_FAILURE)

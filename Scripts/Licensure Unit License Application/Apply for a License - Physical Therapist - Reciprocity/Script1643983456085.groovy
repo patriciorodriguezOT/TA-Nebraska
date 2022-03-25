@@ -21,7 +21,7 @@ import java.text.SimpleDateFormat as SimpleDateFormat
 import java.util.Calendar as Calendar
 import generic.generic_functions as Generic_functions
 import generic.common_functions as common_functions
-import generic.common_functions as Common_functions
+import com.kms.katalon.core.configuration.RunConfiguration
 
 // Verify Parents TC have not failed ---
 // Set TCs dependency
@@ -37,6 +37,8 @@ String placeOfBirth = 'Alaska'
 String schoolName = 'PR Test'
 String titleMessageRecord = 'Record Saved'
 String printName = 'PR Automation Test'
+String projectPath = RunConfiguration.getProjectDir()
+String emtpyDocpath = projectPath + '\\Documents\\Document Empty.txt'
 
 
 // Open Browser
@@ -171,7 +173,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Practice_Prior_To_
 
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnUploadButton'()
 
-common_functions.uploadFilePath('C:\\Users\\patricior-ot\\Documents\\VisualVault\\Nebraska\\Document Empty.txt')
+common_functions.uploadFilePath(emtpyDocpath)
 
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnNextButton'()
 

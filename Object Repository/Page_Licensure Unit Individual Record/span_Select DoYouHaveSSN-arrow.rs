@@ -6,12 +6,12 @@
    <elementGuidId>8105c844-5e80-4507-8004-feada2e9c186</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>#k-4a5bdef0-140a-4820-87fb-a3ad77f60b6c > span.k-select > span.k-icon.k-i-arrow-s</value>
+         <key>XPATH</key>
+         <value>//kendo-dropdownlist[@id='Has SSN']/span/span[2]/span</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[18]/div[2]/div/kendo-dropdownlist/span/span[2]/span</value>
+         <key>CSS</key>
+         <value>#k-4a5bdef0-140a-4820-87fb-a3ad77f60b6c > span.k-select > span.k-icon.k-i-arrow-s</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Using letter management create a denial letter. Verify Tokens and Keywords are substituted correctly</description>
    <name>Create Denial Letter</name>
    <tag></tag>
    <comment></comment>

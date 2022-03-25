@@ -30,7 +30,7 @@ int currentTab = 0
 
 
 // Set Random Variables
-GlobalVariable.G_Applicant_DOB = Generic_functions.randomPastDate(18250, 5840)
+GlobalVariable.G_Applicant_DOB = Generic_functions.randomPastDate(18250, 10000)
 
 GlobalVariable.G_Applicant_SSN = Generic_functions.randomString(nums, 9)
 
@@ -38,7 +38,7 @@ GlobalVariable.G_Applicant_FirstName = ('PR' + randomFirstName)
 
 GlobalVariable.G_Applicant_LastName = ('Automation' + randomLastName)
 
-GlobalVariable.G_Applicant_Email = (('patricio.rodriguez+Applicant' + randomFirstName) + '@onetree.com')
+GlobalVariable.G_Applicant_Email = (('pruebas.onetree+Applicant' + randomFirstName) + '@gmail.com')
 
 
 

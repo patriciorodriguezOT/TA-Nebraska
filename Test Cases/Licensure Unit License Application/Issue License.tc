@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Verify that the license detail record is created and that the start and end dates are accurately calculated for PT.
+
+License Detail Status record is also created with a start and end date.  Reason for status should be License Issued or Initial License.</description>
    <name>Issue License</name>
    <tag></tag>
    <comment></comment>

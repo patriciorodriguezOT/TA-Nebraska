@@ -56,7 +56,6 @@ public class Page_Licensure_Unit_Appeals {
 		WebUI.waitForElementVisible(inputPhone, 0)
 		WebUI.setText(inputPhone, phone)
 	}
-
 	@Keyword
 	def enterUpdatedPhonExt (String ext) {
 		WebUI.waitForElementVisible(inputPhoneExt, 0)
@@ -68,7 +67,6 @@ public class Page_Licensure_Unit_Appeals {
 		WebUI.waitForElementVisible(inputAddressL1, 0)
 		WebUI.setText(inputAddressL1, address)
 	}
-
 	@Keyword
 	def enterUpdatedAddressL2 (String address) {
 		WebUI.waitForElementVisible(inputAddressL2, 0)
@@ -123,4 +121,11 @@ public class Page_Licensure_Unit_Appeals {
 			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due INVALID denial code entered")
 		}
 	}
+	
+		@Keyword
+	def verifyErrorAlert (String alertObj, String errorText) {
+		if (!alertObj.contains(errorText)) {
+			// Stop tc execution
+			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due VALID denial code entered")
+		}
 }

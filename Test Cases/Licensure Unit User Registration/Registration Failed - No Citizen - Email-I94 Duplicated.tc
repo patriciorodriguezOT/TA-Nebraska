@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Register a foreign citizen that does have their email or I94 in the system and does have a user account that represents the email already in the system.  Should not be allowed to register.</description>
    <name>Registration Failed - No Citizen - Email-I94 Duplicated</name>
    <tag></tag>
    <comment></comment>
