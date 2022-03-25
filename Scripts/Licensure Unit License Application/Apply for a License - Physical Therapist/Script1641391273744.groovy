@@ -161,7 +161,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Practice_Prior_To_
 //Checklist Management---
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnUploadButton'()
 
-common_functions.uploadFilePath('C:\\Users\\patricior-ot\\Documents\\VisualVault\\Nebraska\\Document Empty.txt')
+common_functions.uploadFilePath('C:\\Users\\federicoc-ot\\OneDrive - onetree.com\\Escritorio\\Katalon\\textFile.txt')
 
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnNextButton'()
 
