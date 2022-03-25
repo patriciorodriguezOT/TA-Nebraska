@@ -51,7 +51,7 @@ public class GetDenialEventRecord {
 		ResponseObject respObj = WS.sendRequest(ro)
 		return respObj
 	}
-	
+
 	// Handling methods
 	public static int getStatusCode(ResponseObject resp) {
 		return resp.getStatusCode()

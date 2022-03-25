@@ -43,14 +43,14 @@ public class DenialEventRecordRes {
 		// Return Denial Event Record Revision ID
 		return revisionIdObj
 	}
-	
+
 	@Keyword
 	def getDenialEventRecordDenialDate (ResponseObject denialEventRecordRes) {
 
-		// Assign the Revision ID from the Denial Event Record to the variables
+		// Assign the Denial Date from the Denial Event Record to the variables
 		String denialDateObj = WS.getElementPropertyValue(denialEventRecordRes, 'data[0]["date of Denial"]')
 
-		// Return Denial Event Record Revision ID
+		// Return Denial Event Record Date of Denial
 		return denialDateObj
 	}
 }

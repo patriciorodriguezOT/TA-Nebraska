@@ -8,6 +8,10 @@ import com.kms.katalon.core.testobject.TestObjectProperty
 import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import internal.GlobalVariable
+import java.time.Instant as Instant
+import java.time.LocalDate as LocalDate
+import java.time.LocalDateTime as LocalDateTime
+import java.time.format.DateTimeFormatter as DateTimeFormatter
 
 
 public class PostDenialEventRecord {
@@ -15,7 +19,7 @@ public class PostDenialEventRecord {
 	String baseUrl = GlobalVariable.G_BaseUrl
 	String denialEventRecordId = "2cf4d0f6-b28a-ec11-a9d7-a8692667873e"
 	String revisionId = GlobalVariable.G_DenialEvent_RevisionId
-	
+
 	// Request variables
 	String requestMethod = "POST"
 	String authHeader = "Bearer " + GlobalVariable.G_Token
@@ -29,11 +33,14 @@ public class PostDenialEventRecord {
 	 * POST request
 	 * @return
 	 */
-	public ResponseObject postNewDenialDate(String timestamp) {
-		
+	public ResponseObject postNewDenialDate(String date) {
+
 		String endpoint = baseUrl + "/formtemplates/" + denialEventRecordId + "/forms/" + revisionId
-		String body = String.format('{"date of Denial":"%s"}', timestamp);
 		
+		String body = String.format('{"date of Denial":"%s"}', date);
+		
+		println body
+
 		RequestObject ro = new RestRequestObjectBuilder()
 				.withRestUrl(endpoint)
 				.withHttpHeaders(defaultHeaders)
