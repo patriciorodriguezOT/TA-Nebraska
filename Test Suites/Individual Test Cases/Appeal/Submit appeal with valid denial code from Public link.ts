@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Submit Appeal with Valid Denial Code from Public link</name>
+   <name>Submit appeal with valid denial code from Public link</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -87,6 +87,6 @@
       <guid>8a921ad5-63f2-4032-8e6f-d1711b57cf2a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Licensure Unit License Application/Submit Appeal with Valid Denial Code from Public link</testCaseId>
+      <testCaseId>Test Cases/Appeal/Submit appeal with valid denial code from Public link</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
