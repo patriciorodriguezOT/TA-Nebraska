@@ -224,4 +224,9 @@
       <initValue>''</initValue>
       <name>G_DenialEvent_RevisionId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_DenialEvent_DenialDate</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
