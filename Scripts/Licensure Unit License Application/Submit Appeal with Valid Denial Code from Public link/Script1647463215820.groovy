@@ -43,8 +43,6 @@ CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL2'('81611'
 // Enter appeal reason
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealReason'('Because I can')
 
-//Upload file to attach MISSING
-
 // Click on submit appeal
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnAppealSubmitBtn'()
 
