@@ -91,3 +91,4 @@ GlobalVariable.G_Appeal_Code = CustomKeywords.'pages.Page_Licensure_Unit_License
 
 //Close Browser
 WebUI.closeBrowser()
+
