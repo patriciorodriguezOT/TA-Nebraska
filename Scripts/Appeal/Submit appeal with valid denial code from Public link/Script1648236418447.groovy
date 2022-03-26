@@ -19,15 +19,15 @@ import org.openqa.selenium.Keys as Keys
 
 // Verify Parents TC have not failed ---
 // Set TCs dependency
-String[] parentsTC = ['Test Cases/Licensure Unit License Application/Deny License Application']
+//String[] parentsTC = ['Test Cases/Licensure Unit License Application/Deny License Application']
 // Verify any TC dependency has failed
-CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
+//CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 
 // Go to Appeal Public Link
 WebUI.openBrowser(GlobalVariable.G_Appeal_Link)
 
 // Enter Appeal Code and click Next
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'(GlobalVariable.G_Appeal_Code)
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'('402193')
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextBtn'()
 
 // Dismiss appeal info modal
@@ -37,14 +37,21 @@ CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnCloseModalBtn'()
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedPhone'('3333333333') 		// Update phone number
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL1'('PO BOX 5') 	// Update address line 1
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL2'('1234 Street') // Update address line 2
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL2'('5678 Street') // Update address line 3
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL2'('81611') 		// Update zip code (Aspen,CO)
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL3'('5678 Street') // Update address line 3
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedZip'('81611') 			// Update zip code (Aspen,CO)
 
 // Enter appeal reason
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealReason'('Because I can')
 
-// Click on submit appeal
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnAppealSubmitBtn'()
+// Click on submit btn
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnSubmitBtn'()
+
+// Click on submit btn within modal
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnModalSubmitBtn'()
+
+// Move to Next Window
+currentTab = WebUI.getWindowIndex()
+WebUI.switchToWindowIndex(currentTab + 1)
 
 // Verify appeal was submitted
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.verifyAppealSubmitted'()
