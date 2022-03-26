@@ -6,6 +6,8 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
+import javax.swing.KeyStroke
+
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
@@ -20,6 +22,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.util.KeywordUtil
+import org.openqa.selenium.Keys as Keys
 
 import internal.GlobalVariable
 
@@ -31,7 +34,8 @@ public class Page_Licensure_Unit_Appeals {
 	private TestObject inputAppealCode			= findTestObject('Page_Licensure_Unit_Appeals/input_Appeal_Code')
 	private TestObject btnModalClose			= findTestObject('Page_Licensure_Unit_Appeals/button_Modal_Close')
 	private TestObject btnNext					= findTestObject('Page_Licensure_Unit_Appeals/button_Next')
-	private TestObject btnAppealSubmit			= findTestObject('Page_Licensure_Unit_Appeals/button_Appeal_Submit')
+	private TestObject btnModalSubmit			= findTestObject('Page_Licensure_Unit_Appeals/button_Modal_Submit')
+	private TestObject btnSubmit				= findTestObject('Page_Licensure_Unit_Appeals/button_Submit')
 	private TestObject checkboxOutsideUSA		= findTestObject('Page_Licensure_Unit_Appeals/checkbox_OutsideUSA')
 	private TestObject inputPhone				= findTestObject('Page_Licensure_Unit_Appeals/input_Applicant_Phone')
 	private TestObject inputPhoneExt			= findTestObject('Page_Licensure_Unit_Appeals/input_Applicant_Phone_Ext')
@@ -83,6 +87,7 @@ public class Page_Licensure_Unit_Appeals {
 	def enterUpdatedZip (String zip) {
 		WebUI.waitForElementVisible(inputZip, 0)
 		WebUI.setText(inputZip, zip)
+		WebUI.sendKeys(inputZip, Keys.chord(Keys.ENTER))
 	}
 
 	@Keyword
@@ -107,9 +112,15 @@ public class Page_Licensure_Unit_Appeals {
 	}
 
 	@Keyword
-	def clicOnAppealSubmitBtn () {
-		WebUI.waitForElementVisible(btnAppealSubmit, 0)
-		WebUI.click(btnAppealSubmit)
+	def clicOnModalSubmitBtn () {
+		WebUI.waitForElementVisible(btnModalSubmit, 0)
+		WebUI.click(btnModalSubmit)
+	}
+	
+	@Keyword
+	def clicOnSubmitBtn () {
+		WebUI.waitForElementVisible(btnSubmit, 0)
+		WebUI.click(btnSubmit)
 	}
 
 	/****************
@@ -121,7 +132,7 @@ public class Page_Licensure_Unit_Appeals {
 			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due INVALID denial code entered")
 		}
 	}
-	
+
 	@Keyword
 	def verifyErrorAlert (String alertObj, String errorText) {
 		if (!alertObj.contains(errorText)) {
