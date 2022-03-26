@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Appeal_Submit</name>
+   <name>button_Modal_Submit</name>
    <tag></tag>
    <elementGuidId>5508793e-3240-4135-870e-15f8b169cd9e</elementGuidId>
    <selectorCollection>
