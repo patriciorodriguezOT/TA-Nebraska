@@ -44,7 +44,7 @@ public class Page_Licensure_Unit_Appeals {
 	private TestObject inputAddressL3			= findTestObject('Page_Licensure_Unit_Appeals/input_Applicant_Address_L3')
 	private TestObject inputZip					= findTestObject('Page_Licensure_Unit_Appeals/input_Applicant_Zip')
 	private TestObject textareaAppealReason		= findTestObject('Page_Licensure_Unit_Appeals/textarea_ReasonForAppeal')
-	private TestObject divAppealSubmitted		= findTestObject('Page_Licensure_Unit_Appeals/Page_Appeal_Submitted/div_Appeal_Submitted')
+	private TestObject h1AppealSubmitted		= findTestObject('Page_Licensure_Unit_Appeals/h1_Your appeal has been submitted')
 
 	/*************
 	 * Inputs
@@ -87,7 +87,6 @@ public class Page_Licensure_Unit_Appeals {
 	def enterUpdatedZip (String zip) {
 		WebUI.waitForElementVisible(inputZip, 0)
 		WebUI.setText(inputZip, zip)
-		WebUI.sendKeys(inputZip, Keys.chord(Keys.ENTER))
 	}
 
 	@Keyword
@@ -101,25 +100,25 @@ public class Page_Licensure_Unit_Appeals {
 	 *************/
 	@Keyword
 	def clickOnNextBtn () {
-		WebUI.waitForElementVisible(btnNext, 0)
+		WebUI.waitForElementVisible(btnNext, 10)
 		WebUI.click(btnNext)
 	}
 
 	@Keyword
 	def clicOnCloseModalBtn () {
-		WebUI.waitForElementVisible(btnModalClose, 0)
+		WebUI.waitForElementVisible(btnModalClose, 10)
 		WebUI.click(btnModalClose)
 	}
 
 	@Keyword
 	def clicOnModalSubmitBtn () {
-		WebUI.waitForElementVisible(btnModalSubmit, 0)
+		WebUI.waitForElementVisible(btnModalSubmit, 10)
 		WebUI.click(btnModalSubmit)
 	}
 	
 	@Keyword
 	def clicOnSubmitBtn () {
-		WebUI.waitForElementVisible(btnSubmit, 0)
+		WebUI.waitForElementVisible(btnSubmit, 10)
 		WebUI.click(btnSubmit)
 	}
 
@@ -128,13 +127,15 @@ public class Page_Licensure_Unit_Appeals {
 	 ****************/
 	@Keyword
 	def verifyAppealSubmitted () {
-		if (!WebUI.verifyElementPresent(divAppealSubmitted, 0)) {
+		WebUI.waitForElementVisible(h1AppealSubmitted, 10)
+		if (!WebUI.verifyElementPresent(h1AppealSubmitted, 10)) {
 			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due INVALID denial code entered")
 		}
 	}
 
 	@Keyword
 	def verifyErrorAlert (String alertObj, String errorText) {
+		WebUI.waitForElementVisible(alertObj, 10)
 		if (!alertObj.contains(errorText)) {
 			// Stop tc execution
 			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due VALID denial code entered")
