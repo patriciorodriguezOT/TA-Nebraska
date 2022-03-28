@@ -19,9 +19,9 @@ import org.openqa.selenium.Keys as Keys
 
 // Verify Parents TC have not failed ---
 // Set TCs dependency
-//String[] parentsTC = ['Test Cases/Licensure Unit License Application/Deny License Application']
+String[] parentsTC = ['Test Cases/Licensure Unit License Application/Deny License Application']
 // Verify any TC dependency has failed
-//CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
+CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 
 // Go to Appeal Public Link
 WebUI.openBrowser(GlobalVariable.G_Appeal_Link)
