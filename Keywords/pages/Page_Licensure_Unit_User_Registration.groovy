@@ -238,7 +238,7 @@ public class Page_Licensure_Unit_User_Registration {
 	def verifyRegistrationCompletedSuccessfully () {
 		WebUI.waitForElementVisible(msgSubmittedSuccessful, 0)
 
-		WebUI.verifyElementText(msgSubmittedSuccessful, 'The user account has been created, and the user has been notified of their login information via email. The record has been saved.')
+		WebUI.verifyElementText(msgSubmittedSuccessful, 'The user account has been created, and the user has been notified of their login information via email. The record has been saved.', FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.click(buttonDialogOk)
 
@@ -252,7 +252,7 @@ public class Page_Licensure_Unit_User_Registration {
 	def verifyRegistrationExistingUserCompletedSuccessfully () {
 		WebUI.waitForElementVisible(msgSubmittedSuccessful, 0)
 
-		WebUI.verifyElementText(msgSubmittedSuccessful, 'An existing User record has been found matching the information you have entered. An account has been created for that User Registration record and login credentials have been sent by email.')
+		WebUI.verifyElementText(msgSubmittedSuccessful, 'An existing User record has been found matching the information you have entered. An account has been created for that User Registration record and login credentials have been sent by email.', FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.click(buttonDialogOk)
 
@@ -264,7 +264,7 @@ public class Page_Licensure_Unit_User_Registration {
 	def verifyDuplicatedErrorMessage () {
 		WebUI.waitForElementVisible(msgSubmittedSuccessful, 0)
 
-		WebUI.verifyElementText(msgSubmittedSuccessful, 'An error was encountered. A record for you already exists in the system based upon one of the key identifying criteria. Please go to https://vv5qa.visualvault.com/ to sign in or use the forgot username/password link. If you need further assistance, please e-mail DHHS.LanceSupport@nebraska.gov.')
+		WebUI.verifyElementText(msgSubmittedSuccessful, 'An error was encountered. A record for you already exists in the system based upon one of the key identifying criteria. Please go to https://vv5qa.visualvault.com/ to sign in or use the forgot username/password link. If you need further assistance, please e-mail DHHS.LanceSupport@nebraska.gov.', FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.click(buttonDialogOk)
 

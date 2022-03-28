@@ -25,15 +25,17 @@ import generic.generic_functions as Generic_functions
 
 String chars = 'abcdefghijklmnopqrstuvwxyz'
 String nums = '123456780'
-String DOB = Generic_functions.randomPastDate(18250, 5840)
+String DOB = Generic_functions.randomPastDate(18250, 10000)
 
 
 // Set Random Variables
+String titleMessage = 'Unable To Process Registration'
+String bodyMessage = 'An error was encountered. A record for you already exists in the system based upon one of the key identifying criteria. Please go to https://vv5qa.visualvault.com/ to sign in or use the forgot username/password link. If you need further assistance, please e-mail DHHS.LanceSupport@nebraska.gov.'
 String randomFirstName = Generic_functions.randomString(chars, 5)
 String randomLastName = Generic_functions.randomString(chars, 5)
 String randomSSN = Generic_functions.randomString(nums, 9)
-String existingEmail = 'patricio.rodriguez+applicant1368@onetree.com'
-String existingSSN = '121321245'
+String existingEmail = 'pruebas.onetree+Applicantgjmpg@gmail.com'
+String existingSSN = '776-02-5258'
 GlobalVariable.G_Applicant_FirstName = ('PR' + randomFirstName)
 GlobalVariable.G_Applicant_LastName = ('Automation' + randomLastName)
 GlobalVariable.G_Applicant_Email = (('patricio.rodriguez+Applicant' + randomFirstName) + '@onetree.com')
@@ -51,16 +53,21 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeLastName'(Gl
 
 CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeDOB'(DOB)
 
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePlaceOfBirth'(placeOfBirth)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePlaceOfBirth'(GlobalVariable.G_Applicant_PlaceOfBirth)
 
 
 
 // Enter Mailing Address Information
 CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.selectCountryEEUU'()
 
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeZipCode'(zipCode)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeZipCode'(GlobalVariable.G_Applicant_ZipCode)
 
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeAddressLine'(addressLine)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeAddressLine'(GlobalVariable.G_Applicant_AddressLine)
+
+
+
+// Select Yes on dropdown "Is the Physical address the same?"
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.selectSameAddress'('Yes')
 
 
 
@@ -72,7 +79,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeSSN'(randomS
 
 
 // Enter PhoneNumber Information
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePrimaryPhoneNumber'(phoneNumber)
+CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completePrimaryPhoneNumber'(GlobalVariable.G_Applicant_PhoneNumber)
 
 
 
@@ -89,7 +96,11 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.clickOnSubmitBtn'()
 
 
 // Verify Error Message because user duplicated is displayed - In this case the duplacted error is cause because the Email
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.verifyDuplicatedErrorMessage'()
+CustomKeywords.'pages.ModalDialog.verifyBody'(bodyMessage)
+
+CustomKeywords.'pages.ModalDialog.verifyTitle'(titleMessage)
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
 
 
@@ -119,8 +130,12 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.clickOnSubmitBtn'()
 
 
 
-// Verify Error Message because user duplicated is displayed - In this case the duplacted error is cause because the SSN
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.verifyDuplicatedErrorMessage'()
+// Verify Error Message because user duplicated is displayed - In this case the duplacted error is cause because the Email
+CustomKeywords.'pages.ModalDialog.verifyBody'(bodyMessage)
+
+CustomKeywords.'pages.ModalDialog.verifyTitle'(titleMessage)
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
 
 

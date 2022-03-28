@@ -35,7 +35,7 @@ String messageBody = 'A total of 2 checklist(s) not completed/approved were rese
 WebUI.openBrowser(GlobalVariable.G_Nebraska_Link)
 
 // Login with LU Staff user
-CustomKeywords.'pages.Page_Login.login'(GlobalVariable.G_LU_Staff_UserName, GlobalVariable.G_LU_Staff_Pass)
+CustomKeywords.'pages.Page_Login.login'(GlobalVariable.G_LP_Staff_UserName, GlobalVariable.LP_Staff_Pass)
 
 
 // Go to Applications in Progress

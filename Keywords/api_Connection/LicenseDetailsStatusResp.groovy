@@ -84,6 +84,18 @@ public class LicenseDetailsStatusResp {
 
 
 	@Keyword
+	def verifyOriginalStatusReason (Object responseDetailsStatus, String expectedStatusReason) {
+
+		// Get License Expiration Type and Date Expires from the form
+		String licenseStatusReason = WS.getElementPropertyValue(responseDetailsStatus, 'data[0]["reason Status was Assigned"]')
+
+		System.out.println('\nLicense Status: ' + licenseStatusReason + '\n')
+
+		WebUI.verifyMatch(licenseStatusReason, expectedStatusReason, true, FailureHandling.CONTINUE_ON_FAILURE)
+	}
+
+
+	@Keyword
 	def verifyEffectivetDate (Object responseDetailsStatus, String startDate) {
 
 		// Get Effective Date from the License Details Status form

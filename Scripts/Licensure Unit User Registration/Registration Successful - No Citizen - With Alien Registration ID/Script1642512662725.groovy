@@ -24,7 +24,7 @@ import generic.generic_functions as Generic_functions
 
 String chars = 'abcdefghijklmnopqrstuvwxyz'
 String nums = '1234567890'
-String DOB = Generic_functions.randomPastDate(18250, 5840)
+String DOB = Generic_functions.randomPastDate(18250, 10000)
 
 
 // Set Random Variables
@@ -32,8 +32,8 @@ String randomFirstName = Generic_functions.randomString(chars, 5)
 String randomLastName = Generic_functions.randomString(chars, 5)
 String randomAlienRegistrationNum = Generic_functions.randomString(nums, 9)
 GlobalVariable.G_Applicant_FirstName = ('PR' + randomFirstName)
-GlobalVariable.G_Applicant_LastName = ('Automation' + randomLastName)
-GlobalVariable.G_Applicant_Email = (('pruebas.onetree+Applicant' + randomFirstName) + '@gmail.com')
+GlobalVariable.G_Applicant_LastName = ('AutomationNoCitizen' + randomLastName)
+GlobalVariable.G_Applicant_Email = (('pruebas.onetree+ApplicantNoCitizen' + randomFirstName) + '@gmail.com')
 
 
 // Open Browser
