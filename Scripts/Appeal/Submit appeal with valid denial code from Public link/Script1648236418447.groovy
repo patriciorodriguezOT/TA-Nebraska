@@ -27,18 +27,17 @@ import org.openqa.selenium.Keys as Keys
 WebUI.openBrowser(GlobalVariable.G_Appeal_Link)
 
 // Enter Appeal Code and click Next
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'('402193')
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'(GlobalVariable.G_Appeal_Code)
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextBtn'()
 
 // Dismiss appeal info modal
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnCloseModalBtn'()
 
 // Update address info
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedPhone'('3333333333') 		// Update phone number
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL1'('PO BOX 5') 	// Update address line 1
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL2'('1234 Street') // Update address line 2
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL3'('5678 Street') // Update address line 3
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedZip'('81611') 			// Update zip code (Aspen,CO)
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedPhone'('3333333333')				// Update phone number
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL1'('PO BOX 10')			// Update address line 1
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL2'('1234 ST') 			// Update address line 2
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL3'('5678 ST') 			// Update address line 3
 
 // Enter appeal reason
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealReason'('Because I can')
@@ -48,10 +47,6 @@ CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnSubmitBtn'()
 
 // Click on submit btn within modal
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnModalSubmitBtn'()
-
-// Move to Next Window
-currentTab = WebUI.getWindowIndex()
-WebUI.switchToWindowIndex(currentTab + 1)
 
 // Verify appeal was submitted
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.verifyAppealSubmitted'()
