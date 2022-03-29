@@ -25,6 +25,9 @@ import ws.GetToken as GetToken
 import ws.GetDenialEventRecord as GetDenialEventRecord
 import ws.PostDenialEventRecord as PostDenialEventRecord
 
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.WebDriver as WebDriver
+
 // Verify Denial Event Record Status was created correctly
 GetToken getTokenReq = new GetToken()
 
@@ -40,7 +43,7 @@ if(getTokenReq.getStatusCode(getTokenResp) != 200) {
 // Get Object for Denial Event Record that matches Appeal Denial Code saved as variable
 GetDenialEventRecord getDenialEventRecordReq = new GetDenialEventRecord()
 
-ResponseObject getDenialEventRecordRes = getDenialEventRecordReq.getDenialEventRecordByDenialCode('229795')
+ResponseObject getDenialEventRecordRes = getDenialEventRecordReq.getDenialEventRecordByDenialCode('026286')
 
 // TC fail control
 if(getDenialEventRecordReq.getStatusCode(getDenialEventRecordRes) != 200) {
@@ -53,18 +56,41 @@ GlobalVariable.G_DenialEvent_RevisionId = CustomKeywords.'api_Connection.DenialE
 // Get Danial Date from Denial Event Record Res
 GlobalVariable.G_DenialEvent_DenialDate = CustomKeywords.'api_Connection.DenialEventRecordRes.getDenialEventRecordDenialDate'(getDenialEventRecordRes)
 
-// Modifies Denial Date 51 days into future
-String newDenialDate51 = GenericFunctions.getCustomDatePlusCustomDays(GlobalVariable.G_DenialEvent_DenialDate, 51)
+// Modifies Denial Date 51 days into past
+String denialDateMinus51 = GenericFunctions.getCustomDateMinusCustomDays(GlobalVariable.G_DenialEvent_DenialDate, 50)
 
 // Post new Denial Event date of Denial for License Application Record
 PostDenialEventRecord postDenialEventRecordReq = new PostDenialEventRecord()
 
-ResponseObject postDenialEventRecordRes = postDenialEventRecordReq.postNewDenialDate(newDenialDate51)
+ResponseObject postDenialEventRecordRes = postDenialEventRecordReq.postNewDenialDate(denialDateMinus51)
 
 // TC fail control
 if(getDenialEventRecordReq.getStatusCode(postDenialEventRecordRes) != 200) {
 	KeywordUtil.markFailed("Status code is not 200 as expected. It is "	+ GetToken.getStatusCode(postDenialEventRecordRes))
 }
+
+// Open Browser and go to Appeal form public link
+WebUI.openBrowser(GlobalVariable.G_Appeal_Link)
+
+// Enter incorrect appeal code
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'('026286')
+
+// Click on Next
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextButton'()
+
+// Verify if alert is present and get alertText
+WebUI.verifyAlertPresent(5)
+
+// Get the text from the alert and stores it in variable
+WebDriver driver = DriverFactory.getWebDriver()
+String alertText = driver.switchTo().alert().getText()
+
+// Verify if modal text contains an error message indicating denial code is invalid
+String errorText = String.format("An error was encountered. The denial code of %s was not found in the system or is older than 50 days.", '026286');
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.verifyErrorAlert'(alertText, errorText)
+
+//Close browser
+WebUI.closeBrowser()
 
 // Open appeal form
 
