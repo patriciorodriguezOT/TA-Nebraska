@@ -19,8 +19,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import java.text.SimpleDateFormat as SimpleDateFormat
 import java.util.Calendar as Calendar
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
+import java.time.Instant
+import java.time.temporal.ChronoUnit
+import java.time.Duration
 
 import internal.GlobalVariable
 
@@ -92,21 +93,37 @@ public class generic_functions {
 		String todayDate = formatter.format(today)
 		return todayDate
 	}
-	
-	public static String getCustomDatePlusCustomDays(String date, int daysAfter) {
+
+	public static String getCustomDatePlusCustomDays(String date, int daysFuture) {
 		// Parse Instant Date as String to Instant Date format
 		Instant instantDate = new SimpleDateFormat("yyyy-MM-dd'T'HH':'mm':'ss'Z'")
-		.parse(date)
-		.toInstant()
-				
+				.parse(date)
+				.toInstant()
+
 		// Adds custom amount of days to given instant date
 		Instant nowPlusCustomDays = instantDate
-		.plus(daysAfter, ChronoUnit.DAYS);
-		
+				.plus(daysFuture, ChronoUnit.DAYS);
+
 		// Create a new String using the new instant date
 		String customDatePlusCustomDays = nowPlusCustomDays
-		
+
 		return customDatePlusCustomDays
+	}
+	
+	public static String getCustomDateMinusCustomDays(String date, int daysPast) {
+		// Parse Instant Date as String to Instant Date format
+		Instant instantDate = new SimpleDateFormat("yyyy-MM-dd'T'HH':'mm':'ss'Z'")
+				.parse(date)
+				.toInstant()
+
+		// Adds custom amount of days to given instant date
+		Instant nowMinusCustomDays = instantDate
+				.minus(Duration.ofDays(daysPast));
+
+		// Create a new String using the new instant date
+		String customDateMinusCustomDays = nowMinusCustomDays
+
+		return customDateMinusCustomDays
 	}
 
 
