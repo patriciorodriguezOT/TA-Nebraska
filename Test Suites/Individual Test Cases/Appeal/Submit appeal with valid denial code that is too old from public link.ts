@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description>Submit appeal with valid denial code that is too old from public link: There is a 30 day period that the denial codes are usable. Using the public link and the old denial code, attempt to submit with the old denial code. User should be stopped indicating that it is out of date. Test with codes that are at 49, 50 and 51 days to determine which ones go and which ones do not.</description>
+   <name>Submit appeal with valid denial code that is too old from public link</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
+   <testSuiteGuid>099ef98d-3e40-4186-aa5e-105edf4171e1</testSuiteGuid>
+   <testCaseLink>
+      <guid>0a51aa05-b0f3-436b-8eaa-fd01ac82d690</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit User Registration/Registration Successful - US Citizen - With SSN</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>a911b9e4-f27f-4e3a-8f3b-4b8a44ea2ce1</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>c16edb5a-08ec-4c32-8cf4-5b8fb57dbb70</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>c1a3ae38-d74e-4712-bce0-24a7dcaaf4fe</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>70617006-c77c-4821-8fdb-936830a9b03c</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e813f4c5-3d09-4178-afec-d0bd292420c9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit User Registration/Reset Password and Complete Registration Process</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>fab3b028-d85b-4c05-9fc7-33597404ba5c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>01db107b-17ea-4fe4-ac1f-4291ffa8aa1e</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>b97fd85f-21d5-448b-98fd-f4b45f450720</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>b6037fc2-b2cf-4608-b4f6-81835fe70f58</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>6a200090-67b3-438e-90ca-29de4ef8a608</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>dc9db50f-21df-44ac-bd88-ba3242c656d4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit License Application/Deny License Application</testCaseId>
+   </testCaseLink>
+</TestSuiteEntity>
