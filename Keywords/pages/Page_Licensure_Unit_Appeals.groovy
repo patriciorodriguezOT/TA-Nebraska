@@ -100,7 +100,7 @@ public class Page_Licensure_Unit_Appeals {
 	}
 
 	@Keyword
-	def clicOnSubmitBtn () {
+	def clickOnSubmitBtn () {
 		WebUI.waitForElementVisible(btnSubmit, 10)
 		WebUI.click(btnSubmit)
 	}
