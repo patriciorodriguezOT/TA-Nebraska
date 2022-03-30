@@ -100,13 +100,7 @@ public class Page_Licensure_Unit_Appeals {
 	}
 
 	@Keyword
-	def clicOnModalSubmitBtn () {
-		WebUI.waitForElementVisible(btnModalSubmit, 10)
-		WebUI.click(btnModalSubmit)
-	}
-
-	@Keyword
-	def clicOnSubmitBtn () {
+	def clickOnSubmitBtn () {
 		WebUI.waitForElementVisible(btnSubmit, 10)
 		WebUI.click(btnSubmit)
 	}
@@ -127,15 +121,6 @@ public class Page_Licensure_Unit_Appeals {
 		if (!alertObj.contains(errorText)) {
 			// Stop tc execution
 			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due VALID denial code entered")
-		}
-	}
-
-	@Keyword
-	def verifyValidDenialCode () {
-		WebUI.waitForElementVisible(findTestObject('Modal Dialog Components/button_Okay'), 10)
-		if (!WebUI.verifyElementPresent(findTestObject('Modal Dialog Components/button_Okay'), 10)) {
-			// Stop tc execution
-			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due INVALID denial code entered")
 		}
 	}
 }
