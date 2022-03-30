@@ -6,8 +6,6 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
-import javax.swing.KeyStroke
-
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
@@ -22,7 +20,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.webui.keyword.builtin.WaitForElementVisibleKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.util.KeywordUtil
-import org.openqa.selenium.Keys as Keys
 
 import internal.GlobalVariable
 
@@ -32,9 +29,7 @@ import internal.GlobalVariable
 public class Page_Licensure_Unit_Appeals {
 
 	private TestObject inputAppealCode			= findTestObject('Page_Licensure_Unit_Appeals/input_Appeal_Code')
-	private TestObject btnModalClose			= findTestObject('Page_Licensure_Unit_Appeals/button_Modal_Close')
 	private TestObject btnNext					= findTestObject('Page_Licensure_Unit_Appeals/button_Next')
-	private TestObject btnModalSubmit			= findTestObject('Page_Licensure_Unit_Appeals/button_Modal_Submit')
 	private TestObject btnSubmit				= findTestObject('Page_Licensure_Unit_Appeals/button_Submit')
 	private TestObject checkboxOutsideUSA		= findTestObject('Page_Licensure_Unit_Appeals/checkbox_OutsideUSA')
 	private TestObject inputPhone				= findTestObject('Page_Licensure_Unit_Appeals/input_Applicant_Phone')
@@ -104,18 +99,6 @@ public class Page_Licensure_Unit_Appeals {
 		WebUI.click(btnNext)
 	}
 
-	@Keyword
-	def clicOnCloseModalBtn () {
-		WebUI.waitForElementVisible(btnModalClose, 10)
-		WebUI.click(btnModalClose)
-	}
-
-	@Keyword
-	def clicOnModalSubmitBtn () {
-		WebUI.waitForElementVisible(btnModalSubmit, 10)
-		WebUI.click(btnModalSubmit)
-	}
-	
 	@Keyword
 	def clicOnSubmitBtn () {
 		WebUI.waitForElementVisible(btnSubmit, 10)

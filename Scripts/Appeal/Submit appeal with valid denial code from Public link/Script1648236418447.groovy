@@ -15,7 +15,6 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 // Verify Parents TC have not failed ---
 // Set TCs dependency
@@ -30,8 +29,8 @@ WebUI.openBrowser(GlobalVariable.G_Appeal_Link)
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'(GlobalVariable.G_Appeal_Code)
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextBtn'()
 
-// Dismiss appeal info modal
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnCloseModalBtn'()
+// Close appeal info modal
+CustomKeywords.'pages.ModalDialog.clickOnCloseButton'()
 
 // Update address info
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedPhone'('3333333333')				// Update phone number
@@ -46,7 +45,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealReason'('Because I 
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnSubmitBtn'()
 
 // Click on submit btn within modal
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnModalSubmitBtn'()
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
 // Verify appeal was submitted
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.verifyAppealSubmitted'()
