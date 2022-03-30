@@ -18,7 +18,6 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.util.KeywordUtil
 import internal.GlobalVariable as GlobalVariable
 import generic.generic_functions as GenericFunctions
-import org.openqa.selenium.Keys as Keys
 
 import ws.GetToken as GetToken
 
