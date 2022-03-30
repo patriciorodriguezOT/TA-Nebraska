@@ -127,8 +127,8 @@ CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'(GlobalVariabl
 // Click on Next
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextBtn'()
 
-// Verify valid denial code entered and form shows up
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.verifyValidDenialCode'()
+// Verify valid denial code entered and form shows up poping up a modal
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
 //Close browser
 WebUI.closeBrowser()
