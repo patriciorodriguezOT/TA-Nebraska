@@ -118,7 +118,6 @@ public class Page_Licensure_Unit_Appeals {
 
 	@Keyword
 	def verifyErrorAlert (String alertObj, String errorText) {
-		WebUI.waitForElementVisible(alertObj, 10)
 		if (!alertObj.contains(errorText)) {
 			// Stop tc execution
 			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due VALID denial code entered")
