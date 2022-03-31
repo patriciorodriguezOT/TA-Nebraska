@@ -22,6 +22,7 @@ import ws.GetLicenseDetailsStatus as GetLicenseDetailsStatus
 import com.kms.katalon.core.testobject.ResponseObject
 import java.util.Calendar as Calendar
 import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.configuration.RunConfiguration
 
 
 
@@ -33,8 +34,9 @@ GlobalVariable.G_Applicant_LastName = 'Automationeznne'
 
 // Set TC variables
 int currentTab = 0
-String projectPath = System.getProperty("user.dir")
-String expectedImgDir = projectPath + '\\ScreenShots\\Expected Screenshots\\WallCertificateScreenView.png'
+String projectPath = RunConfiguration.getProjectDir()
+String expectedImgDir = projectPath + '/ScreenShots/Expected Screenshots/WallCertificateScreenView2.png'
+print expectedImgDir
 String actualImgDir = ""
 
 

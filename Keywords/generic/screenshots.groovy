@@ -17,7 +17,7 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-
+import com.kms.katalon.core.configuration.RunConfiguration
 import internal.GlobalVariable
 
 public class screenshots {
@@ -33,9 +33,9 @@ public class screenshots {
 
 		String screenshotName = 'screenshot-' + todayDate
 
-		String projectPath = System.getProperty("user.dir")
+		String projectPath = RunConfiguration.getProjectDir()
 
-		String screenshotDir = projectPath + '\\ScreenShots\\' + screenshotName + '.png'
+		String screenshotDir = projectPath + '/ScreenShots/' + screenshotName + '.png'
 
 		System.out.println('FileName:' + screenshotDir)
 
