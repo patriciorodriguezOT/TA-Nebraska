@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Applicant Phone</name>
+   <name>checkbox_OutsideUSA</name>
    <tag></tag>
-   <elementGuidId>46c2fd34-11c6-4558-be75-51b7cf9d8afb</elementGuidId>
+   <elementGuidId>98f8bb36-b607-4802-9d47-811fb89f7785</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='Applicant Phone']</value>
+         <value>//input[@id='OutsideNA']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
+         <value>#OutsideNA</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -26,92 +26,85 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>title</name>
+      <name>type</name>
       <type>Main</type>
-      <value>Applicant Phone</value>
+      <value>checkbox</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>type</name>
+      <name>title</name>
       <type>Main</type>
-      <value>text</value>
+      <value>OutsideNA</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tabindex</name>
       <type>Main</type>
-      <value>12</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>maxlength</name>
-      <type>Main</type>
-      <value>100</value>
+      <value>0</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>Applicant Phone</value>
+      <value>OutsideNA</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>vvfieldtype</name>
       <type>Main</type>
-      <value>textbox</value>
+      <value>checkbox</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>vvfieldname</name>
       <type>Main</type>
-      <value>Applicant Phone</value>
+      <value>OutsideNA</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>vvfieldvalueid</name>
       <type>Main</type>
-      <value>18f0e766-617e-ca42-6fda-c6a4719385ae</value>
+      <value>f2220607-16eb-30ca-f7d1-57bbf0693b8c</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>k-textbox ng-untouched ng-pristine ng-valid fd-input</value>
+      <value>ng-untouched ng-pristine ng-valid</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;Applicant Phone&quot;)</value>
+      <value>id(&quot;OutsideNA&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='Applicant Phone']</value>
+      <value>//input[@id='OutsideNA']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[14]/div[4]/input</value>
+      <value>//div[2]/div/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@title = 'Applicant Phone' and @type = 'text' and @id = 'Applicant Phone']</value>
+      <value>//input[@type = 'checkbox' and @title = 'OutsideNA' and @id = 'OutsideNA']</value>
    </webElementXpaths>
 </WebElementEntity>
