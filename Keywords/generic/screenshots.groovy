@@ -35,7 +35,7 @@ public class screenshots {
 
 		String projectPath = RunConfiguration.getProjectDir()
 
-		String screenshotDir = projectPath + '\\ScreenShots\\' + screenshotName + '.png'
+		String screenshotDir = projectPath + '/ScreenShots/' + screenshotName + '.png'
 
 		System.out.println('FileName:' + screenshotDir)
 
