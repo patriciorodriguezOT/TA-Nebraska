@@ -112,7 +112,7 @@ public class Page_Licensure_Unit_Appeals {
 	def verifyAppealSubmitted () {
 		WebUI.waitForElementVisible(h1AppealSubmitted, 10)
 		if (!WebUI.verifyElementPresent(h1AppealSubmitted, 10)) {
-			KeywordUtil.markFailed("\nThe test case can not be completed. Error alert won't show due INVALID denial code entered")
+			KeywordUtil.markFailed("\nThe test case can not be completed. Appeal submission confirmation webpage did not load")
 		}
 	}
 

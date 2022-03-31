@@ -219,4 +219,14 @@
       <initValue>'https://vv5qa.visualvault.com/app/NEDHHS/LIS/FormDataDetails?Mode=ReadOnly&amp;ReportID=19495dd1-529c-eb11-81fc-a5e993b5732d'</initValue>
       <name>G_IndividualsAll_Link</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_DenialEvent_RevisionId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_DenialEvent_DenialDate</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

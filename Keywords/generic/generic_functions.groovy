@@ -19,6 +19,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import java.text.SimpleDateFormat as SimpleDateFormat
 import java.util.Calendar as Calendar
+import java.time.Instant
+import java.time.temporal.ChronoUnit
+import java.time.Duration
 
 import internal.GlobalVariable
 
@@ -65,7 +68,6 @@ public class generic_functions {
 
 
 	public static String getTodayDate() {
-		//-------------RANDOM DATE------------------
 		// get today's date
 		Date today = Calendar.getInstance().getTime()
 
@@ -78,7 +80,6 @@ public class generic_functions {
 	}
 
 	public static String getTodayDatePlusDays(int daysAfter) {
-		//-------------RANDOM DATE------------------
 		// get today's date
 		Date today = Calendar.getInstance().getTime()
 
@@ -91,6 +92,38 @@ public class generic_functions {
 		// create a new String using the date format we want
 		String todayDate = formatter.format(today)
 		return todayDate
+	}
+
+	public static String getCustomDatePlusCustomDays(String date, int daysFuture) {
+		// Parse Instant Date as String to Instant Date format
+		Instant instantDate = new SimpleDateFormat("yyyy-MM-dd'T'HH':'mm':'ss'Z'")
+				.parse(date)
+				.toInstant()
+
+		// Adds custom amount of days to given instant date
+		Instant nowPlusCustomDays = instantDate
+				.plus(daysFuture, ChronoUnit.DAYS);
+
+		// Create a new String using the new instant date
+		String customDatePlusCustomDays = nowPlusCustomDays
+
+		return customDatePlusCustomDays
+	}
+	
+	public static String getCustomDateMinusCustomDays(String date, int daysPast) {
+		// Parse Instant Date as String to Instant Date format
+		Instant instantDate = new SimpleDateFormat("yyyy-MM-dd'T'HH':'mm':'ss'Z'")
+				.parse(date)
+				.toInstant()
+
+		// Adds custom amount of days to given instant date
+		Instant nowMinusCustomDays = instantDate
+				.minus(Duration.ofDays(daysPast));
+
+		// Create a new String using the new instant date
+		String customDateMinusCustomDays = nowMinusCustomDays
+
+		return customDateMinusCustomDays
 	}
 
 
