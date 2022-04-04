@@ -30,7 +30,7 @@ CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 GenericFunctions genericFunctions = new GenericFunctions()
 
 // Setting the variables needed on the test case.
-String licenseType = 'EO 21-18 Prov Physical Therapist'
+String licenseType = 'Physical Therapist'
 String summaryOfEvent = 'Summary Event PR Test'
 String eventType = 'Facility'
 String estimatedDateOfEvent = genericFunctions.getTodayDatePlusDays(5)

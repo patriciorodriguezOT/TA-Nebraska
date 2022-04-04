@@ -34,7 +34,7 @@ CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 GenericFunctions genericFunctions = new GenericFunctions()
 GetToken getTokenReq = new GetToken()
 int currentTab
-String licenseType = 'EO 21-18 Prov Physical Therapist'
+String licenseType = 'Physical Therapist'
 String startDate
 String endDate
 String alertTextExpected = 'The License has been set to Inactive and the License Details Status record has been created.'
