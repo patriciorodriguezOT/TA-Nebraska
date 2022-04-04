@@ -32,7 +32,7 @@ String messageTitle = 'Application Re-Submitted'
 String messageBody = "You have successfully re-submitted your license application. The application is now under review with the Nebraska Licensure Unit. You can review submitted application in read-only mode by navigating through the tabs on LICENSE APPLICATION. If the Licensure Unit needs additional information, you will receive notification to add or update your information. You can now go to the home page and check the status of your application under 'My Applications In Process' by clicking on the 'My Home' tab on the left side of the portal"
 String expectedStatus = 'Submitted'
 String projectPath = RunConfiguration.getProjectDir()
-String emtpyDoc2path = projectPath + '\\Documents\\Document Empty 2.txt'
+String emtpyDoc2path = projectPath + '/Documents/Document Empty 2.txt'
 
 
 

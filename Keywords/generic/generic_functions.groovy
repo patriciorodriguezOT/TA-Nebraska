@@ -109,7 +109,7 @@ public class generic_functions {
 
 		return customDatePlusCustomDays
 	}
-	
+
 	public static String getCustomDateMinusCustomDays(String date, int daysPast) {
 		// Parse Instant Date as String to Instant Date format
 		Instant instantDate = new SimpleDateFormat("yyyy-MM-dd'T'HH':'mm':'ss'Z'")

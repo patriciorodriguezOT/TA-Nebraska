@@ -38,6 +38,7 @@ String expectedImgDir = projectPath + '/ScreenShots/Expected Screenshots/WallCer
 
 
 
+
 // Go to Login Page
 WebUI.openBrowser(GlobalVariable.G_Nebraska_Link)
 
