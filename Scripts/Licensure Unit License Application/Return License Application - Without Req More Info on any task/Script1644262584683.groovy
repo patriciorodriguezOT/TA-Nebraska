@@ -28,6 +28,7 @@ String[] parentsTC = ['Test Cases/Licensure Unit License Application/Apply for a
 CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 
 
+String status = 'Pending'
 String messageTitle = 'No Returned Checklist Tasks'
 String messageBody = "To change this application to 'Deficient' status at least one checklist task must be in a returned state. Tasks can be marked as returned by opening the task, and clicking the 'Request More Information' button on the 'Approve' tab."
 // Go to Login Page
@@ -75,7 +76,7 @@ CustomKeywords.'pages.ModalDialog.verifyTitle'(messageTitle)
 CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
 
-CustomKeywords.'pages.Page_Licensure_Unit_License.verifyStatus'('Submitted')
+CustomKeywords.'pages.Page_Licensure_Unit_License.verifyStatus'(status)
 
 
 
