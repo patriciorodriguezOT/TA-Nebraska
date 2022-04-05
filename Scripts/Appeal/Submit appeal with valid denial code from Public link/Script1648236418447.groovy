@@ -42,7 +42,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterUpdatedAddressL3'('5678 S
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealReason'('Because I can')
 
 // Click on submit btn
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clicOnSubmitBtn'()
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnSubmitBtn'()
 
 // Click on submit btn within modal
 CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()

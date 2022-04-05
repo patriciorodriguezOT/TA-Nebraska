@@ -38,7 +38,7 @@ String schoolName = 'PR Test'
 String titleMessageRecord = 'Record Saved'
 String printName = 'PR Automation Test'
 String projectPath = RunConfiguration.getProjectDir()
-String emtpyDocpath = projectPath + '\\Documents\\Document Empty.txt'
+String emtpyDocpath = projectPath + '/Documents/Document Empty.txt'
 
 
 // Open Browser
