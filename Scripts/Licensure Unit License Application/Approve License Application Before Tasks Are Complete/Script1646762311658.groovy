@@ -35,7 +35,7 @@ String titleMessage = 'Missing checklist tasks'
 
 String bodyMessage = 'You may not approve this application until all checklist tasks related to the application are either Approved, Cancelled or Not Applicable. Please return to the checklist tab to address all tasks.\nNumber of remaining tasks: 8'
 
-String statusApplication = 'Submitted'
+String statusApplication = 'Pending'
 
 // Go to Login Page
 WebUI.openBrowser(GlobalVariable.G_Nebraska_Link)
@@ -67,6 +67,7 @@ CustomKeywords.'pages.Page_Home_Admin_ApplicationsInProgress.clickOnReviewLink'(
 int currentTab = WebUI.getWindowIndex()
 
 WebUI.switchToWindowIndex(currentTab + 1)
+
 
 
 // Go to Checklist tab of the Form
