@@ -78,6 +78,12 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
+      <guid>79e11d94-cffa-4fd6-90e0-e5863e2a901e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit License Application/Start Review - License Application (Modal Dialog)</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>1290db73-4425-4715-b47b-9aa86b0ee33d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -94,6 +100,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Licensure Unit License Application/Complete Task returned and resubmit License Application</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>dfeaa661-9d24-415c-9d1f-61aefde81440</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit License Application/Start Review - License Application (Start Review Btn)</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7c7ec00e-abb6-47ff-9f5a-7745accde71b</guid>

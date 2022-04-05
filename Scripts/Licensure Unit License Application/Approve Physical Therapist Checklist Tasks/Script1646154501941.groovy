@@ -209,6 +209,17 @@ Thread.sleep(1000)
 WebUI.switchToWindowIndex(currentTab + 1)
 
 
+
+// Close License Application
+CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Manage.clickOnCancelAndClose'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+System.sleep(2000)
+
+WebUI.switchToWindowIndex(currentTab)
+
+
 // Close browser
 WebUI.closeBrowser()
 

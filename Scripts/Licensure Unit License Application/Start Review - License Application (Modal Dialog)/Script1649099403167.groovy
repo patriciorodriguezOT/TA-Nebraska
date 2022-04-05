@@ -16,26 +16,29 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import generic.generic_functions as Generic_functions
-import generic.common_functions as Common_functions
-import pages.Page_Login as loginPage
 
 
 // Verify Parents TC have not failed ---
 // Set TCs dependency
-String[] parentsTC = ['Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist']
+String[] parentsTC = ['Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist', 'Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist - Reciprocity']
 // Verify any TC dependency has failed
 CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 
 
 
-String messageTitle = 'Checklist Tasks'
-String messageBody = 'A total of 2 checklist(s) not completed/approved were reset. Please click "Create Letter" to be redirected to Letter Management to begin generating a letter regarding this returned application.'
+
+int currentTab = 0
+String ExpStatus = 'Pending'
+String modalDialogTitle = 'Submitted Application'
+String modalDialogBody = 'You are opening a license application that was recently submitted. Are you opening this application to start your official review of the application? If you are, select OK so that we can update the status of the application to pending. This will help the applicant know the status of the application when they review it online. If you are not opening this application to review it, select cancel.'
+
+
+
 // Go to Login Page
 WebUI.openBrowser(GlobalVariable.G_Nebraska_Link)
 
 // Login with LU Staff user
-CustomKeywords.'pages.Page_Login.login'(GlobalVariable.G_LP_Staff_UserName, GlobalVariable.LP_Staff_Pass)
+CustomKeywords.'pages.Page_Login.login'(GlobalVariable.G_LU_Staff_UserName, GlobalVariable.G_LU_Staff_Pass)
 
 
 // Go to Applications in Progress
@@ -56,69 +59,33 @@ CustomKeywords.'pages.Page_Home_Admin_ApplicationsInProgress.clickOnSearchButton
 CustomKeywords.'pages.Page_Home_Admin_ApplicationsInProgress.clickOnReviewLink'()
 
 
-
 // Move to Next Window
-int currentTab = WebUI.getWindowIndex()
+currentTab = WebUI.getWindowIndex()
 
 WebUI.switchToWindowIndex(currentTab + 1)
 
+System.sleep(3000)
 
-// Go to Checklist tab of the Form
-CustomKeywords.'pages.Page_Licensure_Unit_License_Application.clickOnChecklistTab'()
+CustomKeywords.'pages.ModalDialog.verifyTitle'(modalDialogTitle)
 
-
-// Request More Info for Task Task "Citizenship Documentation"
-CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist.clickOnOpenCitizenshipDocumentation'()
-
-WebUI.switchToWindowIndex(currentTab + 2)
-
-CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
-
-CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnRequestMoreInfoButton'()
-
-CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
+CustomKeywords.'pages.ModalDialog.verifyBody'(modalDialogBody)
 
 CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
-System.sleep(2000)
 
-WebUI.switchToWindowIndex(currentTab + 1)
-
-
-// Request More Info for Task "Transcripts"
-CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist.clickOnOpenTranscript'()
-
-WebUI.switchToWindowIndex(currentTab + 2)
-
-CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
-
-CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnRequestMoreInfoButton'()
-
-CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
-
-CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
-
-System.sleep(2000)
-
-WebUI.switchToWindowIndex(currentTab + 1)
+ 
+// Verify the License Application Opened is the correct one
+CustomKeywords.'pages.Page_Licensure_Unit_License_Application.verifyLicenseApplicationOpened'(GlobalVariable.G_Applicant_FirstName, GlobalVariable.G_Applicant_LastName)
 
 
-
-// Go to Manage Tab
+// Go to Manage Tab of the Form
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application.clickOnManageTab'()
 
-CustomKeywords.'pages.Page_Licensure_Unit_License_Application.setApplicationDeficient'()
+// Verify License Application Status
+CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Manage.verifyStatus'(ExpStatus)
 
-CustomKeywords.'pages.ModalDialog.clickOnReturnApplicationBtn'()
-
-CustomKeywords.'pages.ModalDialog.verifyBody'(messageBody)
-
-CustomKeywords.'pages.ModalDialog.verifyTitle'(messageTitle)
-
-CustomKeywords.'pages.ModalDialog.clickOnCloseButton'()
-
-
-CustomKeywords.'pages.Page_Licensure_Unit_License.verifyStatus'('Waiting Applicant Action')
+// Click on "Start Review" and complete the process
+CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Manage.verifyStartReviewBtnIsNotVisible'()
 
 
 
@@ -132,7 +99,5 @@ System.sleep(2000)
 WebUI.switchToWindowIndex(currentTab)
 
 
-// Close browser
+//Close Browser
 WebUI.closeBrowser()
-
-

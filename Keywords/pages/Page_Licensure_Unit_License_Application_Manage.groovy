@@ -19,6 +19,7 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.kms.katalon.core.util.KeywordUtil
 
 import internal.GlobalVariable
 
@@ -73,18 +74,10 @@ public class Page_Licensure_Unit_License_Application_Manage {
 
 
 	@Keyword
-	def StartReview () {
+	def clickOnStartReview () {
 		WebUI.waitForElementVisible(buttonStartReview, 0)
 
 		WebUI.click(buttonStartReview)
-
-		WebUI.waitForElementVisible(modalDialogTitle, 0)
-
-		WebUI.verifyElementText(modalDialogTitle, 'Create Application', FailureHandling.CONTINUE_ON_FAILURE)
-
-		WebUI.click(buttonMDOkay)
-
-		WebUI.verifyElementText(dropdownStatus, 'Pending', FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
 
@@ -162,6 +155,15 @@ public class Page_Licensure_Unit_License_Application_Manage {
 		WebUI.waitForElementVisible(dropdownStatus, 0)
 
 		WebUI.verifyElementText(dropdownStatus, status, FailureHandling.CONTINUE_ON_FAILURE)
+	}
+
+	@Keyword
+	def verifyStartReviewBtnIsNotVisible () {
+		WebUI.waitForElementVisible(buttonStartReview, 20)
+
+		if(!WebUI.verifyElementNotVisible(buttonStartReview, FailureHandling.CONTINUE_ON_FAILURE)) {
+			KeywordUtil.markFailed("Failure: The button 'Start Review' was present.")
+		}
 	}
 
 }

@@ -69,12 +69,9 @@ CustomKeywords.'pages.Page_Licensure_Unit_License_Application.verifyLicenseAppli
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application.clickOnManageTab'()
 
 
-// Click on "Start Review" and complete the process
-CustomKeywords.'pages.Page_Licensure_Unit_License_Application.StartReview'()
-
-
 // Click on Approve Application and complte the process
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application.ApproveApplication'()
+
 
 
 //Close Browser

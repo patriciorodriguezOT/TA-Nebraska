@@ -182,6 +182,7 @@ CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
 WebUI.switchToWindowIndex(currentTab)
 
+// Close Browser
 WebUI.closeBrowser()
 
 

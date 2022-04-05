@@ -123,6 +123,8 @@ CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
 System.sleep(2000)
 
+WebUI.switchToWindowIndex(currentTab)
+
 // Close browser
 WebUI.closeBrowser()
 
