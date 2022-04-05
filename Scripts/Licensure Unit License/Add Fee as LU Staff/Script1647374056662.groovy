@@ -37,7 +37,7 @@ GetToken getTokenReq = new GetToken()
 int currentTab
 String feeAmount = 50
 String allowPayments = 'No'
-String licenseType = 'EO 21-18 Prov Physical Therapist'
+String licenseType = 'Physical Therapist'
 String titleModalDialog = 'Record Saved'
 String bodyModalDialog = "The record has been saved."
 String status = 'Unpaid'
