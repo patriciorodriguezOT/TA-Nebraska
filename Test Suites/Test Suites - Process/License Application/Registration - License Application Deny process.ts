@@ -78,6 +78,12 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
+      <guid>5c888b70-9246-4f75-8f2a-eced0c7dc54f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit License Application/Start Review - License Application (Start Review Btn)</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>960f5026-3ae6-41c9-8ea8-22c2c8780f16</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
