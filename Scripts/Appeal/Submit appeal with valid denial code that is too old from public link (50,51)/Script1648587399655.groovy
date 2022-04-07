@@ -33,6 +33,8 @@ String[] parentsTC = ['Test Cases/Licensure Unit License Application/Deny Licens
 // Verify any TC dependency has failed
 CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 
+String modalDialgoTitle = 'Appeals'
+
 // Verify Denial Event Record Status was created correctly
 GetToken getTokenReq = new GetToken()
 
@@ -127,8 +129,11 @@ CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'(GlobalVariabl
 // Click on Next
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextBtn'()
 
+//Verify Modal Dialog Title
+CustomKeywords.'pages.ModalDialog.verifyTitle'(modalDialgoTitle)
+
 // Verify valid denial code entered and form shows up poping up a modal
-CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+CustomKeywords.'pages.ModalDialog.clickOnCloseButton'()
 
 //Close browser
 WebUI.closeBrowser()

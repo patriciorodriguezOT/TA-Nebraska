@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Registration - License Application Deny process</name>
+   <name>Submit appeal with valid denial code that is too old from public link (49)</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,9 +10,9 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>05cd1510-0a18-4397-baea-8d9e1895548a</testSuiteGuid>
+   <testSuiteGuid>408cfb16-b115-48c8-b65c-a0abb48150ac</testSuiteGuid>
    <testCaseLink>
-      <guid>02daefce-9713-45f4-a42a-1c250dfd8d89</guid>
+      <guid>0ac68511-bf65-48da-8b0f-5fee2b28dc6e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Licensure Unit User Registration/Registration Successful - US Citizen - With SSN</testCaseId>
@@ -42,13 +42,13 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>aa4c4af8-327f-46c0-abda-df2110ff0bde</guid>
+      <guid>2bbd1810-1c60-4cb8-a05b-5ed4406236d0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Licensure Unit User Registration/Reset Password and Complete Registration Process</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>6e3f52c9-2875-419f-aa36-cd4d54a86e94</guid>
+      <guid>a1a32aca-27f0-4ceb-970e-694cb7ce06e1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist - Reciprocity</testCaseId>
@@ -78,57 +78,21 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>5c888b70-9246-4f75-8f2a-eced0c7dc54f</guid>
+      <guid>afff1e5c-9a33-42b9-83e6-0e5aada6651f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Licensure Unit License Application/Start Review - License Application (Start Review Btn)</testCaseId>
+      <testCaseId>Test Cases/Licensure Unit License Application/Start Review - License Application (Modal Dialog)</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>960f5026-3ae6-41c9-8ea8-22c2c8780f16</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Licensure Unit License Application/Approve License Application Before Tasks Are Complete</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>3f3896e0-cb56-4b76-aab6-f700d66f612b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Licensure Unit License Application/Return License Application - Without Req More Info on any task</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>5ecb9c8b-c569-4108-8035-ac40eeb744e5</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Licensure Unit License Application/Mark License Deficient and keep the Application</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>b4d5b39c-3aca-49e2-b26f-56fda63e39d8</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Licensure Unit License Application/Complete Task returned when LU Staff kept the application</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>0a5c7107-b0cd-4234-ab6b-38695d4b61e5</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Licensure Unit License Application/Create Denial Letter</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>15d93abc-b8e4-4f0d-8855-5679090e7b5f</guid>
+      <guid>ffe227c7-2a93-455f-bd1f-9126c9c2dfdf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Licensure Unit License Application/Deny License Application</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>096a38a3-c4be-4781-9d6c-8aa52f3296b0</guid>
+      <guid>74136d29-7185-4f8c-ab98-55f1e4c266f7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Appeal/Submit appeal with invalid denial code from Public link</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>7eab5472-e7f7-4898-9949-be62b8a53935</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Appeal/Submit appeal with valid denial code that is too old from public link (50,51)</testCaseId>
+      <testCaseId>Test Cases/Appeal/Submit appeal with valid denial code that is too old from public link (49)</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

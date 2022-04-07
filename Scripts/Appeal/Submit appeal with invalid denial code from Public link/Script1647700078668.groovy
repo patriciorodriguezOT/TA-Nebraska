@@ -33,7 +33,7 @@ WebUI.openBrowser(GlobalVariable.G_Appeal_Link)
 CustomKeywords.'pages.Page_Licensure_Unit_Appeals.enterAppealCode'(randomAppealCode)
 
 // Click on Next
-CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextButton'()
+CustomKeywords.'pages.Page_Licensure_Unit_Appeals.clickOnNextBtn'()
 
 // Verify if alert is present and get alertText
 WebUI.verifyAlertPresent(5)
