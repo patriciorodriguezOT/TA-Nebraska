@@ -47,7 +47,7 @@ public class Page_Licensure_Unit_Fee {
 
 	@Keyword
 	def selectPhysicalTherapistOnLicenseName () {
-		WebUI.waitForElementVisible(dropdownLicenseName, 0)
+		WebUI.waitForElementVisible(dropdownLicenseName, 40)
 
 		WebUI.click(dropdownLicenseName)
 
@@ -57,6 +57,8 @@ public class Page_Licensure_Unit_Fee {
 
 	@Keyword
 	def selectLapFeeOnFeeType () {
+		WebUI.waitForElementVisible(dropdownFeeType, 40)
+		
 		WebUI.click(dropdownFeeType)
 
 		WebUI.click(dropdownLapFeeOpt)
@@ -100,7 +102,7 @@ public class Page_Licensure_Unit_Fee {
 
 	@Keyword
 	def verifyRepeatingRawControlInfo (String expectedTotalDue, String expectedTotalPaid, String expectedDescription, String expectedStatus) {
-		WebUI.waitForElementVisible(columnTotalDue, 0)
+		WebUI.waitForElementVisible(columnTotalDue, 40)
 
 		String totalDue = WebUI.getText(columnTotalDue)
 

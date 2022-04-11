@@ -28,7 +28,7 @@ public class Page_Applicant_MyFinances {
 
 	@Keyword
 	def clickOnPayOutstandingFees () {
-		WebUI.waitForElementVisible(linkPayOutstandingFees, 0)
+		WebUI.waitForElementVisible(linkPayOutstandingFees, 40)
 
 		WebUI.click(linkPayOutstandingFees)
 	}

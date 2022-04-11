@@ -42,7 +42,7 @@ public class ModalDialog {
 
 	@Keyword
 	def verifyTitleAndBodyText (String title, String body) {
-		WebUI.waitForElementVisible(modalDialogTitle, 0)
+		WebUI.waitForElementVisible(modalDialogTitle, 40)
 
 		WebUI.verifyElementText(modalDialogTitle, title, FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -54,42 +54,42 @@ public class ModalDialog {
 
 	@Keyword
 	def clickOnOkbutton () {
-		WebUI.waitForElementVisible(modalDialogOkButton, 0)
+		WebUI.waitForElementVisible(modalDialogOkButton, 40)
 
 		WebUI.click(modalDialogOkButton)
 	}
 
 	@Keyword
 	def clickOnOkaybutton () {
-		WebUI.waitForElementVisible(modalDialogOkayButton, 0)
+		WebUI.waitForElementVisible(modalDialogOkayButton, 40)
 
 		WebUI.click(modalDialogOkayButton)
 	}
 
 	@Keyword
 	def clickOnCloseButton () {
-		WebUI.waitForElementVisible(modalDialogCloseButton, 0)
+		WebUI.waitForElementVisible(modalDialogCloseButton, 40)
 
 		WebUI.click(modalDialogCloseButton)
 	}
 
 	@Keyword
 	def clickOnConfirmbutton () {
-		WebUI.waitForElementVisible(modalDialogConfirmButton, 0)
+		WebUI.waitForElementVisible(modalDialogConfirmButton, 40)
 
 		WebUI.click(modalDialogConfirmButton)
 	}
 
 	@Keyword
 	def clickOnMergeValue () {
-		WebUI.waitForElementVisible(buttonMergeValue, 0)
+		WebUI.waitForElementVisible(buttonMergeValue, 40)
 
 		WebUI.click(buttonMergeValue)
 	}
 
 	@Keyword
 	def enterRangeOfDate (String startDate, String endDate) {
-		WebUI.waitForElementVisible(inputStartDate, 0)
+		WebUI.waitForElementVisible(inputStartDate, 40)
 
 		WebUI.sendKeys(inputStartDate, startDate)
 
@@ -98,42 +98,42 @@ public class ModalDialog {
 
 	@Keyword
 	def enterLicenseBoard (String token1) {
-		WebUI.waitForElementVisible(inputLicenseBoard, 0)
+		WebUI.waitForElementVisible(inputLicenseBoard, 40)
 
 		WebUI.sendKeys(inputLicenseBoard, token1)
 	}
 
 	@Keyword
 	def verifyTitle (String title) {
-		WebUI.waitForElementVisible(modalDialogTitle, 0)
+		WebUI.waitForElementVisible(modalDialogTitle, 40)
 
 		WebUI.verifyElementText(modalDialogTitle, title, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
 	@Keyword
 	def verifyBody (String body) {
-		WebUI.waitForElementVisible(modalDialogContent, 0)
+		WebUI.waitForElementVisible(modalDialogContent, 40)
 
 		WebUI.verifyElementText(modalDialogContent, body, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
 	@Keyword
 	def clickOnReturnApplicationBtn () {
-		WebUI.waitForElementVisible(modalDialogRetrunApplicationBtn, 0)
+		WebUI.waitForElementVisible(modalDialogRetrunApplicationBtn, 40)
 
 		WebUI.click(modalDialogRetrunApplicationBtn)
 	}
 
 	@Keyword
 	def clickOnKeepApplicationBtn () {
-		WebUI.waitForElementVisible(modalDialogKeepApplicationBtn, 0)
+		WebUI.waitForElementVisible(modalDialogKeepApplicationBtn, 40)
 
 		WebUI.click(modalDialogKeepApplicationBtn)
 	}
 
 	@Keyword
 	def verifyTokensNotFoundMsg () {
-		WebUI.waitForElementVisible(modalDialogTitle, 5)
+		WebUI.waitForElementVisible(modalDialogTitle, 40)
 
 		if (WebUI.verifyElementNotVisible(modalDialogTitle, FailureHandling.CONTINUE_ON_FAILURE)) {
 		} else {

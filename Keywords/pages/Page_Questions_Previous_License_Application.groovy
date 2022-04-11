@@ -37,7 +37,7 @@ public class Page_Questions_Previous_License_Application {
 
 	@Keyword
 	def answerYesNoQuestion (String answer) {
-		WebUI.waitForElementVisible(dropdownYesNoQuestion, 0)
+		WebUI.waitForElementVisible(dropdownYesNoQuestion, 40)
 
 		if (answer == 'Yes') {
 			WebUI.click(dropdownYesNoQuestion)
@@ -53,7 +53,7 @@ public class Page_Questions_Previous_License_Application {
 
 	@Keyword
 	def clickOnNextButtonm () {
-		WebUI.waitForElementVisible(buttonNext, 0)
+		WebUI.waitForElementVisible(buttonNext, 40)
 
 		WebUI.click(buttonNext)
 	}
@@ -61,14 +61,14 @@ public class Page_Questions_Previous_License_Application {
 
 	@Keyword
 	def clickOnConfirmAnswers () {
-		WebUI.waitForElementVisible(buttonConfirmAnswers, 0)
+		WebUI.waitForElementVisible(buttonConfirmAnswers, 40)
 
 		WebUI.click(buttonConfirmAnswers)
 	}
 
 	@Keyword
 	def selectAnswer (String answer) {
-		WebUI.waitForElementVisible(labelOpt1, 0)
+		WebUI.waitForElementVisible(labelOpt1, 40)
 
 		if (answer == 'Opt1') {
 			WebUI.click(labelOpt1)

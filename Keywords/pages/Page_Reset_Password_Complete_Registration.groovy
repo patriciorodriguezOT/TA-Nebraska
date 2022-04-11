@@ -31,7 +31,7 @@ public class Page_Reset_Password_Complete_Registration {
 
 	@Keyword
 	def completePasswords () {
-		WebUI.waitForElementVisible(inputNewPassword, 0)
+		WebUI.waitForElementVisible(inputNewPassword, 40)
 
 		WebUI.sendKeys(inputNewPassword, GlobalVariable.G_ApplicantPass)
 
@@ -41,7 +41,7 @@ public class Page_Reset_Password_Complete_Registration {
 
 	@Keyword
 	def clickOnResetPasswordbtn () {
-		WebUI.waitForElementVisible(buttonResetPassword, 0)
+		WebUI.waitForElementVisible(buttonResetPassword, 40)
 
 		WebUI.click(buttonResetPassword)
 	}

@@ -51,7 +51,7 @@ public class Page_Licensure_Unit_License_Application_Manage {
 	// Actions on Manage TAB
 	@Keyword
 	def clickOnApplicationApprove () {
-		WebUI.waitForElementVisible(buttonApplicantApprove, 0)
+		WebUI.waitForElementVisible(buttonApplicantApprove, 40)
 
 		WebUI.click(buttonApplicantApprove)
 	}
@@ -59,7 +59,7 @@ public class Page_Licensure_Unit_License_Application_Manage {
 
 	@Keyword
 	def clickOnCancelAndClose () {
-		WebUI.waitForElementVisible(buttonCancelAndClose, 0)
+		WebUI.waitForElementVisible(buttonCancelAndClose, 40)
 
 		WebUI.click(buttonCancelAndClose)
 	}
@@ -67,7 +67,7 @@ public class Page_Licensure_Unit_License_Application_Manage {
 
 	@Keyword
 	def clickOnCreateLetter () {
-		WebUI.waitForElementVisible(buttonCreateLetter, 0)
+		WebUI.waitForElementVisible(buttonCreateLetter, 40)
 
 		WebUI.click(buttonCreateLetter)
 	}
@@ -75,7 +75,7 @@ public class Page_Licensure_Unit_License_Application_Manage {
 
 	@Keyword
 	def clickOnStartReview () {
-		WebUI.waitForElementVisible(buttonStartReview, 0)
+		WebUI.waitForElementVisible(buttonStartReview, 40)
 
 		WebUI.click(buttonStartReview)
 	}
@@ -83,11 +83,11 @@ public class Page_Licensure_Unit_License_Application_Manage {
 
 	@Keyword
 	def ApproveApplication () {
-		WebUI.waitForElementVisible(buttonApplicantApprove, 0)
+		WebUI.waitForElementVisible(buttonApplicantApprove, 40)
 
 		WebUI.click(buttonApplicantApprove)
 
-		WebUI.waitForElementVisible(modalDialogTitle, 0)
+		WebUI.waitForElementVisible(modalDialogTitle, 40)
 
 		WebUI.verifyElementText(modalDialogTitle, 'Application Approved', FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -98,7 +98,7 @@ public class Page_Licensure_Unit_License_Application_Manage {
 
 	@Keyword
 	def DenyApplication () {
-		WebUI.waitForElementVisible(buttonApplicationDeny, 0)
+		WebUI.waitForElementVisible(buttonApplicationDeny, 40)
 
 		WebUI.click(dropdownReasonForDenial)
 
@@ -106,7 +106,7 @@ public class Page_Licensure_Unit_License_Application_Manage {
 
 		WebUI.click(buttonApplicationDeny)
 
-		WebUI.waitForElementVisible(modalDialogTitle, 0)
+		WebUI.waitForElementVisible(modalDialogTitle, 40)
 
 		WebUI.verifyElementText(modalDialogTitle, 'Application Denied', FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -117,17 +117,17 @@ public class Page_Licensure_Unit_License_Application_Manage {
 
 	@Keyword
 	def IssueLicense () {
-		WebUI.waitForElementVisible(buttonIssueLicense, 0)
+		WebUI.waitForElementVisible(buttonIssueLicense, 40)
 
 		WebUI.click(buttonIssueLicense)
 
-		WebUI.waitForElementVisible(modalDialogTitle, 0)
+		WebUI.waitForElementVisible(modalDialogTitle, 40)
 
 		WebUI.verifyElementText(modalDialogTitle, 'Issue License', FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.click(buttonMDOk)
 
-		WebUI.waitForElementVisible(modalDialogTitle, 0)
+		WebUI.waitForElementVisible(modalDialogTitle, 40)
 
 		WebUI.verifyElementText(modalDialogTitle, 'License Issued', FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -136,7 +136,7 @@ public class Page_Licensure_Unit_License_Application_Manage {
 
 	@Keyword
 	def setApplicationDeficient () {
-		WebUI.waitForElementVisible(buttonApplicantDeficient, 0)
+		WebUI.waitForElementVisible(buttonApplicantDeficient, 40)
 
 		WebUI.click(buttonApplicantDeficient)
 	}
@@ -152,14 +152,14 @@ public class Page_Licensure_Unit_License_Application_Manage {
 
 	@Keyword
 	def verifyStatus (String status) {
-		WebUI.waitForElementVisible(dropdownStatus, 0)
+		WebUI.waitForElementVisible(dropdownStatus, 40)
 
 		WebUI.verifyElementText(dropdownStatus, status, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
 	@Keyword
 	def verifyStartReviewBtnIsNotVisible () {
-		WebUI.waitForElementVisible(buttonStartReview, 20)
+		WebUI.waitForElementVisible(buttonStartReview, 240)
 
 		if(!WebUI.verifyElementNotVisible(buttonStartReview, FailureHandling.CONTINUE_ON_FAILURE)) {
 			KeywordUtil.markFailed("Failure: The button 'Start Review' was present.")

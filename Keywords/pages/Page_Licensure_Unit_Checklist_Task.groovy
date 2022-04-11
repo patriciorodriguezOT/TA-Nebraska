@@ -40,35 +40,35 @@ public class Page_Licensure_Unit_Checklist_Task {
 
 	@Keyword
 	def clickOnApproveTab () {
-		WebUI.waitForElementVisible(tabApprove, 0)
+		WebUI.waitForElementVisible(tabApprove, 40)
 
 		WebUI.click(tabApprove)
 	}
-	
-	
+
+
 	@Keyword
 	def clickOnCompleteTab () {
-		WebUI.waitForElementVisible(tabComplete, 0)
+		WebUI.waitForElementVisible(tabComplete, 40)
 
 		WebUI.click(tabComplete)
 	}
-	
-	
+
+
 	@Keyword
 	def clickOnCompleteBtn () {
-		WebUI.waitForElementVisible(buttonComplete, 0)
+		WebUI.waitForElementVisible(buttonComplete, 40)
 
 		WebUI.click(buttonComplete)
-		
+
 		WebUI.waitForAlert(0)
-		
+
 		WebUI.verifyElementText(dropdownStatus, 'Waiting Approval', FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
 
 	@Keyword
 	def clickOnApproveButton () {
-		WebUI.waitForElementVisible(buttonApprove, 0)
+		WebUI.waitForElementVisible(buttonApprove, 40)
 
 		WebUI.click(buttonApprove)
 
@@ -78,7 +78,7 @@ public class Page_Licensure_Unit_Checklist_Task {
 
 	@Keyword
 	def clickOnRequestMoreInfoButton () {
-		WebUI.waitForElementVisible(buttonRequestMoreInfo, 0)
+		WebUI.waitForElementVisible(buttonRequestMoreInfo, 40)
 
 		WebUI.click(buttonRequestMoreInfo)
 
@@ -90,7 +90,7 @@ public class Page_Licensure_Unit_Checklist_Task {
 
 	@Keyword
 	def clickOnCloseButton () {
-		WebUI.waitForElementVisible(buttonClose, 0)
+		WebUI.waitForElementVisible(buttonClose, 40)
 
 		WebUI.click(buttonClose)
 	}

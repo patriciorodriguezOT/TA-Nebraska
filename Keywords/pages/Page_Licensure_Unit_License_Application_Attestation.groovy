@@ -38,7 +38,7 @@ public class Page_Licensure_Unit_License_Application_Attestation {
 
 	@Keyword
 	def checkIAmACitizen () {
-		WebUI.waitForElementVisible(checkboxIamCitizen, 0)
+		WebUI.waitForElementVisible(checkboxIamCitizen, 40)
 
 		WebUI.click(checkboxIamCitizen)
 	}
@@ -46,7 +46,7 @@ public class Page_Licensure_Unit_License_Application_Attestation {
 
 	@Keyword
 	def enterPrintName (String printName) {
-		WebUI.waitForElementVisible(fieldPrintName, 0)
+		WebUI.waitForElementVisible(fieldPrintName, 40)
 
 		WebUI.sendKeys(fieldPrintName, printName)
 	}
@@ -54,7 +54,7 @@ public class Page_Licensure_Unit_License_Application_Attestation {
 
 	@Keyword
 	def checkSignature () {
-		WebUI.waitForElementVisible(checkboxSignature, 0)
+		WebUI.waitForElementVisible(checkboxSignature, 40)
 
 		WebUI.click(checkboxSignature)
 	}
@@ -62,14 +62,14 @@ public class Page_Licensure_Unit_License_Application_Attestation {
 
 	@Keyword
 	def clickOnNextButton () {
-		WebUI.waitForElementVisible(buttonNext, 0)
+		WebUI.waitForElementVisible(buttonNext, 40)
 
 		WebUI.click(buttonNext)
 	}
 
 	@Keyword
 	def clickOnNextButtonModalDialog () {
-		WebUI.waitForElementVisible(buttonModalDialog, 0)
+		WebUI.waitForElementVisible(buttonModalDialog, 40)
 
 		WebUI.click(buttonModalDialog)
 	}

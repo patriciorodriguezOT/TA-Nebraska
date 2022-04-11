@@ -34,12 +34,12 @@ public class Page_Licensure_Unit_License_Application_Pay {
 
 	@Keyword
 	def clickOnPayNowBtn () {
-		WebUI.waitForElementVisible(buttonPayNow, 0)
+		WebUI.waitForElementVisible(buttonPayNow, 40)
 
 		WebUI.click(buttonPayNow)
 	}
-	
-	
+
+
 	@Keyword
 	def verifyPayNowBtnIsVisible () {
 		WebUI.verifyElementVisible(buttonPayNow, FailureHandling.OPTIONAL)

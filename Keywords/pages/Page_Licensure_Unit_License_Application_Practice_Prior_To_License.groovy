@@ -38,13 +38,13 @@ public class Page_Licensure_Unit_License_Application_Practice_Prior_To_License {
 	@Keyword
 	def selectHasPracticedWithoutLicense (String answer) {
 		if (answer == 'Yes') {
-			WebUI.waitForElementVisible(dropdownHasPracticedWithoutLic, 0)
+			WebUI.waitForElementVisible(dropdownHasPracticedWithoutLic, 40)
 
 			WebUI.click(dropdownHasPracticedWithoutLic)
 
 			WebUI.click(selectHasPracticedWthoutLicYesOpt)
 		} else {
-			WebUI.waitForElementVisible(dropdownHasPracticedWithoutLic, 0)
+			WebUI.waitForElementVisible(dropdownHasPracticedWithoutLic, 40)
 
 			WebUI.click(dropdownHasPracticedWithoutLic)
 
@@ -55,7 +55,7 @@ public class Page_Licensure_Unit_License_Application_Practice_Prior_To_License {
 
 	@Keyword
 	def clickOnNextButton () {
-		WebUI.waitForElementVisible(buttonNext, 0)
+		WebUI.waitForElementVisible(buttonNext, 40)
 
 		WebUI.click(buttonNext)
 	}

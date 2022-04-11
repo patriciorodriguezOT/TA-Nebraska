@@ -35,7 +35,7 @@ public class Page_Login {
 
 	@Keyword
 	def enterUserName (String username) {
-		WebUI.waitForElementVisible(findTestObject('Page_Login_VisualVault/input_UserName'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Login_VisualVault/input_UserName'), 40)
 
 		WebUI.sendKeys(findTestObject('Page_Login_VisualVault/input_Password'), username)
 	}
@@ -43,7 +43,7 @@ public class Page_Login {
 
 	@Keyword
 	def enterPassword (String pass) {
-		WebUI.waitForElementVisible(findTestObject('Page_Login_VisualVault/input_UserName'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Login_VisualVault/input_UserName'), 40)
 
 		WebUI.sendKeys(findTestObject('Page_Login_VisualVault/input_Password'), pass)
 	}
