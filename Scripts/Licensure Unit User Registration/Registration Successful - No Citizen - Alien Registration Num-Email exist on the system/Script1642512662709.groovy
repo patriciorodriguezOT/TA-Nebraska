@@ -19,6 +19,7 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('LU Staff User/Create Individual Record - No Citizen - with Alien Registration Num'), [:], FailureHandling.STOP_ON_FAILURE)
 
+String modalDialogMessage = 'An existing Individual Record has been found matching the information you have entered. An account has been created for that User Registration record and login credentials have been sent by email.'
 
 
 // Open Browser
@@ -70,7 +71,10 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeRetypeEmailA
 // Click on Submit and complete Registration
 CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.clickOnSubmitBtn'()
 
-CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.verifyRegistrationExistingUserCompletedSuccessfully'()
+CustomKeywords.'pages.ModalDialog.verifyBody'(modalDialogMessage)
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
 
 
 

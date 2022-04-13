@@ -87,12 +87,6 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeEmailAddress
 CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.completeRetypeEmailAddress'(GlobalVariable.G_Applicant_Email)
 
 
-
-// Take Screenshot
-WebUI.takeScreenshot('C:\\Users\\patricior-ot\\Katalon Studio\\ScreenShots\\Screenshot' + GlobalVariable.G_Applicant_Email + '.png')
-
-
-
 // Click on Submit and complete Registration
 CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.clickOnSubmitBtn'()
 

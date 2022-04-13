@@ -86,31 +86,31 @@
    <testCaseLink>
       <guid>960f5026-3ae6-41c9-8ea8-22c2c8780f16</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Licensure Unit License Application/Approve License Application Before Tasks Are Complete</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3f3896e0-cb56-4b76-aab6-f700d66f612b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Licensure Unit License Application/Return License Application - Without Req More Info on any task</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5ecb9c8b-c569-4108-8035-ac40eeb744e5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Licensure Unit License Application/Mark License Deficient and keep the Application</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b4d5b39c-3aca-49e2-b26f-56fda63e39d8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Licensure Unit License Application/Complete Task returned when LU Staff kept the application</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0a5c7107-b0cd-4234-ab6b-38695d4b61e5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Licensure Unit License Application/Create Denial Letter</testCaseId>
    </testCaseLink>
    <testCaseLink>

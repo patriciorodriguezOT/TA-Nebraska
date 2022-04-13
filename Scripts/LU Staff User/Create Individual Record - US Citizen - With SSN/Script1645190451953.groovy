@@ -40,7 +40,10 @@ GlobalVariable.G_Applicant_LastName = ('Automation' + randomLastName)
 
 GlobalVariable.G_Applicant_Email = (('pruebas.onetree+Applicant' + randomFirstName) + '@gmail.com')
 
-
+print GlobalVariable.G_Applicant_FirstName
+print GlobalVariable.G_Applicant_LastName
+print GlobalVariable.G_Applicant_SSN
+print GlobalVariable.G_Applicant_Email
 
 // Open Browser
 WebUI.openBrowser(GlobalVariable.G_Nebraska_Link)

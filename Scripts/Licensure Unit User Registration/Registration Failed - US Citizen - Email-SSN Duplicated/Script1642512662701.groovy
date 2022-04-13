@@ -30,7 +30,8 @@ String DOB = Generic_functions.randomPastDate(18250, 10000)
 
 // Set Random Variables
 String titleMessage = 'Unable To Process Registration'
-String bodyMessage = 'An error was encountered. A record for you already exists in the system based upon one of the key identifying criteria. Please go to https://vv5qa.visualvault.com/ to sign in or use the forgot username/password link. If you need further assistance, please e-mail DHHS.LanceSupport@nebraska.gov.'
+String bodyMessageEmailDuplicated = 'An error was encountered. There was an error during the submission of this record. Multiple records with matching emails found. Please try again or contact a system administrator if this problem continues.'
+String bodyMessageSSNDuplicated = 'An error was encountered. Duplicate user information present in the system. Please try again or contact a system administrator if this problem continues.'
 String randomFirstName = Generic_functions.randomString(chars, 5)
 String randomLastName = Generic_functions.randomString(chars, 5)
 String randomSSN = Generic_functions.randomString(nums, 9)
@@ -96,7 +97,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.clickOnSubmitBtn'()
 
 
 // Verify Error Message because user duplicated is displayed - In this case the duplacted error is cause because the Email
-CustomKeywords.'pages.ModalDialog.verifyBody'(bodyMessage)
+CustomKeywords.'pages.ModalDialog.verifyBody'(bodyMessageEmailDuplicated)
 
 CustomKeywords.'pages.ModalDialog.verifyTitle'(titleMessage)
 
@@ -131,7 +132,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_User_Registration.clickOnSubmitBtn'()
 
 
 // Verify Error Message because user duplicated is displayed - In this case the duplacted error is cause because the Email
-CustomKeywords.'pages.ModalDialog.verifyBody'(bodyMessage)
+CustomKeywords.'pages.ModalDialog.verifyBody'(bodyMessageSSNDuplicated)
 
 CustomKeywords.'pages.ModalDialog.verifyTitle'(titleMessage)
 
