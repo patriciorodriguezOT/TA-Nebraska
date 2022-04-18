@@ -75,11 +75,13 @@ CustomKeywords.'pages.Page_Licensure_Unit_License.clickOnPrintWallCertificateBut
 WebUI.switchToWindowIndex(currentTab + 2)
 
 // Make sure Wallet Card Load Correctly
-System.sleep(15000)
+System.sleep(25000)
 
 WebUI.waitForPageLoad(30)
 
 // Take screenshot of the Wallet Card print view. It returns the path location of the image.
+WebUI.takeFullPageScreenshot()
+
 String currentImgDir = CustomKeywords.'generic.screenshots.getFullPageScreenshot'()
 
 // Compare ScreenShots. First Screenshot is a Correct Example. The second Screenshot is the one taken on the test case

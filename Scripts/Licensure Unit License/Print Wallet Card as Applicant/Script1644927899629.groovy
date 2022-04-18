@@ -58,11 +58,13 @@ CustomKeywords.'pages.Page_Licensure_Unit_License.clickOnPrintWalletCardButton'(
 
 WebUI.switchToWindowIndex(currentTab + 2)
 
-System.sleep(15000)
+System.sleep(25000)
 
 WebUI.waitForPageLoad(30)
 
 // Take screenshot and save Path of img
+WebUI.takeFullPageScreenshot()
+
 String currentImgDir = CustomKeywords.'generic.screenshots.getFullPageScreenshot'()
 
 // Compare ScreenShots. First Screenshot is a Correct Example. The second Screenshot is the one taken on the test case
