@@ -44,24 +44,26 @@ public class Page_Licensure_Unit_Checklist_Task {
 
 		WebUI.click(tabApprove)
 	}
-	
-	
+
+
 	@Keyword
 	def clickOnCompleteTab () {
 		WebUI.waitForElementVisible(tabComplete, 0)
 
 		WebUI.click(tabComplete)
 	}
-	
-	
+
+
 	@Keyword
 	def clickOnCompleteBtn () {
 		WebUI.waitForElementVisible(buttonComplete, 0)
 
 		WebUI.click(buttonComplete)
-		
+
 		WebUI.waitForAlert(0)
 		
+		System.sleep(3000)
+
 		WebUI.verifyElementText(dropdownStatus, 'Waiting Approval', FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
@@ -71,8 +73,6 @@ public class Page_Licensure_Unit_Checklist_Task {
 		WebUI.waitForElementVisible(buttonApprove, 0)
 
 		WebUI.click(buttonApprove)
-
-		WebUI.verifyElementText(dropdownStatus, 'Approved', FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
 
@@ -83,6 +83,8 @@ public class Page_Licensure_Unit_Checklist_Task {
 		WebUI.click(buttonRequestMoreInfo)
 
 		WebUI.waitForAlert(0)
+		
+		System.sleep(3000)
 
 		WebUI.verifyElementText(dropdownStatus, 'Returned', FailureHandling.CONTINUE_ON_FAILURE)
 	}
@@ -93,5 +95,12 @@ public class Page_Licensure_Unit_Checklist_Task {
 		WebUI.waitForElementVisible(buttonClose, 0)
 
 		WebUI.click(buttonClose)
+	}
+	
+	@Keyword
+	def verifyStatus (String statutsExpected) {
+		String currentStatus =  WebUI.getText(dropdownStatus)
+		
+		WebUI.verifyMatch(currentStatus, statutsExpected, false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 }

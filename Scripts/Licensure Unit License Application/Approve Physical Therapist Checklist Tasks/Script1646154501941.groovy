@@ -57,6 +57,7 @@ CustomKeywords.'pages.Page_Home_Admin_ApplicationsInProgress.clickOnReviewLink'(
 
 // Move to Next Window
 int currentTab = WebUI.getWindowIndex()
+String statusExpected = 'Approeved'
 
 WebUI.switchToWindowIndex(currentTab + 1)
 
@@ -73,6 +74,10 @@ WebUI.switchToWindowIndex(currentTab + 2)
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveButton'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 
@@ -92,6 +97,10 @@ CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveButton'()
 
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
+
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 
 CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
@@ -109,6 +118,10 @@ WebUI.switchToWindowIndex(currentTab + 2)
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveButton'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 
@@ -128,6 +141,10 @@ CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveButton'()
 
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
+
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 
 CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
@@ -145,6 +162,10 @@ WebUI.switchToWindowIndex(currentTab + 2)
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveButton'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 
@@ -164,6 +185,10 @@ CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveButton'()
 
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
+
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 
 CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
@@ -182,6 +207,10 @@ CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveButton'()
 
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
+
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 
 CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
@@ -199,6 +228,10 @@ WebUI.switchToWindowIndex(currentTab + 2)
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveButton'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 
