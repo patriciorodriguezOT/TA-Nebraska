@@ -26,7 +26,7 @@ String[] parentsTC = ['Test Cases/Licensure Unit License Application/Apply for a
 // Verify any TC dependency has failed
 CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 
-
+String statusExpected = 'Waiting Approval'
 
 // Go to Login Page
 WebUI.openBrowser(GlobalVariable.G_Nebraska_Link)
@@ -44,6 +44,10 @@ WebUI.switchToWindowIndex(currentTab + 1)
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCompleteTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCompleteBtn'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 
@@ -66,6 +70,10 @@ WebUI.switchToWindowIndex(currentTab + 1)
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCompleteTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCompleteBtn'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 

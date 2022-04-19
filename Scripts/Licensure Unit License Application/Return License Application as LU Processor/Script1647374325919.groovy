@@ -28,9 +28,9 @@ String[] parentsTC = ['Test Cases/Licensure Unit License Application/Apply for a
 CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 
 
-
 String messageTitle = 'Checklist Tasks'
 String messageBody = 'A total of 2 checklist(s) not completed/approved were reset. Please click "Create Letter" to be redirected to Letter Management to begin generating a letter regarding this returned application.'
+String statusExpected = 'Returned'
 // Go to Login Page
 WebUI.openBrowser(GlobalVariable.G_Nebraska_Link)
 
@@ -76,6 +76,10 @@ CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnRequestMoreInfoButton'()
 
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
+
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 
 CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
@@ -93,6 +97,10 @@ WebUI.switchToWindowIndex(currentTab + 2)
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnApproveTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnRequestMoreInfoButton'()
+
+CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
+
+CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.verifyStatus'(statusExpected)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Checklist_Task.clickOnCloseButton'()
 

@@ -57,7 +57,7 @@ CustomKeywords.'pages.Page_Home_Admin_ApplicationsInProgress.clickOnReviewLink'(
 
 // Move to Next Window
 int currentTab = WebUI.getWindowIndex()
-String statusExpected = 'Approeved'
+String statusExpected = 'Approved'
 
 WebUI.switchToWindowIndex(currentTab + 1)
 
