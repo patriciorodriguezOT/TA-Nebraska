@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='k-tabstrip-tabpanel-0']/viewer-tab-form/div/div[2]/div/div/div[24]/div/div/label</value>
+         <value>//input[@id='Option Checkbox 2']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

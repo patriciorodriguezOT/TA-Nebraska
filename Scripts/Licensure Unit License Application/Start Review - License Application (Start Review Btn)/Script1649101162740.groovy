@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 
 // Verify Parents TC have not failed ---
 // Set TCs dependency
-String[] parentsTC = ['Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist', 'Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist - Reciprocity']
+String[] parentsTC = ['Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist', 'Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist - Reciprocity', 'Test Cases/Licensure Unit License Application/Return License Application as LU Processor', 'Test Cases/Licensure Unit License Application/Complete Task returned and resubmit License Application']
 // Verify any TC dependency has failed
 CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 

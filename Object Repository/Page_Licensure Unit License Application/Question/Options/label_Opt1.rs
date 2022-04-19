@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='k-tabstrip-tabpanel-0']/viewer-tab-form/div/div[2]/div/div/div[23]/div/div/label</value>
+         <value>//input[@id='Option Checkbox 1']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

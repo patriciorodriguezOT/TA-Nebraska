@@ -107,7 +107,7 @@ public class Page_Licensure_Unit_Shopping_Cart {
 	@Keyword
 	def selectPaymentType (String paymentType) {
 		WebUI.waitForElementClickable(dropdownPaymentType, 20)
-		
+
 		WebUI.waitForElementVisible(dropdownPaymentType, 20)
 
 		WebUI.click(dropdownPaymentType)
