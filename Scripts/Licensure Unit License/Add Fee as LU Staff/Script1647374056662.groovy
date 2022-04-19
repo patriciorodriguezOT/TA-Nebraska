@@ -160,6 +160,8 @@ WebUI.openBrowser(GlobalVariable.G_Nebraska_Link)
 // Login with LU Staff user
 CustomKeywords.'pages.Page_Login.login'(GlobalVariable.G_Applicant_Email, GlobalVariable.G_ApplicantPass)
 
+System.sleep(10000)
+
 CustomKeywords.'pages.Page_Applicant_Home.clickOnViewYourFinances'()
 
 // Move to Next Window
@@ -172,6 +174,8 @@ CustomKeywords.'pages.Page_Applicant_MyFinances.clickOnPayOutstandingFees'()
 
 // Move to Next Window
 WebUI.switchToWindowIndex(currentTab + 2)
+
+System.sleep(10000)
 
 
 // Click on Refresh button to make sure Fee is displayed on the RRC
