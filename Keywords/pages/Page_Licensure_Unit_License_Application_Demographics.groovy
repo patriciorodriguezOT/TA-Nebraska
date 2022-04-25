@@ -45,7 +45,7 @@ public class Page_Licensure_Unit_License_Application_Demographics {
 
 	@Keyword
 	def checkCheckboxExperience () {
-		WebUI.waitForElementVisible(checkboxExperience, 0)
+		WebUI.waitForElementVisible(checkboxExperience, 40)
 
 		WebUI.check(checkboxExperience)
 	}
@@ -53,7 +53,7 @@ public class Page_Licensure_Unit_License_Application_Demographics {
 
 	@Keyword
 	def enterAKA (String aka) {
-		WebUI.waitForElementVisible(inputAKA, 0)
+		WebUI.waitForElementVisible(inputAKA, 40)
 
 		WebUI.sendKeys(inputAKA, aka)
 	}
@@ -62,13 +62,13 @@ public class Page_Licensure_Unit_License_Application_Demographics {
 	@Keyword
 	def selectSameAddres (String sameAddress) {
 		if (sameAddress == 'Yes') {
-			WebUI.waitForElementVisible(selectSameAddress, 0)
+			WebUI.waitForElementVisible(selectSameAddress, 40)
 
 			WebUI.click(selectSameAddress)
 
 			WebUI.click(selectSameAddressYesOpt)
 		} else {
-			WebUI.waitForElementVisible(selectSameAddress, 0)
+			WebUI.waitForElementVisible(selectSameAddress, 40)
 
 			WebUI.click(selectSameAddress)
 
@@ -79,22 +79,22 @@ public class Page_Licensure_Unit_License_Application_Demographics {
 
 	@Keyword
 	def verifyPlaceOfBirth (String placeOfBirth) {
-		WebUI.waitForElementVisible(inputPlaceOfBirth, 0)
+		WebUI.waitForElementVisible(inputPlaceOfBirth, 40)
 
-		WebUI.verifyElementAttributeValue(inputPlaceOfBirth, 'value', placeOfBirth, 0)
+		WebUI.verifyElementAttributeValue(inputPlaceOfBirth, 'value', placeOfBirth, 40)
 	}
 
 
 	@Keyword
 	def selectSpouseMemberUSAF (String answer) {
 		if (answer == 'Yes') {
-			WebUI.waitForElementVisible(selectSpouseOfUSAF, 0)
+			WebUI.waitForElementVisible(selectSpouseOfUSAF, 40)
 
 			WebUI.click(selectSpouseOfUSAF)
 
 			WebUI.click(selectSpouseOfUSAFYesOpt)
 		} else {
-			WebUI.waitForElementVisible(selectSpouseOfUSAF, 0)
+			WebUI.waitForElementVisible(selectSpouseOfUSAF, 40)
 
 			WebUI.click(selectSpouseOfUSAF)
 
@@ -106,13 +106,13 @@ public class Page_Licensure_Unit_License_Application_Demographics {
 	@Keyword
 	def selectProvisionalLicense (String answer) {
 		if (answer == 'Yes') {
-			WebUI.waitForElementVisible(selectProvisionalLicense, 0)
+			WebUI.waitForElementVisible(selectProvisionalLicense, 40)
 
 			WebUI.click(selectProvisionalLicense)
 
 			WebUI.click(selectProvisionalLicenseYesOpt)
 		} else {
-			WebUI.waitForElementVisible(selectProvisionalLicense, 0)
+			WebUI.waitForElementVisible(selectProvisionalLicense, 40)
 
 			WebUI.click(selectProvisionalLicense)
 
@@ -122,7 +122,7 @@ public class Page_Licensure_Unit_License_Application_Demographics {
 
 	@Keyword
 	def clickOnNextButton () {
-		WebUI.waitForElementVisible(buttonNext, 0)
+		WebUI.waitForElementVisible(buttonNext, 40)
 
 		WebUI.click(buttonNext)
 	}

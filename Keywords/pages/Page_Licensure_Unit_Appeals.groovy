@@ -46,47 +46,47 @@ public class Page_Licensure_Unit_Appeals {
 	 *************/	
 	@Keyword
 	def enterAppealCode (String appealCode) {
-		WebUI.waitForElementVisible(inputAppealCode, 0)
+		WebUI.waitForElementVisible(inputAppealCode, 40)
 		WebUI.sendKeys(inputAppealCode, appealCode)
 	}
 
 	@Keyword
 	def enterUpdatedPhone (String phone) {
-		WebUI.waitForElementVisible(inputPhone, 0)
+		WebUI.waitForElementVisible(inputPhone, 40)
 		WebUI.setText(inputPhone, phone)
 	}
 	@Keyword
 	def enterUpdatedPhonExt (String ext) {
-		WebUI.waitForElementVisible(inputPhoneExt, 0)
+		WebUI.waitForElementVisible(inputPhoneExt, 40)
 		WebUI.setText(inputPhoneExt, ext)
 	}
 
 	@Keyword
 	def enterUpdatedAddressL1 (String address) {
-		WebUI.waitForElementVisible(inputAddressL1, 0)
+		WebUI.waitForElementVisible(inputAddressL1, 40)
 		WebUI.setText(inputAddressL1, address)
 	}
 	@Keyword
 	def enterUpdatedAddressL2 (String address) {
-		WebUI.waitForElementVisible(inputAddressL2, 0)
+		WebUI.waitForElementVisible(inputAddressL2, 40)
 		WebUI.setText(inputAddressL2, address)
 	}
 
 	@Keyword
 	def enterUpdatedAddressL3 (String address) {
-		WebUI.waitForElementVisible(inputAddressL3, 0)
+		WebUI.waitForElementVisible(inputAddressL3, 40)
 		WebUI.setText(inputAddressL3, address)
 	}
 
 	@Keyword
 	def enterUpdatedZip (String zip) {
-		WebUI.waitForElementVisible(inputZip, 0)
+		WebUI.waitForElementVisible(inputZip, 40)
 		WebUI.setText(inputZip, zip)
 	}
 
 	@Keyword
 	def enterAppealReason (String text) {
-		WebUI.waitForElementVisible(textareaAppealReason, 0)
+		WebUI.waitForElementVisible(textareaAppealReason, 40)
 		WebUI.sendKeys(textareaAppealReason, text)
 	}
 
@@ -95,13 +95,13 @@ public class Page_Licensure_Unit_Appeals {
 	 *************/
 	@Keyword
 	def clickOnNextBtn () {
-		WebUI.waitForElementVisible(btnNext, 10)
+		WebUI.waitForElementVisible(btnNext, 40)
 		WebUI.click(btnNext)
 	}
 
 	@Keyword
 	def clickOnSubmitBtn () {
-		WebUI.waitForElementVisible(btnSubmit, 10)
+		WebUI.waitForElementVisible(btnSubmit, 40)
 		WebUI.click(btnSubmit)
 	}
 
@@ -110,8 +110,8 @@ public class Page_Licensure_Unit_Appeals {
 	 ****************/
 	@Keyword
 	def verifyAppealSubmitted () {
-		WebUI.waitForElementVisible(h1AppealSubmitted, 10)
-		if (!WebUI.verifyElementPresent(h1AppealSubmitted, 10)) {
+		WebUI.waitForElementVisible(h1AppealSubmitted, 40)
+		if (!WebUI.verifyElementPresent(h1AppealSubmitted, 40)) {
 			KeywordUtil.markFailed("\nThe test case can not be completed. Appeal submission confirmation webpage did not load")
 		}
 	}

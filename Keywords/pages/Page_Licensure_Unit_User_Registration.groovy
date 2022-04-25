@@ -61,35 +61,35 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def completeFirstName (String FirstName) {
-		WebUI.waitForElementVisible(inputFirstName, 0)
+		WebUI.waitForElementVisible(inputFirstName, 40)
 
 		WebUI.sendKeys(inputFirstName, FirstName)
 	}
 
 	@Keyword
 	def completeLastName (String LastName) {
-		WebUI.waitForElementVisible(inputLastName, 0)
+		WebUI.waitForElementVisible(inputLastName, 40)
 
 		WebUI.sendKeys(inputLastName, LastName)
 	}
 
 	@Keyword
 	def completeDOB (String DOB) {
-		WebUI.waitForElementVisible(inputDOB, 0)
+		WebUI.waitForElementVisible(inputDOB, 40)
 
 		WebUI.sendKeys(inputDOB, DOB)
 	}
 
 	@Keyword
 	def completePlaceOfBirth (String PlaceOfBirth) {
-		WebUI.waitForElementVisible(inputPlaceOfBirth, 0)
+		WebUI.waitForElementVisible(inputPlaceOfBirth, 40)
 
 		WebUI.sendKeys(inputPlaceOfBirth, PlaceOfBirth)
 	}
 
 	@Keyword
 	def selectCountryEEUU () {
-		WebUI.waitForElementVisible(selectCountry, 0)
+		WebUI.waitForElementVisible(selectCountry, 40)
 
 		WebUI.click(selectCountry)
 
@@ -99,7 +99,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def selectCountryUruguay () {
-		WebUI.waitForElementVisible(selectCountry, 0)
+		WebUI.waitForElementVisible(selectCountry, 40)
 
 		WebUI.click(selectCountry)
 
@@ -109,7 +109,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def selectCountryCanada () {
-		WebUI.waitForElementVisible(selectCountry, 0)
+		WebUI.waitForElementVisible(selectCountry, 40)
 
 		WebUI.click(selectCountry)
 
@@ -119,7 +119,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def selectSameAddress (String sameAddress) {
-		WebUI.waitForElementVisible(selectSameAddress, 0)
+		WebUI.waitForElementVisible(selectSameAddress, 40)
 
 		WebUI.click(selectSameAddress)
 
@@ -133,7 +133,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def selectUSCitizen (String USCitizen) {
-		WebUI.waitForElementVisible(selectUSCitizen, 0)
+		WebUI.waitForElementVisible(selectUSCitizen, 40)
 
 		WebUI.click(selectUSCitizen)
 
@@ -147,7 +147,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def selectDoYouHaveSSN (String HaveSSN) {
-		WebUI.waitForElementVisible(selectDoYouHaveSSN, 0)
+		WebUI.waitForElementVisible(selectDoYouHaveSSN, 40)
 
 		WebUI.click(selectDoYouHaveSSN)
 
@@ -161,7 +161,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def completeZipCode (String ZipCode) {
-		WebUI.waitForElementVisible(inputZipCode, 0)
+		WebUI.waitForElementVisible(inputZipCode, 40)
 
 		WebUI.sendKeys(inputZipCode, ZipCode)
 	}
@@ -169,7 +169,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def completeAddressLine (String AddressLine) {
-		WebUI.waitForElementVisible(inputAddressLine1, 0)
+		WebUI.waitForElementVisible(inputAddressLine1, 40)
 
 		WebUI.sendKeys(inputAddressLine1, AddressLine)
 	}
@@ -177,7 +177,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def completeSSN (String SSN) {
-		WebUI.waitForElementVisible(inputSSN, 0)
+		WebUI.waitForElementVisible(inputSSN, 40)
 
 		WebUI.sendKeys(inputSSN, SSN)
 	}
@@ -185,7 +185,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def completeI94 (String I94) {
-		WebUI.waitForElementVisible(inputI94, 0)
+		WebUI.waitForElementVisible(inputI94, 40)
 
 		WebUI.sendKeys(inputI94, I94)
 	}
@@ -193,7 +193,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def completeAlienRegistrationNum (String AlienRegistrationNum) {
-		WebUI.waitForElementVisible(inputAlienRegistrationNum, 0)
+		WebUI.waitForElementVisible(inputAlienRegistrationNum, 40)
 
 		WebUI.sendKeys(inputAlienRegistrationNum, AlienRegistrationNum)
 	}
@@ -201,7 +201,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def completePrimaryPhoneNumber (String PhoneNumber) {
-		WebUI.waitForElementVisible(selectPhoneNumber, 0)
+		WebUI.waitForElementVisible(selectPhoneNumber, 40)
 
 		WebUI.click(selectPhoneNumber)
 
@@ -213,7 +213,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def completeEmailAddress (String EmailAddress) {
-		WebUI.waitForElementVisible(inputEmailAddress, 0)
+		WebUI.waitForElementVisible(inputEmailAddress, 40)
 
 		WebUI.sendKeys(inputEmailAddress, EmailAddress)
 	}
@@ -221,7 +221,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def completeRetypeEmailAddress (String EmailAddress) {
-		WebUI.waitForElementVisible(inputRetypeEmailAddress, 0)
+		WebUI.waitForElementVisible(inputRetypeEmailAddress, 40)
 
 		WebUI.sendKeys(inputRetypeEmailAddress, EmailAddress)
 	}
@@ -229,14 +229,14 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def clickOnSubmitBtn () {
-		WebUI.waitForElementVisible(buttonSubmit, 0)
+		WebUI.waitForElementVisible(buttonSubmit, 40)
 
 		WebUI.click(buttonSubmit)
 	}
 
 	@Keyword
 	def verifyRegistrationCompletedSuccessfully () {
-		WebUI.waitForElementVisible(msgSubmittedSuccessful, 0)
+		WebUI.waitForElementVisible(msgSubmittedSuccessful, 40)
 
 		WebUI.verifyElementText(msgSubmittedSuccessful, 'The user account has been created, and the user has been notified of their login information via email. The record has been saved.', FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -250,7 +250,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def verifyRegistrationExistingUserCompletedSuccessfully () {
-		WebUI.waitForElementVisible(msgSubmittedSuccessful, 0)
+		WebUI.waitForElementVisible(msgSubmittedSuccessful, 40)
 
 		WebUI.verifyElementText(msgSubmittedSuccessful, 'An existing User record has been found matching the information you have entered. An account has been created for that User Registration record and login credentials have been sent by email.', FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -262,7 +262,7 @@ public class Page_Licensure_Unit_User_Registration {
 
 	@Keyword
 	def verifyDuplicatedErrorMessage () {
-		WebUI.waitForElementVisible(msgSubmittedSuccessful, 0)
+		WebUI.waitForElementVisible(msgSubmittedSuccessful, 40)
 
 		WebUI.verifyElementText(msgSubmittedSuccessful, 'An error was encountered. A record for you already exists in the system based upon one of the key identifying criteria. Please go to https://vv5qa.visualvault.com/ to sign in or use the forgot username/password link. If you need further assistance, please e-mail DHHS.LanceSupport@nebraska.gov.', FailureHandling.CONTINUE_ON_FAILURE)
 

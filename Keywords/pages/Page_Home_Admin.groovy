@@ -31,7 +31,7 @@ public class Page_Home_Admin {
 
 	@Keyword
 	def clickOnApplicationsInProcess () {
-		WebUI.waitForElementVisible(tabApplicationsInProcess, 0)
+		WebUI.waitForElementVisible(tabApplicationsInProcess, 40)
 
 		WebUI.click(tabApplicationsInProcess)
 	}
@@ -39,7 +39,7 @@ public class Page_Home_Admin {
 
 	@Keyword
 	def clickOnApprovedApplications () {
-		WebUI.waitForElementVisible(tabApprovedApplications, 0)
+		WebUI.waitForElementVisible(tabApprovedApplications, 40)
 
 		WebUI.click(tabApprovedApplications)
 	}
@@ -47,7 +47,7 @@ public class Page_Home_Admin {
 
 	@Keyword
 	def clickOnLicenseDetails () {
-		WebUI.waitForElementVisible(tabLicenseDetails, 0)
+		WebUI.waitForElementVisible(tabLicenseDetails, 40)
 
 		WebUI.click(tabLicenseDetails)
 	}
@@ -55,7 +55,7 @@ public class Page_Home_Admin {
 
 	@Keyword
 	def clickOnIndividualLink () {
-		WebUI.waitForElementVisible(individualLink, 0)
+		WebUI.waitForElementVisible(individualLink, 40)
 
 		WebUI.click(individualLink)
 	}

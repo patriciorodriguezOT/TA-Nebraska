@@ -34,7 +34,7 @@ public class Page_Licensure_Unit_Send_Communication {
 
 	@Keyword
 	def verifyLabelForm () {
-		WebUI.waitForElementVisible(labelForm, 0)
+		WebUI.waitForElementVisible(labelForm, 40)
 
 		WebUI.verifyElementVisible(labelForm)
 	}
@@ -42,7 +42,7 @@ public class Page_Licensure_Unit_Send_Communication {
 
 	@Keyword
 	def verifyEmailRecipients (String emailRecipient) {
-		WebUI.waitForElementVisible(labelForm, 0)
+		WebUI.waitForElementVisible(labelForm, 40)
 
 		WebUI.verifyElementAttributeValue(inputEmailRecipients, 'value', emailRecipient, 0, FailureHandling.CONTINUE_ON_FAILURE)
 	}

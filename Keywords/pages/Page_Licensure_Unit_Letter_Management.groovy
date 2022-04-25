@@ -45,7 +45,7 @@ public class Page_Licensure_Unit_Letter_Management {
 
 	@Keyword
 	def selectPhysicalTherapistOnLicenseType () {
-		WebUI.waitForElementVisible(dropdownLicenseType, 0)
+		WebUI.waitForElementVisible(dropdownLicenseType, 40)
 
 		WebUI.click(dropdownLicenseType)
 
@@ -55,7 +55,7 @@ public class Page_Licensure_Unit_Letter_Management {
 
 	@Keyword
 	def selectDeficiencyNotificationtOnTemplate () {
-		WebUI.waitForElementVisible(dropdownTemplateList, 0)
+		WebUI.waitForElementVisible(dropdownTemplateList, 40)
 
 		WebUI.click(dropdownTemplateList)
 
@@ -65,7 +65,7 @@ public class Page_Licensure_Unit_Letter_Management {
 
 	@Keyword
 	def selectDenialNotificationtOnTemplate () {
-		WebUI.waitForElementVisible(dropdownTemplateList, 0)
+		WebUI.waitForElementVisible(dropdownTemplateList, 40)
 
 		WebUI.click(dropdownTemplateList)
 
@@ -75,7 +75,7 @@ public class Page_Licensure_Unit_Letter_Management {
 
 	@Keyword
 	def getPdfContent () {
-		WebUI.waitForElementVisible(pdfContent, 0)
+		WebUI.waitForElementVisible(pdfContent, 40)
 
 		String pdfContent = WebUI.getText(pdfContent)
 
@@ -85,7 +85,7 @@ public class Page_Licensure_Unit_Letter_Management {
 
 	@Keyword
 	def clickOnSaveBtn () {
-		WebUI.waitForElementVisible(buttonSave, 0)
+		WebUI.waitForElementVisible(buttonSave, 40)
 
 		WebUI.click(buttonSave)
 	}
@@ -93,21 +93,21 @@ public class Page_Licensure_Unit_Letter_Management {
 
 	@Keyword
 	def clickOnCancelAndContinueBtn () {
-		WebUI.waitForElementVisible(buttonCancelAndContinue, 0)
+		WebUI.waitForElementVisible(buttonCancelAndContinue, 40)
 
 		WebUI.click(buttonCancelAndContinue)
 	}
 
 	@Keyword
 	def clickOnPreviewPrintBtn () {
-		WebUI.waitForElementVisible(buttonPreviewPrint, 0)
+		WebUI.waitForElementVisible(buttonPreviewPrint, 40)
 
 		WebUI.click(buttonPreviewPrint)
 	}
 
 	@Keyword
 	def clickOnSendEmailBtn () {
-		WebUI.waitForElementVisible(buttonSendEmail, 0)
+		WebUI.waitForElementVisible(buttonSendEmail, 40)
 
 		WebUI.click(buttonSendEmail)
 	}
@@ -115,7 +115,7 @@ public class Page_Licensure_Unit_Letter_Management {
 
 	@Keyword
 	def clickOnMergeLanceDataBtn () {
-		WebUI.waitForElementVisible(buttonMergeLanceData, 0)
+		WebUI.waitForElementVisible(buttonMergeLanceData, 40)
 
 		WebUI.click(buttonMergeLanceData)
 	}
@@ -123,7 +123,7 @@ public class Page_Licensure_Unit_Letter_Management {
 
 	@Keyword
 	def clickOnSetDynamicValuesBtn () {
-		WebUI.waitForElementVisible(buttonSetDynamicValues, 0)
+		WebUI.waitForElementVisible(buttonSetDynamicValues, 40)
 
 		WebUI.click(buttonSetDynamicValues)
 	}
@@ -162,7 +162,7 @@ public class Page_Licensure_Unit_Letter_Management {
 
 	@Keyword
 	def verifyBtnsPrintAndEmailAreVisible () {
-		WebUI.waitForElementVisible(buttonPreviewPrint, 10)
+		WebUI.waitForElementVisible(buttonPreviewPrint, 40)
 
 		WebUI.verifyElementVisible(buttonPreviewPrint, FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -171,7 +171,7 @@ public class Page_Licensure_Unit_Letter_Management {
 
 	@Keyword
 	def verifyPrintTabIsVisible () {
-		WebUI.waitForElementVisible(popupPrintTab, 10)
+		WebUI.waitForElementVisible(popupPrintTab, 40)
 
 		WebUI.verifyElementVisible(popupPrintTab, FailureHandling.CONTINUE_ON_FAILURE)
 	}

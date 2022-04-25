@@ -35,9 +35,9 @@ public class Page_Home_Admin_Manage_Individual_IndividualsAll {
 	@Keyword
 	def clickOnSearchFilterBtn () {
 		System.sleep(5000)
-		
-		WebUI.waitForElementVisible(btnSearchFilter, 20);
-		
+
+		WebUI.waitForElementVisible(btnSearchFilter, 40);
+
 		WebUI.click(btnSearchFilter);
 	}
 
@@ -45,29 +45,29 @@ public class Page_Home_Admin_Manage_Individual_IndividualsAll {
 	def enterSearchCriteria (String searchCriteriaValue) {
 
 		//Select criteria type
-		WebUI.waitForElementVisible(dropdownSearchCriteria, 0);
+		WebUI.waitForElementVisible(dropdownSearchCriteria, 40);
 		WebUI.click(dropdownSearchCriteria);
 		WebUI.click(optionSearchCriteriaFirstName);
 
 		//Select operator
-		WebUI.waitForElementVisible(dropdownSearchOperator, 0);
+		WebUI.waitForElementVisible(dropdownSearchOperator, 40);
 		WebUI.click(dropdownSearchOperator);
 		WebUI.click(optionSearchOperatorContains);
 
 		//Input search value
-		WebUI.waitForElementVisible(textboxSearch, 0);
+		WebUI.waitForElementVisible(textboxSearch, 40);
 		WebUI.sendKeys(textboxSearch, searchCriteriaValue);
 	}
 
 	@Keyword
 	def clickOnSearchBtn () {
-		WebUI.waitForElementVisible(btnSearch, 0);
+		WebUI.waitForElementVisible(btnSearch, 40);
 		WebUI.click(btnSearch);
 	}
 
 	@Keyword
 	def verifyIndividualRecordCreated () {
-		WebUI.waitForElementVisible(checkboxIndividualRecord, 0)
-		WebUI.verifyElementPresent(checkboxIndividualRecord, 0)
+		WebUI.waitForElementVisible(checkboxIndividualRecord, 40)
+		WebUI.verifyElementPresent(checkboxIndividualRecord, 40)
 	}
 }

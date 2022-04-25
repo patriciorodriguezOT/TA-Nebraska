@@ -37,21 +37,21 @@ public class Page_Licensure_Unit_License_Application_Checklist_Management {
 
 	@Keyword
 	def clickOnOkDialogButton () {
-		WebUI.waitForElementVisible(buttonDialogConfirmation, 0)
+		WebUI.waitForElementVisible(buttonDialogConfirmation, 40)
 
 		WebUI.click(buttonDialogConfirmation)
 	}
 
 	@Keyword
 	def clickOnNextButton () {
-		WebUI.waitForElementVisible(buttonNext, 0)
+		WebUI.waitForElementVisible(buttonNext, 40)
 
 		WebUI.click(buttonNext)
 	}
 
 	@Keyword
 	def clickOnAcknowledgeButton () {
-		WebUI.waitForElementVisible(buttonAcknowledge, 0)
+		WebUI.waitForElementVisible(buttonAcknowledge, 40)
 
 		WebUI.click(buttonAcknowledge)
 	}
@@ -59,7 +59,7 @@ public class Page_Licensure_Unit_License_Application_Checklist_Management {
 
 	@Keyword
 	def clickOnUploadButton () {
-		WebUI.waitForElementVisible(buttonUploadFile, 0)
+		WebUI.waitForElementVisible(buttonUploadFile, 40)
 
 		WebUI.click(buttonUploadFile)
 	}
@@ -67,7 +67,7 @@ public class Page_Licensure_Unit_License_Application_Checklist_Management {
 
 	@Keyword
 	def clickOnOpenRelatedFormButton () {
-		WebUI.waitForElementVisible(buttonOpenRelatedForm, 0)
+		WebUI.waitForElementVisible(buttonOpenRelatedForm, 40)
 
 		WebUI.click(buttonOpenRelatedForm)
 	}

@@ -41,13 +41,13 @@ public class Page_Licensure_Unit_License_Application_Convictions {
 	@Keyword
 	def selectIsOnProbation (String answer) {
 		if (answer == 'Yes') {
-			WebUI.waitForElementVisible(dropdownIsOnProbation, 0)
+			WebUI.waitForElementVisible(dropdownIsOnProbation, 40)
 
 			WebUI.click(dropdownIsOnProbation)
 
 			WebUI.click(selectIsOnProbationYesOpt)
 		} else {
-			WebUI.waitForElementVisible(dropdownIsOnProbation, 0)
+			WebUI.waitForElementVisible(dropdownIsOnProbation, 40)
 
 			WebUI.click(dropdownIsOnProbation)
 
@@ -59,13 +59,13 @@ public class Page_Licensure_Unit_License_Application_Convictions {
 	@Keyword
 	def selectHasBeenConvicted (String answer) {
 		if (answer == 'Yes') {
-			WebUI.waitForElementVisible(dropdownHasBeenConvicted, 0)
+			WebUI.waitForElementVisible(dropdownHasBeenConvicted, 40)
 
 			WebUI.click(dropdownHasBeenConvicted)
 
 			WebUI.click(selectHasBeenConvictedYesOpt)
 		} else {
-			WebUI.waitForElementVisible(dropdownHasBeenConvicted, 0)
+			WebUI.waitForElementVisible(dropdownHasBeenConvicted, 40)
 
 			WebUI.click(dropdownHasBeenConvicted)
 
@@ -76,7 +76,7 @@ public class Page_Licensure_Unit_License_Application_Convictions {
 
 	@Keyword
 	def clickOnNextButton () {
-		WebUI.waitForElementVisible(buttonNext, 0)
+		WebUI.waitForElementVisible(buttonNext, 40)
 
 		WebUI.click(buttonNext)
 	}

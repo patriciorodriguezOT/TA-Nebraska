@@ -48,7 +48,7 @@ public class Page_Licensure_Unit_License_Application_Other_License {
 	@Keyword
 	def selectIsCurrentlyuPracticing (String answer) {
 
-		WebUI.waitForElementVisible(dropdownCurrentlyPracticing, 20)
+		WebUI.waitForElementVisible(dropdownCurrentlyPracticing, 40)
 
 		WebUI.click(dropdownCurrentlyPracticing)
 
@@ -69,7 +69,7 @@ public class Page_Licensure_Unit_License_Application_Other_License {
 
 	@Keyword
 	def selectHasEverPracticed (String answer) {
-		WebUI.waitForElementVisible(dropdownEverPracticed, 20)
+		WebUI.waitForElementVisible(dropdownEverPracticed, 40)
 
 		WebUI.click(dropdownEverPracticed)
 
@@ -91,13 +91,13 @@ public class Page_Licensure_Unit_License_Application_Other_License {
 	@Keyword
 	def selectHasBeenDeniedRight (String answer) {
 		if (answer == 'Yes') {
-			WebUI.waitForElementVisible(dropdownHasBeenDeniedRight, 20)
+			WebUI.waitForElementVisible(dropdownHasBeenDeniedRight, 40)
 
 			WebUI.click(dropdownHasBeenDeniedRight)
 
 			WebUI.click(selectHasBeenDeniedRightYesOpt)
 		} else {
-			WebUI.waitForElementVisible(dropdownHasBeenDeniedRight, 20)
+			WebUI.waitForElementVisible(dropdownHasBeenDeniedRight, 40)
 
 			WebUI.click(dropdownHasBeenDeniedRight)
 
@@ -109,13 +109,13 @@ public class Page_Licensure_Unit_License_Application_Other_License {
 	@Keyword
 	def selectHasBeenDeniedIssuance (String answer) {
 		if (answer == 'Yes') {
-			WebUI.waitForElementVisible(dropdownHasBeenDeniedIssuance, 20)
+			WebUI.waitForElementVisible(dropdownHasBeenDeniedIssuance, 40)
 
 			WebUI.click(dropdownHasBeenDeniedIssuance)
 
 			WebUI.click(selectHasBeenDeniedIssuanceYesOpt)
 		} else {
-			WebUI.waitForElementVisible(dropdownHasBeenDeniedIssuance, 20)
+			WebUI.waitForElementVisible(dropdownHasBeenDeniedIssuance, 40)
 
 			WebUI.click(dropdownHasBeenDeniedIssuance)
 
@@ -127,13 +127,13 @@ public class Page_Licensure_Unit_License_Application_Other_License {
 	@Keyword
 	def selectDoesApplicantHold (String answer) {
 		if (answer == 'Yes') {
-			WebUI.waitForElementVisible(dropdownDoesApplicantHold, 20)
+			WebUI.waitForElementVisible(dropdownDoesApplicantHold, 40)
 
 			WebUI.click(dropdownDoesApplicantHold)
 
 			WebUI.click(selectDoesApplicantHoldYesOpt)
 		} else {
-			WebUI.waitForElementVisible(dropdownDoesApplicantHold, 20)
+			WebUI.waitForElementVisible(dropdownDoesApplicantHold, 40)
 
 			WebUI.click(dropdownDoesApplicantHold)
 
@@ -144,7 +144,7 @@ public class Page_Licensure_Unit_License_Application_Other_License {
 
 	@Keyword
 	def clickOnNextButton () {
-		WebUI.waitForElementVisible(buttonNext, 20)
+		WebUI.waitForElementVisible(buttonNext, 40)
 
 		WebUI.click(buttonNext)
 	}

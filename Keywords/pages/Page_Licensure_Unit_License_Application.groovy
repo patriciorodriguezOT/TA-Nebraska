@@ -45,35 +45,35 @@ public class Page_Licensure_Unit_License_Application {
 	// Go to x Tab
 	@Keyword
 	def clickOnChecklistTab () {
-		WebUI.waitForElementVisible(buttonChecklistTab, 0)
+		WebUI.waitForElementVisible(buttonChecklistTab, 40)
 
 		WebUI.click(buttonChecklistTab)
 	}
 
 	@Keyword
 	def clickOnManageTab () {
-		WebUI.waitForElementVisible(buttonManageTab, 0)
+		WebUI.waitForElementVisible(buttonManageTab, 40)
 
 		WebUI.click(buttonManageTab)
 	}
 
 	@Keyword
 	def clickOnChecklistManagementTab () {
-		WebUI.waitForElementVisible(buttonChecklistMang, 0)
+		WebUI.waitForElementVisible(buttonChecklistMang, 40)
 
 		WebUI.click(buttonChecklistMang)
 	}
 
 	@Keyword
 	def clickOnSubmitBtn () {
-		WebUI.waitForElementVisible(buttonSubbmit, 0)
+		WebUI.waitForElementVisible(buttonSubbmit, 40)
 
 		WebUI.click(buttonSubbmit)
 	}
 
 	@Keyword
 	def clickOnCloseBtn () {
-		WebUI.waitForElementVisible(buttonClose, 0)
+		WebUI.waitForElementVisible(buttonClose, 40)
 
 		WebUI.click(buttonClose)
 	}
@@ -83,7 +83,7 @@ public class Page_Licensure_Unit_License_Application {
 	// Section APPLICATION INSTRUCTIONS
 	@Keyword
 	def clickOnAcknowledgeBtn () {
-		WebUI.waitForElementVisible(buttonAcknowledge, 0)
+		WebUI.waitForElementVisible(buttonAcknowledge, 40)
 
 		WebUI.click(buttonAcknowledge)
 	}
@@ -94,18 +94,18 @@ public class Page_Licensure_Unit_License_Application {
 	// Actions on Manage TAB
 	@Keyword
 	def clickOnApplicationApprove () {
-		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/button_Application Approve'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/button_Application Approve'), 40)
 
 		WebUI.click(findTestObject('Page_Licensure Unit License Application/Manage/button_Application Approve'))
 	}
 
 	@Keyword
 	def StartReview () {
-		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/button_Start Review'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/button_Start Review'), 40)
 
 		WebUI.click(findTestObject('Page_Licensure Unit License Application/Manage/button_Start Review'))
 
-		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 40)
 
 		WebUI.verifyElementText(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 'Create Application')
 
@@ -116,11 +116,11 @@ public class Page_Licensure_Unit_License_Application {
 
 	@Keyword
 	def ApproveApplication () {
-		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/button_Application Approve'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/button_Application Approve'), 40)
 
 		WebUI.click(findTestObject('Page_Licensure Unit License Application/Manage/button_Application Approve'))
 
-		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 40)
 
 		WebUI.verifyElementText(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 'Application Approved')
 
@@ -133,7 +133,7 @@ public class Page_Licensure_Unit_License_Application {
 	// Deny License Application, complete the process and verify Message displayed and Status
 	@Keyword
 	def DenyApplication () {
-		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/button_Application Deny'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/button_Application Deny'), 40)
 
 		// Select Reason for Denial
 		WebUI.click(findTestObject('Page_Licensure Unit License Application/Manage/span_ReaseonForDenial-arrow'))
@@ -143,7 +143,7 @@ public class Page_Licensure_Unit_License_Application {
 		// Click on button Application Deny
 		WebUI.click(findTestObject('Page_Licensure Unit License Application/Manage/button_Application Deny'))
 
-		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 40)
 
 		// Verify Title of the Message
 		WebUI.verifyElementText(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 'Application Denied', FailureHandling.CONTINUE_ON_FAILURE)
@@ -155,17 +155,17 @@ public class Page_Licensure_Unit_License_Application {
 
 	@Keyword
 	def IssueLicense () {
-		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/button_Issue License'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/button_Issue License'), 40)
 
 		WebUI.click(findTestObject('Page_Licensure Unit License Application/Manage/button_Issue License'))
 
-		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 40)
 
 		WebUI.verifyElementText(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 'Issue License', FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.click(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/button_Ok'))
 
-		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 40)
 
 		WebUI.verifyElementText(findTestObject('Page_Licensure Unit License Application/Manage/Dialog Message/h5_Title'), 'License Issued', FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -174,7 +174,7 @@ public class Page_Licensure_Unit_License_Application {
 
 	@Keyword
 	def setApplicationDeficient () {
-		WebUI.waitForElementVisible(buttonApplicantDeficient, 0)
+		WebUI.waitForElementVisible(buttonApplicantDeficient, 40)
 
 		WebUI.click(buttonApplicantDeficient)
 	}
@@ -193,7 +193,7 @@ public class Page_Licensure_Unit_License_Application {
 	// Other functions
 	@Keyword
 	def verifyLicenseApplicationOpened (String FirstName, String LastName) {
-		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Demographics/input_First Name'), 0)
+		WebUI.waitForElementVisible(findTestObject('Page_Licensure Unit License Application/Demographics/input_First Name'), 40)
 
 		WebUI.verifyElementAttributeValue(findTestObject('Page_Licensure Unit License Application/Demographics/input_First Name'), 'value', FirstName, 0, FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -203,7 +203,7 @@ public class Page_Licensure_Unit_License_Application {
 
 	@Keyword
 	def verifyStatus (String status) {
-		WebUI.waitForElementVisible(dropdownStatus, 0)
+		WebUI.waitForElementVisible(dropdownStatus, 40)
 
 		WebUI.verifyElementText(dropdownStatus, status, FailureHandling.CONTINUE_ON_FAILURE)
 	}

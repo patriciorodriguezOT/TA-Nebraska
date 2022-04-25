@@ -28,13 +28,13 @@ public class Page_Home_Admin_ApplicationsInProgress {
 	private TestObject selectFirstNameOpt				= findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/li_First Name')
 	private TestObject buttonSearch						= findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/input_Search Button')
 	private TestObject linkReview						= findTestObject('Page_Home_Admin_VisualVault/Home_Section/Page_Applications In Progress/a_Review')
-	
-	
-	
-	
+
+
+
+
 	@Keyword
 	def clickOnSearchRecordButton () {
-		WebUI.waitForElementVisible(buttonSearchMain, 20)
+		WebUI.waitForElementVisible(buttonSearchMain, 40)
 
 		WebUI.click(buttonSearchMain)
 	}
@@ -42,7 +42,7 @@ public class Page_Home_Admin_ApplicationsInProgress {
 
 	@Keyword
 	def enterSearchCriteria (String Criteria) {
-		WebUI.waitForElementVisible(inputSearchCriteria, 20)
+		WebUI.waitForElementVisible(inputSearchCriteria, 40)
 
 		WebUI.sendKeys(inputSearchCriteria, Criteria)
 	}
@@ -50,7 +50,7 @@ public class Page_Home_Admin_ApplicationsInProgress {
 
 	@Keyword
 	def selectFirstNameForSearch () {
-		WebUI.waitForElementVisible(selectSearchCriteria, 20)
+		WebUI.waitForElementVisible(selectSearchCriteria, 40)
 
 		WebUI.click(selectSearchCriteria)
 
@@ -60,7 +60,7 @@ public class Page_Home_Admin_ApplicationsInProgress {
 
 	@Keyword
 	def clickOnSearchButton () {
-		WebUI.waitForElementVisible(buttonSearch, 20)
+		WebUI.waitForElementVisible(buttonSearch, 40)
 
 		WebUI.click(buttonSearch)
 	}
@@ -68,7 +68,7 @@ public class Page_Home_Admin_ApplicationsInProgress {
 
 	@Keyword
 	def clickOnReviewLink () {
-		WebUI.waitForElementVisible(linkReview, 20)
+		WebUI.waitForElementVisible(linkReview, 40)
 
 		WebUI.click(linkReview)
 	}

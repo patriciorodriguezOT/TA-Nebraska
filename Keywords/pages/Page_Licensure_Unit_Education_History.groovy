@@ -37,7 +37,7 @@ public class Page_Licensure_Unit_Education_History {
 
 	@Keyword
 	def enterSchoolName (String schoolName) {
-		WebUI.waitForElementVisible(inputNameOfSchool, 0)
+		WebUI.waitForElementVisible(inputNameOfSchool, 40)
 
 		WebUI.sendKeys(inputNameOfSchool, schoolName)
 	}
@@ -45,7 +45,7 @@ public class Page_Licensure_Unit_Education_History {
 
 	@Keyword
 	def selectEducationTypeDiploma () {
-		WebUI.waitForElementVisible(dropdownEducationType, 0)
+		WebUI.waitForElementVisible(dropdownEducationType, 40)
 
 		WebUI.click(dropdownEducationType)
 
@@ -55,7 +55,7 @@ public class Page_Licensure_Unit_Education_History {
 
 	@Keyword
 	def clickOnSaveAndContinue () {
-		WebUI.waitForElementVisible(buttonSaveAndContinue, 0)
+		WebUI.waitForElementVisible(buttonSaveAndContinue, 40)
 
 		WebUI.click(buttonSaveAndContinue)
 	}
@@ -63,7 +63,7 @@ public class Page_Licensure_Unit_Education_History {
 
 	@Keyword
 	def verifyRecordSavedCorrectly (String messageTitle) {
-		WebUI.waitForElementVisible(h5MessageTitle, 0)
+		WebUI.waitForElementVisible(h5MessageTitle, 40)
 
 		WebUI.verifyElementText(h5MessageTitle, messageTitle)
 

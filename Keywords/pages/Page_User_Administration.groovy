@@ -34,7 +34,7 @@ public class Page_User_Administration {
 
 	@Keyword
 	def clickOnSearchMainButton () {
-		WebUI.waitForElementVisible(buttonMainSearchButton, 0)
+		WebUI.waitForElementVisible(buttonMainSearchButton, 40)
 
 		WebUI.click(buttonMainSearchButton)
 	}
@@ -43,7 +43,7 @@ public class Page_User_Administration {
 
 	@Keyword
 	def enterSearchCriteria (String searchCriteria) {
-		WebUI.waitForElementVisible(inputSearchCriteria, 0)
+		WebUI.waitForElementVisible(inputSearchCriteria, 40)
 
 		WebUI.sendKeys(inputSearchCriteria, searchCriteria)
 	}
@@ -52,7 +52,7 @@ public class Page_User_Administration {
 
 	@Keyword
 	def clickOnSearchButton () {
-		WebUI.waitForElementVisible(buttonSearchButton, 0)
+		WebUI.waitForElementVisible(buttonSearchButton, 40)
 
 		WebUI.click(buttonSearchButton)
 	}
@@ -60,10 +60,10 @@ public class Page_User_Administration {
 
 	@Keyword
 	def verifyUniqueRecordOnList () {
-		WebUI.waitForElementVisible(checkboxFirstRecord, 0)
+		WebUI.waitForElementVisible(checkboxFirstRecord, 40)
 
-		WebUI.verifyElementPresent(checkboxFirstRecord, 0)
+		WebUI.verifyElementPresent(checkboxFirstRecord, 40)
 
-		WebUI.verifyElementNotPresent(checkboxSecondRecord, 0)
+		WebUI.verifyElementNotPresent(checkboxSecondRecord, 40)
 	}
 }

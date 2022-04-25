@@ -34,7 +34,7 @@ public class Page_Licensure_Unit_License_Application_US_Citizenshi_Lawful_Presen
 
 	@Keyword
 	def clickOnNextButton () {
-		WebUI.waitForElementVisible(buttonNext, 0)
+		WebUI.waitForElementVisible(buttonNext, 40)
 
 		WebUI.click(buttonNext)
 	}

@@ -64,7 +64,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterFirstName (String FirstName) {
-		WebUI.waitForElementVisible(inputFirstName, 0)
+		WebUI.waitForElementVisible(inputFirstName, 40)
 
 		WebUI.sendKeys(inputFirstName, FirstName)
 	}
@@ -72,7 +72,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterLastName (String LastName) {
-		WebUI.waitForElementVisible(inputLastName, 0)
+		WebUI.waitForElementVisible(inputLastName, 40)
 
 		WebUI.sendKeys(inputLastName, LastName)
 	}
@@ -80,7 +80,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterDateOfBirth (String DOB) {
-		WebUI.waitForElementVisible(inputDOB, 0)
+		WebUI.waitForElementVisible(inputDOB, 40)
 
 		WebUI.sendKeys(inputDOB, DOB)
 	}
@@ -88,7 +88,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterPlaceOfBirth (String PlaceOfBirth) {
-		WebUI.waitForElementVisible(inputPlaceOfBirth, 0)
+		WebUI.waitForElementVisible(inputPlaceOfBirth, 40)
 
 		WebUI.sendKeys(inputPlaceOfBirth, PlaceOfBirth)
 	}
@@ -96,7 +96,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def selectCountryUS () {
-		WebUI.waitForElementVisible(selectCountry, 0)
+		WebUI.waitForElementVisible(selectCountry, 40)
 
 		WebUI.click(selectCountry)
 
@@ -106,7 +106,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def selectCountryCanada () {
-		WebUI.waitForElementVisible(selectCountry, 0)
+		WebUI.waitForElementVisible(selectCountry, 40)
 
 		WebUI.click(selectCountry)
 
@@ -116,7 +116,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def selectCountryUruguay () {
-		WebUI.waitForElementVisible(selectCountry, 0)
+		WebUI.waitForElementVisible(selectCountry, 40)
 
 		WebUI.click(selectCountry)
 
@@ -126,7 +126,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterZipCode (String ZipCode) {
-		WebUI.waitForElementVisible(inputZipCode, 0)
+		WebUI.waitForElementVisible(inputZipCode, 40)
 
 		WebUI.sendKeys(inputZipCode, ZipCode)
 	}
@@ -134,7 +134,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterAddressLine1 (String AddressLine) {
-		WebUI.waitForElementVisible(inputAddressLine1, 0)
+		WebUI.waitForElementVisible(inputAddressLine1, 40)
 
 		WebUI.sendKeys(inputAddressLine1, AddressLine)
 	}
@@ -142,7 +142,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def selectSameAddress (String sameAddress) {
-		WebUI.waitForElementVisible(selectSameAddress, 0)
+		WebUI.waitForElementVisible(selectSameAddress, 40)
 
 		if (sameAddress == 'Yes') {
 			WebUI.click(selectSameAddress)
@@ -174,7 +174,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterSSN (String SSN) {
-		WebUI.waitForElementVisible(inputSSN, 0)
+		WebUI.waitForElementVisible(inputSSN, 40)
 
 		WebUI.sendKeys(inputSSN, SSN)
 	}
@@ -182,7 +182,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def selectDoYouHaveSSN (String SSN) {
-		WebUI.waitForElementVisible(selectDoYouHaveSSN, 0)
+		WebUI.waitForElementVisible(selectDoYouHaveSSN, 40)
 
 		if (SSN == 'Yes') {
 			WebUI.click(selectDoYouHaveSSN)
@@ -198,7 +198,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterAlienRegisterNumber (String AlienRegNum) {
-		WebUI.waitForElementVisible(inputAlianRegNum, 0)
+		WebUI.waitForElementVisible(inputAlianRegNum, 40)
 
 		WebUI.sendKeys(inputAlianRegNum, AlienRegNum)
 	}
@@ -206,7 +206,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterI94 (String I94) {
-		WebUI.waitForElementVisible(inputI94, 0)
+		WebUI.waitForElementVisible(inputI94, 40)
 
 		WebUI.sendKeys(inputI94, I94)
 	}
@@ -214,7 +214,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def completePhoneNumber (String PhoneNumber) {
-		WebUI.waitForElementVisible(inptuPrimaryPhoneNumber, 0)
+		WebUI.waitForElementVisible(inptuPrimaryPhoneNumber, 40)
 
 		WebUI.click(selectPrimaryPhoneType)
 
@@ -226,7 +226,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterEmailAddress (String EmailAddress) {
-		WebUI.waitForElementVisible(inptuEmailAddress, 0)
+		WebUI.waitForElementVisible(inptuEmailAddress, 40)
 
 		WebUI.sendKeys(inptuEmailAddress, EmailAddress)
 	}
@@ -234,7 +234,7 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def enterRetypeEmailAddress (String EmailAddress) {
-		WebUI.waitForElementVisible(inptuRetypeEmailAddress, 0)
+		WebUI.waitForElementVisible(inptuRetypeEmailAddress, 40)
 
 		WebUI.sendKeys(inptuRetypeEmailAddress, EmailAddress)
 	}
@@ -242,11 +242,11 @@ public class Page_Licensure_Unit_Individual_Record {
 
 	@Keyword
 	def clickOnSaveAndConfirm () {
-		WebUI.waitForElementVisible(buttonSaveAndConfirm, 0)
+		WebUI.waitForElementVisible(buttonSaveAndConfirm, 40)
 
 		WebUI.click(buttonSaveAndConfirm)
 
-		WebUI.waitForElementVisible(h5ModalDialogTitle, 0)
+		WebUI.waitForElementVisible(h5ModalDialogTitle, 40)
 
 		WebUI.verifyElementText(h5ModalDialogTitle, 'Record Created')
 

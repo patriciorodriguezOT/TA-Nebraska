@@ -31,7 +31,7 @@ public class Page_License_Information {
 
 	@Keyword
 	def selectPhisicalTherapyProfessionalLicense () {
-		WebUI.waitForElementVisible(dropdownProfessionalLicense, 0)
+		WebUI.waitForElementVisible(dropdownProfessionalLicense, 40)
 
 		WebUI.click(dropdownProfessionalLicense)
 
@@ -41,7 +41,7 @@ public class Page_License_Information {
 
 	@Keyword
 	def selectPhisicalTherapistProfessionalLicenseType () {
-		WebUI.waitForElementVisible(dropdownProfessionalLicenseType, 0)
+		WebUI.waitForElementVisible(dropdownProfessionalLicenseType, 40)
 
 		WebUI.click(dropdownProfessionalLicenseType)
 
@@ -51,7 +51,7 @@ public class Page_License_Information {
 
 	@Keyword
 	def clickOnNextButton () {
-		WebUI.waitForElementVisible(buttonNext, 0)
+		WebUI.waitForElementVisible(buttonNext, 40)
 
 		WebUI.click(buttonNext)
 	}

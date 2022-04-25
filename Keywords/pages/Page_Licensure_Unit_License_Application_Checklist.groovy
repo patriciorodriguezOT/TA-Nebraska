@@ -43,56 +43,56 @@ public class Page_Licensure_Unit_License_Application_Checklist {
 
 	@Keyword
 	def clickOnOpenCitizenshipDocumentation () {
-		WebUI.waitForElementVisible(linkCitizenshipDocumentation, 0)
+		WebUI.waitForElementVisible(linkCitizenshipDocumentation, 40)
 
 		WebUI.click(linkCitizenshipDocumentation)
 	}
 
 	@Keyword
 	def clickOnOpenNDEN () {
-		WebUI.waitForElementVisible(linkNDEN, 0)
+		WebUI.waitForElementVisible(linkNDEN, 40)
 
 		WebUI.click(linkNDEN)
 	}
 
 	@Keyword
 	def clickOnOpenTranscript () {
-		WebUI.waitForElementVisible(linkTranscript, 0)
+		WebUI.waitForElementVisible(linkTranscript, 40)
 
 		WebUI.click(linkTranscript)
 	}
 
 	@Keyword
 	def clickOnOpenMinimumEducation () {
-		WebUI.waitForElementVisible(linkMinimumEducation, 0)
+		WebUI.waitForElementVisible(linkMinimumEducation, 40)
 
 		WebUI.click(linkMinimumEducation)
 	}
 
 	@Keyword
 	def clickOnOpenExamDocumentation () {
-		WebUI.waitForElementVisible(linkExamDocumentation, 0)
+		WebUI.waitForElementVisible(linkExamDocumentation, 40)
 
 		WebUI.click(linkExamDocumentation)
 	}
 
 	@Keyword
 	def clickOnOpenFeesPaid () {
-		WebUI.waitForElementVisible(linkFeesPaid, 0)
+		WebUI.waitForElementVisible(linkFeesPaid, 40)
 
 		WebUI.click(linkFeesPaid)
 	}
 
 	@Keyword
 	def clickOnOpenFingerPrints () {
-		WebUI.waitForElementVisible(linkFingerprints, 0)
+		WebUI.waitForElementVisible(linkFingerprints, 40)
 
 		WebUI.click(linkFingerprints)
 	}
 
 	@Keyword
 	def clickOnOpenUniqueIdentifier () {
-		WebUI.waitForElementVisible(linkUniqueIdentifier, 0)
+		WebUI.waitForElementVisible(linkUniqueIdentifier, 40)
 
 		WebUI.click(linkUniqueIdentifier)
 	}
@@ -100,7 +100,7 @@ public class Page_Licensure_Unit_License_Application_Checklist {
 
 	@Keyword
 	def clickOnApplicationApprove () {
-		WebUI.waitForElementVisible(buttonApplicationApprove, 0)
+		WebUI.waitForElementVisible(buttonApplicationApprove, 40)
 
 		WebUI.click(buttonApplicationApprove)
 	}

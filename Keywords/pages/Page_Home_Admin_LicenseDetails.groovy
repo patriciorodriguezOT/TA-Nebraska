@@ -36,7 +36,7 @@ public class Page_Home_Admin_LicenseDetails {
 	def clickOnMainSearchButton () {
 		System.sleep(5000)
 
-		WebUI.waitForElementVisible(buttonSearchMain, 15)
+		WebUI.waitForElementVisible(buttonSearchMain, 40)
 
 		WebUI.click(buttonSearchMain)
 	}
@@ -44,7 +44,7 @@ public class Page_Home_Admin_LicenseDetails {
 
 	@Keyword
 	def enterSearchCriteria (String Criteria) {
-		WebUI.waitForElementVisible(inputSearchCriteria, 20)
+		WebUI.waitForElementVisible(inputSearchCriteria, 40)
 
 		WebUI.sendKeys(inputSearchCriteria, Criteria)
 	}
@@ -52,7 +52,7 @@ public class Page_Home_Admin_LicenseDetails {
 
 	@Keyword
 	def selectFirstNameForSearch () {
-		WebUI.waitForElementVisible(selectSearchCriteria, 20)
+		WebUI.waitForElementVisible(selectSearchCriteria, 40)
 
 		WebUI.click(selectSearchCriteria)
 
@@ -62,7 +62,7 @@ public class Page_Home_Admin_LicenseDetails {
 
 	@Keyword
 	def clickOnSearchButton () {
-		WebUI.waitForElementVisible(buttonSearch, 20)
+		WebUI.waitForElementVisible(buttonSearch, 40)
 
 		WebUI.click(buttonSearch)
 	}
@@ -70,7 +70,7 @@ public class Page_Home_Admin_LicenseDetails {
 
 	@Keyword
 	def clickOnOpenLink () {
-		WebUI.waitForElementVisible(linkOpen, 20)
+		WebUI.waitForElementVisible(linkOpen, 40)
 
 		WebUI.click(linkOpen)
 	}

@@ -52,7 +52,7 @@ public class Page_Licensure_Unit_Shopping_Cart {
 
 	@Keyword
 	def clickOnRefreshbutton () {
-		WebUI.waitForElementVisible(buttonRefresh, 0)
+		WebUI.waitForElementVisible(buttonRefresh, 40)
 
 		WebUI.click(buttonRefresh)
 	}
@@ -60,7 +60,7 @@ public class Page_Licensure_Unit_Shopping_Cart {
 
 	@Keyword
 	def verifyOpt1OnRRC (String feeDescription, String feeAmount, String totalToPay, String feeID) {
-		WebUI.waitForElementVisible(opt1FeeDescription, 0)
+		WebUI.waitForElementVisible(opt1FeeDescription, 40)
 
 		String currentFeeDescription = WebUI.getText(opt1FeeDescription)
 
@@ -82,7 +82,7 @@ public class Page_Licensure_Unit_Shopping_Cart {
 
 	@Keyword
 	def clickOnCancelAndClose () {
-		WebUI.waitForElementClickable(buttonCancelAndClose, 20)
+		WebUI.waitForElementClickable(buttonCancelAndClose, 40)
 
 		WebUI.click(buttonCancelAndClose)
 	}
@@ -90,7 +90,7 @@ public class Page_Licensure_Unit_Shopping_Cart {
 
 	@Keyword
 	def clickOnPayOnline () {
-		WebUI.waitForElementClickable(buttonPayOnline, 20)
+		WebUI.waitForElementClickable(buttonPayOnline, 40)
 
 		WebUI.click(buttonPayOnline)
 	}
@@ -98,7 +98,7 @@ public class Page_Licensure_Unit_Shopping_Cart {
 
 	@Keyword
 	def clickOnSubmitButton () {
-		WebUI.waitForElementClickable(buttonSubmit, 20)
+		WebUI.waitForElementClickable(buttonSubmit, 40)
 
 		WebUI.click(buttonSubmit)
 	}
@@ -106,9 +106,9 @@ public class Page_Licensure_Unit_Shopping_Cart {
 
 	@Keyword
 	def selectPaymentType (String paymentType) {
-		WebUI.waitForElementClickable(dropdownPaymentType, 20)
+		WebUI.waitForElementClickable(dropdownPaymentType, 40)
 
-		WebUI.waitForElementVisible(dropdownPaymentType, 20)
+		WebUI.waitForElementVisible(dropdownPaymentType, 40)
 
 		WebUI.click(dropdownPaymentType)
 

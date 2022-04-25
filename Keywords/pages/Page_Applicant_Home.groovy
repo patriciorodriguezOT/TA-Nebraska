@@ -39,13 +39,13 @@ public class Page_Applicant_Home {
 
 	@Keyword
 	def clickOnApplyForALicense () {
-		WebUI.waitForElementVisible(iframePrincipal, 0)
+		WebUI.waitForElementVisible(iframePrincipal, 40)
 
-		WebUI.switchToFrame(iframePrincipal, 0)
+		WebUI.switchToFrame(iframePrincipal, 40)
 
-		WebUI.switchToFrame(iframeApplyForALicense, 0)
+		WebUI.switchToFrame(iframeApplyForALicense, 40)
 
-		WebUI.waitForElementVisible(linkApplyForALicense, 0)
+		WebUI.waitForElementVisible(linkApplyForALicense, 40)
 
 		WebUI.click(linkApplyForALicense)
 
@@ -55,13 +55,13 @@ public class Page_Applicant_Home {
 
 	@Keyword
 	def clickOnViewYourFinances () {
-		WebUI.waitForElementVisible(iframePrincipal, 0)
+		WebUI.waitForElementVisible(iframePrincipal, 40)
 
-		WebUI.switchToFrame(iframePrincipal, 0)
+		WebUI.switchToFrame(iframePrincipal, 40)
 
-		WebUI.switchToFrame(iframeViewYourFinances, 0)
+		WebUI.switchToFrame(iframeViewYourFinances, 40)
 
-		WebUI.waitForElementVisible(linkViewYourFinances, 0)
+		WebUI.waitForElementVisible(linkViewYourFinances, 40)
 
 		WebUI.click(linkViewYourFinances)
 
@@ -71,7 +71,7 @@ public class Page_Applicant_Home {
 
 	@Keyword
 	def clickOnViewYourProfile () {
-		WebUI.waitForElementVisible(linkViewYourProfile, 0)
+		WebUI.waitForElementVisible(linkViewYourProfile, 40)
 
 		WebUI.click(linkViewYourProfile)
 	}
@@ -79,11 +79,11 @@ public class Page_Applicant_Home {
 
 	@Keyword
 	def clickOnViewAndPrintLicense () {
-		WebUI.waitForElementVisible(iframePrincipal, 0)
+		WebUI.waitForElementVisible(iframePrincipal, 40)
 
-		WebUI.switchToFrame(iframePrincipal, 0)
+		WebUI.switchToFrame(iframePrincipal, 40)
 
-		WebUI.waitForElementVisible(linkViewAndPrintLicense, 0)
+		WebUI.waitForElementVisible(linkViewAndPrintLicense, 40)
 
 		WebUI.click(linkViewAndPrintLicense)
 
@@ -93,11 +93,11 @@ public class Page_Applicant_Home {
 
 	@Keyword
 	def clickOnOpenTask1 () {
-		WebUI.waitForElementVisible(iframePrincipal, 0)
+		WebUI.waitForElementVisible(iframePrincipal, 40)
 
-		WebUI.switchToFrame(iframePrincipal, 0)
+		WebUI.switchToFrame(iframePrincipal, 40)
 
-		WebUI.waitForElementVisible(linkOpenTask1, 0)
+		WebUI.waitForElementVisible(linkOpenTask1, 40)
 
 		WebUI.click(linkOpenTask1)
 
@@ -107,11 +107,11 @@ public class Page_Applicant_Home {
 
 	@Keyword
 	def clickOnOpenTask2 () {
-		WebUI.waitForElementVisible(iframePrincipal, 0)
+		WebUI.waitForElementVisible(iframePrincipal, 40)
 
-		WebUI.switchToFrame(iframePrincipal, 0)
+		WebUI.switchToFrame(iframePrincipal, 40)
 
-		WebUI.waitForElementVisible(linkOpenTask2, 0)
+		WebUI.waitForElementVisible(linkOpenTask2, 40)
 
 		WebUI.click(linkOpenTask2)
 
@@ -121,11 +121,11 @@ public class Page_Applicant_Home {
 
 	@Keyword
 	def clickOnOpenApplication () {
-		WebUI.waitForElementVisible(iframePrincipal, 0)
+		WebUI.waitForElementVisible(iframePrincipal, 40)
 
-		WebUI.switchToFrame(iframePrincipal, 0)
+		WebUI.switchToFrame(iframePrincipal, 40)
 
-		WebUI.waitForElementVisible(linkOpenApplication, 0)
+		WebUI.waitForElementVisible(linkOpenApplication, 40)
 
 		WebUI.click(linkOpenApplication)
 
@@ -135,7 +135,7 @@ public class Page_Applicant_Home {
 
 	@Keyword
 	def verifyUserIsLogged (String expectedUserID) {
-		WebUI.waitForElementVisible(spanUserId, 0)
+		WebUI.waitForElementVisible(spanUserId, 40)
 
 		String currentUserId = WebUI.getText(spanUserId)
 

@@ -47,7 +47,7 @@ public class Page_Licensure_Unit_Disciplinary_or_Licensure_Event {
 
 	@Keyword
 	def completeSummaryOfEvent (String summaryOfEvent) {
-		WebUI.waitForElementVisible(inputSummaryOfEvent, 0)
+		WebUI.waitForElementVisible(inputSummaryOfEvent, 40)
 
 		WebUI.sendKeys(inputSummaryOfEvent, summaryOfEvent)
 	}
@@ -55,7 +55,7 @@ public class Page_Licensure_Unit_Disciplinary_or_Licensure_Event {
 
 	@Keyword
 	def selectEventType (String eventType) {
-		WebUI.waitForElementVisible(dropdownEventType, 0)
+		WebUI.waitForElementVisible(dropdownEventType, 40)
 
 		WebUI.click(dropdownEventType)
 
@@ -80,12 +80,16 @@ public class Page_Licensure_Unit_Disciplinary_or_Licensure_Event {
 
 	@Keyword
 	def completeEstimatedDateOfEvent (String estimatedDateofEvent) {
+		WebUI.waitForElementVisible(inputEstimatedDateOfEvent, 40)
+		
 		WebUI.sendKeys(inputEstimatedDateOfEvent, estimatedDateofEvent)
 	}
 
 
 	@Keyword
 	def completeEffectiveDate (String effectiveDate) {
+		WebUI.waitForElementVisible(effectiveDate, 40)
+		
 		WebUI.sendKeys(inputEffectiveDate, effectiveDate)
 	}
 
