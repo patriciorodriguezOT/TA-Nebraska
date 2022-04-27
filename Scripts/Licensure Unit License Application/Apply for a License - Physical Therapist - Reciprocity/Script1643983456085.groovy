@@ -40,9 +40,6 @@ String printName = 'PR Automation Test'
 String projectPath = RunConfiguration.getProjectDir()
 String emtpyDocpath = projectPath + '/Documents/Document Empty.txt'
 
-GlobalVariable.G_Applicant_Email = 'pruebas.onetree+Applicantiwylh@gmail.com'
-GlobalVariable.G_Applicant_FirstName = 'PRiwylh'
-GlobalVariable.G_Applicant_LastName = 'Automationiuean'
 
 
 // Open Browser
