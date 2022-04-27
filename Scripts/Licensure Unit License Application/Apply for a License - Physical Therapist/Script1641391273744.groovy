@@ -205,7 +205,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Manageme
 
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnOkDialogButton'()
 
-CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnOkDialogButton'()
+CustomKeywords.'pages.ModalDialog.clickOnCloseButton'()
 
 
 // Complete Attestation Information ---
@@ -238,7 +238,7 @@ if (CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Pay.verifyPayN
 
     CustomKeywords.'pages.Page_Licensure_Unit_Shopping_Cart.clickOnPayOnline'()
 
-    CustomKeywords.'pages.Page_Licensure_Unit_Shopping_Cart.completeCreditCardInfo'(GlobalVariable.G_Applicant_FirstName, GlobalVariable.G_Applicant_LastName, GlobalVariable.G_CreditCardNum, GlobalVariable.G_CreditCardExpMonth, GlobalVariable.G_CreditCardExpYear, GlobalVariable.G_CreditCardSecCode)
+    CustomKeywords.'pages.Page_Licensure_Unit_Shopping_Cart.completeCreditCardInfo'(GlobalVariable.G_CreditCardNum, GlobalVariable.G_CreditCardExpMonth, GlobalVariable.G_CreditCardExpYear, GlobalVariable.G_CreditCardSecCode)
 
     CustomKeywords.'pages.Page_Licensure_Unit_Shopping_Cart.clickOnSubmitButton'()
 

@@ -124,11 +124,7 @@ public class Page_Licensure_Unit_Shopping_Cart {
 	}
 
 	@Keyword
-	def completeCreditCardInfo (String firstName, String lastName, String cardNumber, String cardExpMonth, String cardExpYear, String secCode) {
-		WebUI.sendKeys(inputCardFirstName, firstName)
-
-		WebUI.sendKeys(inputCardLastName, lastName)
-
+	def completeCreditCardInfo (String cardNumber, String cardExpMonth, String cardExpYear, String secCode) {
 		WebUI.sendKeys(inputCardNumber, cardNumber)
 
 		WebUI.sendKeys(inputCardExpMonth, cardExpMonth)
