@@ -64,6 +64,8 @@ int currentTab = WebUI.getWindowIndex()
 
 WebUI.switchToWindowIndex(currentTab + 1)
 
+// Verify the License Application Opened is the correct one
+CustomKeywords.'pages.Page_Licensure_Unit_License_Application.verifyLicenseApplicationOpened'(GlobalVariable.G_Applicant_FirstName, GlobalVariable.G_Applicant_LastName)
 
 
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application.clickOnManageTab'()

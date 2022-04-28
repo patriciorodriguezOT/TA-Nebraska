@@ -21,7 +21,7 @@ import org.openqa.selenium.Keys as Keys
 
 // Verify Parents TC have not failed ---
 // Set TCs dependency
-String[] parentsTC = ['Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist - Reciprocity']
+String[] parentsTC = ['Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist - Reciprocity', 'Test Cases/Licensure Unit License Application/Apply for a License - Physical Therapist']
 // Verify any TC dependency has failed
 CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 
@@ -66,12 +66,8 @@ currentTab = WebUI.getWindowIndex()
 
 WebUI.switchToWindowIndex(currentTab + 1)
 
-
-
 // Verify the License Application Opened is the correct one
-CustomKeywords.'pages.Page_Licensure_Unit_License_Application.verifyLicenseApplicationOpened'(GlobalVariable.G_Applicant_FirstName, 
-    GlobalVariable.G_Applicant_LastName)
-
+CustomKeywords.'pages.Page_Licensure_Unit_License_Application.verifyLicenseApplicationOpened'(GlobalVariable.G_Applicant_FirstName, GlobalVariable.G_Applicant_LastName)
 
 
 // Go to Manage Tab of the Form
