@@ -77,7 +77,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_License.clickOnManageTab'()
 
 CustomKeywords.'pages.Page_Licensure_Unit_License.verifyStatus'(licenseStatus)
 
-CustomKeywords.'pages.Page_Licensure_Unit_License.verifyReleaseHoldBtnIsNotVisible'()
+CustomKeywords.'pages.Page_Licensure_Unit_License.verifyReleaseHoldBtnIsNotPresent'()
 
 
 

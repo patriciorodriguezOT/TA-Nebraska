@@ -248,5 +248,12 @@ public class Page_Licensure_Unit_License {
 
 		WebUI.verifyElementNotVisible(buttonReleaseHold, FailureHandling.CONTINUE_ON_FAILURE)
 	}
+	
+	@Keyword
+	def verifyReleaseHoldBtnIsNotPresent () {
+		WebUI.waitForElementVisible(buttonReleaseHold, 40)
+
+		WebUI.verifyElementNotPresent(buttonReleaseHold, 40, FailureHandling.CONTINUE_ON_FAILURE)
+	}
 
 }
