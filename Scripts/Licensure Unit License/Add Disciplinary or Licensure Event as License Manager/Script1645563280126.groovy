@@ -88,21 +88,14 @@ WebUI.switchToWindowIndex(currentTab + 2)
 
 
 // Complete informmation of Licensure Unit Disciplinary or Licensure Event
-CustomKeywords.'pages.Page_Licensure_Unit_Disciplinary_or_Licensure_Event.completeSummaryOfEvent'(summaryOfEvent)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Disciplinary_or_Licensure_Event.selectEventType'(eventType)
-
-CustomKeywords.'pages.Page_Licensure_Unit_Disciplinary_or_Licensure_Event.completeEstimatedDateOfEvent'(estimatedDateOfEvent)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Disciplinary_or_Licensure_Event.completeEffectiveDate'(effectiveDate)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Disciplinary_or_Licensure_Event.completeDateEnded'(dateEnded)
 
 CustomKeywords.'pages.Page_Licensure_Unit_Disciplinary_or_Licensure_Event.completeDescriptionOfEvent'(desriptionOfEvent)
-
-CustomKeywords.'pages.Page_Licensure_Unit_Disciplinary_or_Licensure_Event.completeDocketNum'(docketNum)
-
-CustomKeywords.'pages.Page_Licensure_Unit_Disciplinary_or_Licensure_Event.completeCaseNum'(caseNum)
 
 
 

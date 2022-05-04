@@ -81,15 +81,15 @@ public class Page_Licensure_Unit_Disciplinary_or_Licensure_Event {
 	@Keyword
 	def completeEstimatedDateOfEvent (String estimatedDateofEvent) {
 		WebUI.waitForElementVisible(inputEstimatedDateOfEvent, 40)
-		
+
 		WebUI.sendKeys(inputEstimatedDateOfEvent, estimatedDateofEvent)
 	}
 
 
 	@Keyword
 	def completeEffectiveDate (String effectiveDate) {
-		WebUI.waitForElementVisible(effectiveDate, 40)
-		
+		WebUI.waitForElementVisible(inputEffectiveDate, 40)
+
 		WebUI.sendKeys(inputEffectiveDate, effectiveDate)
 	}
 

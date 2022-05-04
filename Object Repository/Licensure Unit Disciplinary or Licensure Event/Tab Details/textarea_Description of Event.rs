@@ -6,12 +6,11 @@
    <elementGuidId>5bbd9d07-5072-4773-af58-22182859a17e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//kendo-editor[@id='Description of Findings']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//textarea[@id='Description of Event']</value>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
