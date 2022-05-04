@@ -12,15 +12,27 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>758d1657-a9b0-45f5-b180-3addcef23900</testSuiteGuid>
    <testCaseLink>
-      <guid>89e0e4ec-8252-41eb-b15c-b8bbfa8b5c78</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TC for Testing/Test de prueba</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>eebc3a23-9c94-4f40-9ae0-f6f18e5b44f6</guid>
+      <guid>a366a429-be54-41f5-adc0-c67362700b0a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TC for Testing/Test de prueba 2</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7089113a-74d2-4e45-b99c-fcd45f160c1b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit License/Add Disciplinary or Licensure Event as License Manager</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>120a16a6-fb5c-4de0-b765-de883917571d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit License/Add Fee as LU Staff</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c73f2873-3774-4dd0-8935-6d6e663ad3e3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit License/Make license inactive</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

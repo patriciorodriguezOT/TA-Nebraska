@@ -24,10 +24,13 @@ import java.util.Calendar as Calendar
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import gmail_Connection.getEmailContent as getEmailContent
 
-
+/*
 WebUI.callTestCase(findTestCase('TC for Testing/Test de prueba'), [:], FailureHandling.STOP_ON_FAILURE)
 
 // Login with LU Staff user
 CustomKeywords.'pages.Page_Login.login'(GlobalVariable.G_LM_Staff_UserName, GlobalVariable.G_LM_Staff_Pass)
+*/
 
-
+GlobalVariable.G_Applicant_Email = 'pruebas.onetree+Applicantwkxct@gmail.com'
+GlobalVariable.G_Applicant_FirstName = 'PRwkxct'
+GlobalVariable.G_Applicant_LastName = 'Automationrjhkk'

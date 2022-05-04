@@ -72,7 +72,7 @@ CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Manageme
 
 CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnOkDialogButton'()
 
-CustomKeywords.'pages.Page_Licensure_Unit_License_Application_Checklist_Management.clickOnOkDialogButton'()
+CustomKeywords.'pages.ModalDialog.clickOnCloseButton'()
 
 
 
