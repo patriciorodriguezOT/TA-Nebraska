@@ -37,7 +37,8 @@ int currentTab
 String licenseType = 'Physical Therapist'
 String startDate
 String endDate
-String alertTextExpected = 'The License has been set to Inactive and the License Details Status record has been created.'
+String titleMesage = 'License Details Status'
+String bodyMessage = 'The License has been set to Inactive and the License Details Status record has been created.'
 String alertText
 String expectedLicenseStatus = 'Inactive'
 
@@ -101,15 +102,12 @@ CustomKeywords.'pages.ModalDialog.enterRangeOfDate'(startDate, endDate)
 // Click on Confirm button of Modal Dialog
 CustomKeywords.'pages.ModalDialog.clickOnConfirmbutton'()
 
-// Verify Alert Text and Click on accept button
-WebUI.waitForAlert(30)
+// Verify title and body message, and close it
+CustomKeywords.'pages.ModalDialog.verifyTitle'(titleMesage)
 
-alertText = WebUI.getAlertText()
+CustomKeywords.'pages.ModalDialog.verifyBody'(bodyMessage)
 
-//Verify text alert is correct or not
-WebUI.verifyMatch(alertText, alertTextExpected, true, FailureHandling.CONTINUE_ON_FAILURE)
-
-//WebUI.acceptAlert()
+CustomKeywords.'pages.ModalDialog.clickOnCloseButton'()
 
 
 

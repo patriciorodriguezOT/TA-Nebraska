@@ -132,6 +132,8 @@ CustomKeywords.'pages.Page_Licensure_Unit_License.clickOnCancelAndContinueButton
 
 CustomKeywords.'pages.ModalDialog.clickOnOkaybutton'()
 
+System.sleep(3000)
+
 WebUI.closeBrowser()
 
 
