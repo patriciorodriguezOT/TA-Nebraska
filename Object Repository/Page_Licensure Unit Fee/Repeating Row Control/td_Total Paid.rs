@@ -6,12 +6,12 @@
    <elementGuidId>f77d5427-2226-4513-a16d-4fc99b264735</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='RepeatingRowControl59']/kendo-grid/div/kendo-grid-list/div/div/table/tbody/tr/td[3]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>td.bc856ec5-79ce-2509-1e3c-c3620a205731.hAlignLeft.vAlignMiddle.ng-star-inserted</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='RRC_PaymentItems']/kendo-grid/div/kendo-grid-list/div/div/table/tbody/tr/td[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

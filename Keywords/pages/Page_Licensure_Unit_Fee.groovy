@@ -58,7 +58,7 @@ public class Page_Licensure_Unit_Fee {
 	@Keyword
 	def selectLapFeeOnFeeType () {
 		WebUI.waitForElementVisible(dropdownFeeType, 40)
-		
+
 		WebUI.click(dropdownFeeType)
 
 		WebUI.click(dropdownLapFeeOpt)
