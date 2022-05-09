@@ -4,9 +4,9 @@
 
 Download and Install Katalon Studio. https://web-api.katalon.com/download/
 
-Once Katalon Studio is installed, open it and login with your Katalo user account.
+Once Katalon Studio is installed, open it and login with your Katalon user account.
 
-Clone the TA-Nebraska project repocitory on your desktop from https://github.com/patriciorodriguezOT/TA-Nebraska. The branch ta-main is the one which contains the test cases executed. This is the most important one and it should be stable. The branch ta-develp is which receives the new test cases or updates. Once it is stable, it is marged to ta-main.
+Clone the TA-Nebraska project repository on your desktop from https://github.com/patriciorodriguezOT/TA-Nebraska. The branch ta-main is the one that contains the test cases executed. This is the most important one and it should be stable. The branch ta-develop is which receives the new test cases or updates. Once it is stable, it is merged to ta-main.
 
 Make sure that libraries "javax.mail-1.6.2.jar" and "ashot-1.5.4.jar" are on the Drivers folder of the project. They are used for checking emails received and comparing images.
 
@@ -18,9 +18,9 @@ On Katalon Studio, open the project and verify settings.
 ## Workflow
 When a new test script needs to be created or updated, a ticket should be created on Jira with all the details.
 
-Create a new branch from ta-develp with prefix 'impl-' and the number of the ticket. Once the new changes are applied, it is sent to review and then marged to ta-develop
+Create a new branch from the ta-develop branch, using the prefix 'impl-' and the number of the ticket on the name. Once the new changes are applied, it is sent to review and then marged to ta-develop.
 
-For completing this process, the tool used is Sourcetree - Git-flow.
+Currently, to complete the hole process, the tool used is Sourcetree - Git-flow.
 
 ## Folder Structure
 
@@ -29,8 +29,6 @@ For completing this process, the tool used is Sourcetree - Git-flow.
 The Profiles section contains all the Global Variables needed to execute the test cases.
 
 Each profile contains the links, variables, users, and configuration necessary to execute the test scrips in a specific environment.
-
-~~Execution Profile helps cover multiple and different environments to execute your automation test scripts with ease. You can configure the testing environment in terms of data and behaviors through Global variables.~~
 
  - #### QA Env
 Contains the global variables needed for vv5qa environment. 
@@ -98,4 +96,6 @@ Here is the event that is triggered once the test cases have been completed.
 
 ## Test Cases Relationships
 
-![alt text](Test Cases Relationships.png)
+As it was mentioned previously, some test cases depends on others to be executed. Below is a diagram with 
+
+![alt text](./ReadmeImages/Test%20Cases%20Relationships.png)
