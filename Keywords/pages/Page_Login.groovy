@@ -27,7 +27,7 @@ public class Page_Login {
 	def login (String username, String pass) {
 		WebUI.sendKeys(findTestObject('Page_Login_VisualVault/input_UserName'), username)
 
-		WebUI.sendKeys(findTestObject('Page_Login_VisualVault/input_Password'), pass)
+		WebUI.setEncryptedText(findTestObject('Page_Login_VisualVault/input_Password'), pass)
 
 		WebUI.click(findTestObject('Page_Login_VisualVault/span_LoginButton'))
 	}
