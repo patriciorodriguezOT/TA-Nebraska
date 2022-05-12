@@ -38,7 +38,7 @@ GlobalVariable.G_Applicant_FirstName = ('PR' + randomFirstName)
 
 GlobalVariable.G_Applicant_LastName = ('Automation' + randomLastName)
 
-GlobalVariable.G_Applicant_Email = (('pruebas.onetree+Applicant' + randomFirstName) + '@gmail.com')
+GlobalVariable.G_Applicant_Email = (('applicant' + randomFirstName) + GlobalVariable.MailsacDomain)
 
 print GlobalVariable.G_Applicant_FirstName
 print GlobalVariable.G_Applicant_LastName

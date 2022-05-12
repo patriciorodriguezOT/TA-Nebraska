@@ -12,15 +12,45 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>758d1657-a9b0-45f5-b180-3addcef23900</testSuiteGuid>
    <testCaseLink>
-      <guid>89e0e4ec-8252-41eb-b15c-b8bbfa8b5c78</guid>
+      <guid>aeb46b0d-6d5d-4279-847f-3e65e29acdba</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC for Testing/Test de prueba</testCaseId>
+      <testCaseId>Test Cases/Licensure Unit User Registration/Registration Successful - US Citizen - With SSN</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>a911b9e4-f27f-4e3a-8f3b-4b8a44ea2ce1</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>c16edb5a-08ec-4c32-8cf4-5b8fb57dbb70</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>c1a3ae38-d74e-4712-bce0-24a7dcaaf4fe</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>70617006-c77c-4821-8fdb-936830a9b03c</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>eebc3a23-9c94-4f40-9ae0-f6f18e5b44f6</guid>
+      <guid>75f1586c-ba9a-4afc-977d-3a1ba94fb3ef</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC for Testing/Test de prueba 2</testCaseId>
+      <testCaseId>Test Cases/Licensure Unit User Registration/Reset Password and Complete Registration Process</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>73b7898c-6fa2-4a4b-98ce-e704e282cfea</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Licensure Unit User Registration/Verify Unique Individual Record Created (via API)</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

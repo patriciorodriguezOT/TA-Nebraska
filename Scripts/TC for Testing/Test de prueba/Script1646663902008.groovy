@@ -3,6 +3,8 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+
+import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -29,18 +31,18 @@ import ws.GetLicenseDetailsStatus as GetLicenseDetailsStatus
 import ws.GetToken as GetToken
 import ws.Mailsac as Mailsac
 
-GlobalVariable.G_Applicant_Email = 'test12@visualvaulttesting.msdc.com'
 
-// Get Object for License Detail
+
 Mailsac getMessagesReq = new Mailsac()
 
-ResponseObject getMessagesResp = getMessagesReq.getListMessagesByEmail(GlobalVariable.G_Applicant_Email)
+ResponseObject getMessagesListResp = getMessagesReq.getListMessagesByEmail(GlobalVariable.G_Applicant_Email)
 
-if(getMessagesReq.getStatusCode(getMessagesResp) != 200) {
-	KeywordUtil.markFailed("Status code is not 200 as expected. It is "	+ GetToken.getStatusCode(getMessagesResp))
+if(getMessagesReq.getStatusCode(getMessagesListResp) != 200) {
+	KeywordUtil.markFailed("Status code is not 200 as expected. It is "	+ GetToken.getStatusCode(getMessagesListResp))
 }
 
+String resetPassUrl = CustomKeywords.'api_Connection.MailsacResp.getLinkVerification'(getMessagesListResp)
 
-print getMessagesResp.responseBodyContent
+WebUI.openBrowser(resetPassUrl)
 
 

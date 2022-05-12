@@ -38,7 +38,7 @@ GlobalVariable.G_Applicant_DOB = Generic_functions.randomPastDate(18250, 10000)
 GlobalVariable.G_Applicant_AlienRegistrationNum = Generic_functions.randomString(nums, 9)
 GlobalVariable.G_Applicant_FirstName = ('PR' + randomFirstName)
 GlobalVariable.G_Applicant_LastName = ('AutomationNoCitizen' + randomLastName)
-GlobalVariable.G_Applicant_Email = (('pruebas.onetree+ApplicantNoCitizen' + randomFirstName) + '@gmail.com')
+GlobalVariable.G_Applicant_Email = (('applicantNoCitizen' + randomFirstName) + GlobalVariable.MailsacDomain)
 
 
 

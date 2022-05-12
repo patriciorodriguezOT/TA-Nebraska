@@ -23,6 +23,7 @@ import java.util.Calendar as Calendar
 import internal.GlobalVariable
 import com.kms.katalon.core.testobject.ResponseObject
 
+
 public class MailsacResp {
 
 	private TestObject requesGetLicenseDetails						= findTestObject('RequestApiInformation/GetLicenseDetails')
@@ -30,19 +31,17 @@ public class MailsacResp {
 
 
 	@Keyword
-	def getLinkVerification (Object emailReceived) {
+	def getLinkVerification (ResponseObject emailList) {
 
-		// Assign the expirationDate from the License Details to the variables
-		String link = WS.getElementPropertyValue(emailReceived, '[0].links[0]')
+		String link = WS.getElementPropertyValue(emailList	, '[0].links[0]')
 
 		return link
 	}
 
 	@Keyword
-	def getMessageId (Object emailReceived) {
+	def getMessageId (ResponseObject emailList) {
 
-		// Assign the expirationDate from the License Details to the variables
-		String MessageId = WS.getElementPropertyValue(emailReceived, '[0]._id')
+		String MessageId = WS.getElementPropertyValue(emailList, '[0]._id')
 
 		return MessageId
 	}

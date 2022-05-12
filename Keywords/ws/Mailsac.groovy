@@ -31,7 +31,7 @@ public class Mailsac {
 	public ResponseObject getListMessagesByEmail(String email) {
 		String endpoint = baseUrl + "/api/addresses/" + email + "/messages"
 
-		print endpoint
+		print '\n' + endpoint + '\n'
 
 		RequestObject ro = new RestRequestObjectBuilder()
 				.withRestUrl(endpoint)
