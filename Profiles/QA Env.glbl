@@ -229,4 +229,19 @@
       <initValue>''</initValue>
       <name>G_DenialEvent_DenialDate</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'k_HCSXv5N4EK968Ypkgyyo5CJkwyP9w2174'</initValue>
+      <name>MailsacKey</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'@visualvaulttesting.msdc.co'</initValue>
+      <name>MailsacDomain</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://mailsac.com'</initValue>
+      <name>MailsacBaseUrl</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

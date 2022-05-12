@@ -13,8 +13,7 @@ import internal.GlobalVariable
 
 public class Mailsac {
 	// Endpoint variables
-	String baseUrl = 'https://mailsac.com'
-	String licenseLookupID = "c84de965-197a-ec11-a9d6-e507991dbdb7"
+	String baseUrl = GlobalVariable.MailsacBaseUrl
 
 	// Request variables
 	String requestMethodGET = "GET"
