@@ -33,9 +33,9 @@ public class Page_Reset_Password_Complete_Registration {
 	def completePasswords () {
 		WebUI.waitForElementVisible(inputNewPassword, 40)
 
-		WebUI.sendKeys(inputNewPassword, GlobalVariable.G_ApplicantPass)
+		WebUI.setEncryptedText(inputNewPassword, GlobalVariable.G_ApplicantPass)
 
-		WebUI.sendKeys(inputConfirmNewPassword, GlobalVariable.G_ApplicantPass)
+		WebUI.setEncryptedText(inputConfirmNewPassword, GlobalVariable.G_ApplicantPass)
 	}
 
 

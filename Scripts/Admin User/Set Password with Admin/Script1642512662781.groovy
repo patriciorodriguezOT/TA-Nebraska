@@ -56,11 +56,9 @@ WebUI.verifyElementText(findTestObject('Page_Home_Admin_VisualVault/Page_VisualV
 
 WebUI.click(findTestObject('Page_Home_Admin_VisualVault/Page_VisualVault_Control Panel/Page_VisualVault_Control Panel_AdminTools/User Administration/User Details/span_Change Password'))
 
-WebUI.sendKeys(findTestObject('Page_Home_Admin_VisualVault/Page_VisualVault_Control Panel/Page_VisualVault_Control Panel_AdminTools/User Administration/User Details/Change Password/input_New Password'), 
-    GlobalVariable.G_ApplicantPass)
+WebUI.setEncryptedText(findTestObject('Page_Home_Admin_VisualVault/Page_VisualVault_Control Panel/Page_VisualVault_Control Panel_AdminTools/User Administration/User Details/Change Password/input_New Password'), GlobalVariable.G_ApplicantPass)
 
-WebUI.sendKeys(findTestObject('Page_Home_Admin_VisualVault/Page_VisualVault_Control Panel/Page_VisualVault_Control Panel_AdminTools/User Administration/User Details/Change Password/input_Confirm Password'), 
-    GlobalVariable.G_ApplicantPass)
+WebUI.setEncryptedText(findTestObject('Page_Home_Admin_VisualVault/Page_VisualVault_Control Panel/Page_VisualVault_Control Panel_AdminTools/User Administration/User Details/Change Password/input_Confirm Password'), GlobalVariable.G_ApplicantPass)
 
 WebUI.click(findTestObject('Page_Home_Admin_VisualVault/Page_VisualVault_Control Panel/Page_VisualVault_Control Panel_AdminTools/User Administration/User Details/Change Password/input_Save Button'))
 
