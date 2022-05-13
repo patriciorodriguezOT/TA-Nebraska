@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@src='https://sc-dev.visualvault.com/vv5qa\Apply%20for%20a%20license.html?ver=2']</value>
+         <value>//*[@src='https://sc-dev.visualvault.com/vv5qa/Apply%20for%20a%20license.html?ver=2']</value>
       </entry>
       <entry>
          <key>BASIC</key>
