@@ -34,7 +34,7 @@ GlobalVariable.G_Applicant_LastName = 'Automationeznne'
 
 // Set TC variables
 String projectPath = RunConfiguration.getProjectDir()
-String expectedImgDir = projectPath + '/ScreenShots/Expected Screenshots/WallCertificateScreenView.png'
+String expectedImgDir = projectPath + '/ScreenShots/Expected Screenshots/WallCertificateScreenView_TestCloud.png'
 
 
 
