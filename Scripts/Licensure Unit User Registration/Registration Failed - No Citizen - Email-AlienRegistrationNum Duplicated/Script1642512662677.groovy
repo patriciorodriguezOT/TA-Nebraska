@@ -38,7 +38,7 @@ String existingEmail = 'patricio.rodriguez+Applicantorwqw@onetree.com'
 String existingAlienRegistrationNum = '688452096'
 GlobalVariable.G_Applicant_FirstName = ('PR' + randomFirstName)
 GlobalVariable.G_Applicant_LastName = ('Automation' + randomLastName)
-GlobalVariable.G_Applicant_Email = (('patricio.rodriguez+Applicant' + randomFirstName) + '@onetree.com')
+GlobalVariable.G_Applicant_Email = (('applicantNoCitizen' + randomFirstName) + GlobalVariable.MailsacDomain)
 
 
 

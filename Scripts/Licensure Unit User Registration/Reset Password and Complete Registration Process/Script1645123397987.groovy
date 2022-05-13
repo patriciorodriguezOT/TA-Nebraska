@@ -16,6 +16,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import ws.Mailsac as Mailsac
+import com.kms.katalon.core.testobject.ResponseObject
+import com.kms.katalon.core.util.KeywordUtil
 
 import gmail_Connection.getEmailContent as getEmailContent
 
@@ -27,9 +30,20 @@ String[] parentsTC = ['Test Cases/Licensure Unit User Registration/Registration 
 CustomKeywords.'tc_listener.tcl.checkErrors'(parentsTC)
 
 
+// Get Object for License Detail
+Mailsac getMessagesReq = new Mailsac()
+
+
+
+ResponseObject getMessagesListResp = getMessagesReq.getListMessagesByEmail(GlobalVariable.G_Applicant_Email)
+
+if(getMessagesReq.getStatusCode(getMessagesListResp) != 200) {
+	KeywordUtil.markFailed("Status code is not 200 as expected. It is "	+ getMessagesReq.getStatusCode(getMessagesListResp))
+}
+
 
 // Get link to complete registration from Email received by the Applicant
-String link = CustomKeywords.'gmail_Connection.getEmailContent.findConfirmEmailURL'(GlobalVariable.G_Gmail_Test_Account,  GlobalVariable.G_Gmail_Test_Account_Pass, GlobalVariable.G_Applicant_Email)
+String link = CustomKeywords.'api_Connection.MailsacResp.getLinkVerification'(getMessagesListResp)
 
 // Open browswer and navigate to Rest Password link and complete the registration
 WebUI.openBrowser(link)
@@ -42,7 +56,6 @@ CustomKeywords.'pages.Page_Reset_Password_Complete_Registration.clickOnResetPass
 
 // Verify user was logged correctly
 CustomKeywords.'pages.Page_Applicant_Home.verifyUserIsLogged'(GlobalVariable.G_Applicant_Email)
-
 
 
 // Close browser

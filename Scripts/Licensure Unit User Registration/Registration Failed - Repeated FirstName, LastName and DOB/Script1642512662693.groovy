@@ -42,7 +42,7 @@ String firstName4 = 'Kathrine'
 String lastName4 = 'Smith'
 String aka = 'Kathy, Kathrine'
 String randomSSN = Generic_functions.randomString(nums, 9)
-GlobalVariable.G_Applicant_Email = (('patricio.rodriguez+' + randomSSN) + '@onetree.com')
+GlobalVariable.G_Applicant_Email = (('applicant_' + randomSSN) + GlobalVariable.MailsacDomain)
 
 
 // Open Browser
