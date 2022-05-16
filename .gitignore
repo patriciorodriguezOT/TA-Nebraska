@@ -39,7 +39,7 @@ settings/internal/com.kms.katalon.core.webservice.properties
 \.settings/
 bin/lib/
 Libs/
-ScreenShots/.png
+ScreenShots/*.png
 bin/keyword/.gitignore
 
 
