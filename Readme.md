@@ -6,19 +6,22 @@ Download and Install Katalon Studio. https://web-api.katalon.com/download/
 
 Once Katalon Studio is installed, open it and login with your Katalon user account.
 
-Clone the TA-Nebraska project repository on your desktop from https://github.com/patriciorodriguezOT/TA-Nebraska. The branch ta-main is the one that contains the test cases executed. This is the most important one and it should be stable. The branch ta-develop is which receives the new test cases or updates. Once it is stable, it is merged to ta-main.
+Clone the TA-Nebraska project repository on your desktop from https://github.com/patriciorodriguezOT/TA-Nebraska. The branch ta-main is the one that contains the test cases executed. This is the most important one and it should be stable. The branch ta-development is which receives the new test cases or updates. Once it is stable, it is merged to ta-main.
 
 Make sure that libraries "javax.mail-1.6.2.jar" and "ashot-1.5.4.jar" are on the Drivers folder of the project. They are used for checking emails received and comparing images.
+Links for downloading
+"javax.mail-1.6.2.jar" - https://jar-download.com/artifacts/com.sun.mail/javax.mail/1.6.2/source-code
+"ashot-1.5.4.jar" - https://jar-download.com/artifacts/ru.yandex.qatools.ashot/ashot/1.5.4/source-code
 
 On Katalon Studio, open the project and verify settings.
 - Go to Project -> Settings, select Email section. Set the correct configuration to send Emails Report.
-- Go to Project -> Settings, select Katalon TestOps section. Set the correct configuration so the reports are uploaded to the correct projecto on TestOps.
+- Go to Project -> Settings, select Katalon TestOps section. Set the correct configuration so the reports are uploaded to the correct project on TestOps.
 
 
 ## Workflow
 When a new test script needs to be created or updated, a ticket should be created on Jira with all the details.
 
-Create a new branch from the ta-develop branch, using the prefix 'impl-' and the number of the ticket on the name. Once the new changes are applied, it is sent to review and then marged to ta-develop.
+Create a new branch from the ta-development branch, using the prefix 'impl-' and the number of the ticket on the name. Once the new changes are applied, it is sent to review and then marged to ta-development.
 
 Currently, to complete the hole process, the tool used is Sourcetree - Git-flow.
 
